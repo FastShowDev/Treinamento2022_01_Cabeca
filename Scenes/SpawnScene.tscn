@@ -400,3 +400,4 @@ tile_set = SubResource( 1 )
 [node name="Chest" parent="." instance=ExtResource( 3 )]
 position = Vector2( 626, 179 )
 scale = Vector2( 1.5, 1.5 )
+frame = 0
