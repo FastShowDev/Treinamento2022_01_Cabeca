@@ -18,9 +18,10 @@ func _ready():
 
 func _physics_process(delta: float) -> void:
 	move()
+	attack()
 	verify_direction()
 	animate()
-	#attack()
+	
 
 func move() -> void:
 	var direction_vector: Vector2 = Vector2(
@@ -42,11 +43,22 @@ func verify_direction() -> void:
 		player_direction = Vector2(0,-1)
 
 func attack() -> void:
-	pass
-		
+	if Input.is_action_just_pressed("attack") and not can_attack:
+		can_attack = true
+
 
 func animate() -> void:
-	if velocity != Vector2.ZERO:
+	if can_attack:
+		if player_direction.x == 1:
+			animation.play("attack_right")
+		if player_direction.x == -1:
+			animation.play("attack_left")
+		if player_direction.y == 1:
+			animation.play("attack_down")
+		if player_direction.y == -1:
+			animation.play("attack_up")
+		set_physics_process(false)
+	elif velocity != Vector2.ZERO:
 		if velocity.x > 0:
 			animation.play("move_right")
 		elif velocity.x < 0:
@@ -73,5 +85,13 @@ func play_animation(anim_name):
 	
 
 	
-func on_animation_finished(anim_name):
+func on_animation_finished():
+	
 	pass
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if can_attack:
+		set_physics_process(true)
+		can_attack = false
+	pass # Replace with function body.
