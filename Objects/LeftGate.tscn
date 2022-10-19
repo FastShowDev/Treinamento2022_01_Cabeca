@@ -5,32 +5,31 @@
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
-region = Rect2( 646, 170, 16, 16 )
+region = Rect2( 612, 119, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
-region = Rect2( 646, 187, 16, 16 )
+region = Rect2( 544, 136, 16, 16 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 5 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
 "loop": true,
-"name": "idle",
+"name": "default",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 12, 10.5 )
+extents = Vector2( 7, 9 )
 
-[node name="Chest" type="AnimatedSprite"]
+[node name="Gate" type="AnimatedSprite"]
 frames = SubResource( 3 )
-animation = "idle"
 script = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0, 2.5 )
+position = Vector2( 3, 1 )
 shape = SubResource( 4 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
