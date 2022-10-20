@@ -4,6 +4,7 @@ extends KinematicBody2D
 var max_hearts: int = 4
 var keys: int  = 0
 var hearts: int = 2
+var coins: int = 0
 
 #Player physics
 var speed = 175
@@ -22,7 +23,8 @@ func _ready():
 	pass
 
 func _process(delta: float) -> void:
-	print("Vida atual: " + hearts as String)
+	#print("Vida atual: " + hearts as String)
+	pass
 
 func _physics_process(delta: float) -> void:
 	move()
@@ -101,7 +103,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 func increase_max_heart() -> void:
 	max_hearts += 1
 
-func update_heart_values(heart_value: int) -> void:
+func update_heart_score(heart_value: int) -> void:
 	pass
 
 func collect_heart() -> void:
@@ -109,5 +111,11 @@ func collect_heart() -> void:
 		return
 	else:
 		hearts += 1
-		update_heart_values(hearts)
+		update_heart_score(hearts)
 		
+func update_coin_score(coins: int) -> void:
+	pass
+	
+func collect_coin() -> void:
+	coins += 1
+	update_coin_score(1)
