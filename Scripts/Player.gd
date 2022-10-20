@@ -1,20 +1,28 @@
 extends KinematicBody2D
 
+#Stats
+var max_hearts: int = 4
+var keys: int  = 0
+var hearts: int = 2
+
+#Player physics
 var speed = 175
-var health = 100
-var keys = 0
-var interactDist = 20
 var velocity = Vector2.ZERO
 
+#Components:
 onready var animeted_sprite = $AnimatedSprite
 onready var animation = $AnimationPlayer
 onready var collision = $AttackArea/CollisionShape2D
 
+#Permissions:
 var can_attack: bool = false
 var player_direction: Vector2 = Vector2.ZERO
 
 func _ready():
 	pass
+
+func _process(delta: float) -> void:
+	print("Vida atual: " + hearts as String)
 
 func _physics_process(delta: float) -> void:
 	move()
@@ -22,7 +30,6 @@ func _physics_process(delta: float) -> void:
 	verify_direction()
 	animate()
 	
-
 func move() -> void:
 	var direction_vector: Vector2 = Vector2(
 		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
@@ -78,20 +85,29 @@ func animate() -> void:
 		elif player_direction.y == -1:
 			animeted_sprite.play("idle_up")
 			
-	
-		
 func play_animation(anim_name):
 	pass
-	
-
 	
 func on_animation_finished():
 	
 	pass
-
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if can_attack:
 		set_physics_process(true)
 		can_attack = false
 	pass # Replace with function body.
+
+func increase_max_heart() -> void:
+	max_hearts += 1
+
+func update_heart_values(heart_value: int) -> void:
+	pass
+
+func collect_heart() -> void:
+	if hearts >= max_hearts:
+		return
+	else:
+		hearts += 1
+		update_heart_values(hearts)
+		
