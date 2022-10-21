@@ -5,6 +5,9 @@
 [ext_resource path="res://Assets/Enemies/Bat/character_0026.png" type="Texture" id=3]
 [ext_resource path="res://Scripts/bat.gd" type="Script" id=4]
 
+
+
+
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 16.0
 height = 0.0
