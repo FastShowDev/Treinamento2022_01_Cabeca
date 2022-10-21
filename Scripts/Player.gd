@@ -12,7 +12,7 @@ var speed = 175
 var velocity = Vector2.ZERO
 
 #Components:
-onready var animeted_sprite = $AnimatedSprite
+onready var animated_sprite = $AnimatedSprite
 onready var animation = $AnimationPlayer
 onready var collision = $AttackArea/CollisionShape2D
 
@@ -56,6 +56,7 @@ func verify_direction() -> void:
 	elif velocity.y < 0:
 		player_direction = Vector2(0,-1)
 
+
 func attack() -> void:
 	if Input.is_action_just_pressed("attack") and not can_attack:
 		can_attack = true
@@ -84,13 +85,13 @@ func animate() -> void:
 	else:
 		animation.stop()
 		if player_direction.x == 1:
-			animeted_sprite.play("idle_right")
+			animated_sprite.play("idle_right")
 		elif player_direction.x == -1:
-			animeted_sprite.play("idle_left")
+			animated_sprite.play("idle_left")
 		elif player_direction.y == 1:
-			animeted_sprite.play("idle_down")
+			animated_sprite.play("idle_down")
 		elif player_direction.y == -1:
-			animeted_sprite.play("idle_up")
+			animated_sprite.play("idle_up")
 			
 func play_animation(anim_name):
 	pass
@@ -121,17 +122,21 @@ func collect_heart() -> void:
 func update_coin_score(coins: int) -> void:
 	pass
 
+
 func collect_coin() -> void:
 	coins += 1
 	update_coin_score(1)
 
+#Bomb functions:
 func update_bomb_score(bomb: int) -> void:
 	pass
+
 
 func collect_bomb() -> void:
 	print("Coletei!")
 	bombs += 1
 	update_bomb_score(1)
+	
 	
 func use_bomb() -> void:
 	if Input.is_action_just_pressed("use_item") and bombs > 0:

@@ -198,6 +198,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [ true, false, true ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("BombAnimation:script")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ null ]
+}
 
 [sub_resource type="Animation" id=32]
 resource_name = "idle"
@@ -234,9 +246,9 @@ animation = "explode"
 frame = 1
 script = ExtResource( 20 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="CollectArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectArea"]
 visible = false
 position = Vector2( 0, 5.5 )
 shape = SubResource( 5 )
@@ -252,4 +264,5 @@ anims/RESET = SubResource( 30 )
 anims/explode = SubResource( 31 )
 anims/idle = SubResource( 32 )
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="CollectArea" to="." method="_on_Area2D_body_entered"]
+[connection signal="animation_finished" from="BombAnimation" to="." method="_on_BombAnimation_animation_finished"]
