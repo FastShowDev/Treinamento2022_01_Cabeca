@@ -1,6 +1,6 @@
 extends AnimatedSprite
 
-onready var anim = $AnimationPlayer
+onready var anim = $CoinAnimationPlayer
 
 func _ready():
 	pass

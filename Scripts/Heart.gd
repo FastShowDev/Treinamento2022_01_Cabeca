@@ -1,6 +1,6 @@
 extends AnimatedSprite
 
-onready var animation_player = $AnimationPlayer
+onready var animation_player = $HeartAnimationPlayer
 
 func _ready():
 	pass
