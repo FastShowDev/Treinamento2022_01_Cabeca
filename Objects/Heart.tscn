@@ -75,12 +75,13 @@ tracks/1/keys = {
 extents = Vector2( 5.5, 5 )
 
 [node name="Heart" type="AnimatedSprite"]
+scale = Vector2( 2, 2 )
 frames = SubResource( 5 )
 animation = "idle"
 frame = 1
 script = ExtResource( 2 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="HeartAnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 0.6
 anims/RESET = SubResource( 7 )
 anims/idle = SubResource( 8 )
