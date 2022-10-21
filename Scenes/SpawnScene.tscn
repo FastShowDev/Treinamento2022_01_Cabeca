@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Tiles/Spawn/ThirdLayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/Spawn/SecondLayer.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Objects/LeftGate.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Objects/Heart.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Objects/Coin.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Objects/Bomb.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 5.12006, 10.35, 10.2501, 10.08, 11.0601, 16, 3.86008, 15.93 )
@@ -588,6 +589,17 @@ position = Vector2( 506, 231 )
 [node name="Heart4" parent="Hearts" instance=ExtResource( 9 )]
 position = Vector2( 362, 224 )
 
+[node name="Bombs" type="Node2D" parent="."]
+
+[node name="Bomb" parent="Bombs" instance=ExtResource( 11 )]
+position = Vector2( 337, 238 )
+
+[node name="Bomb2" parent="Bombs" instance=ExtResource( 11 )]
+position = Vector2( 772, 229 )
+
+[node name="Bomb3" parent="Bombs" instance=ExtResource( 11 )]
+position = Vector2( 705, 250 )
+
 [node name="Coins" type="Node2D" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource( 10 )]
@@ -613,3 +625,4 @@ scale = Vector2( 2, 2 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 143, 199 )
+BOMB = ExtResource( 11 )

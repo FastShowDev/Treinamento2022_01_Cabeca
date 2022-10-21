@@ -1,10 +1,11 @@
 extends KinematicBody2D
 
-#Stats
+#Stats + itens
 var max_hearts: int = 4
 var keys: int  = 0
 var hearts: int = 2
 var coins: int = 0
+var bombs: int = 0
 
 #Player physics
 var speed = 175
@@ -14,6 +15,8 @@ var velocity = Vector2.ZERO
 onready var animeted_sprite = $AnimatedSprite
 onready var animation = $AnimationPlayer
 onready var collision = $AttackArea/CollisionShape2D
+
+export var BOMB: PackedScene
 
 #Permissions:
 var can_attack: bool = false
@@ -31,6 +34,8 @@ func _physics_process(delta: float) -> void:
 	attack()
 	verify_direction()
 	animate()
+	use_bomb()
+	#print("Numero de bombas: " + bombs as String)
 	
 func move() -> void:
 	var direction_vector: Vector2 = Vector2(
@@ -115,7 +120,28 @@ func collect_heart() -> void:
 		
 func update_coin_score(coins: int) -> void:
 	pass
-	
+
 func collect_coin() -> void:
 	coins += 1
 	update_coin_score(1)
+
+func update_bomb_score(bomb: int) -> void:
+	pass
+
+func collect_bomb() -> void:
+	print("Coletei!")
+	bombs += 1
+	update_bomb_score(1)
+	
+func use_bomb() -> void:
+	if Input.is_action_just_pressed("use_item") and bombs > 0:
+		print("Usando bomba!")
+		bombs -= 1
+		var bomb = BOMB.instance()
+		get_parent().add_child(bomb)
+		get_parent().call_deferred("add_child", bomb)
+		bomb.exploding = true
+		bomb.scale.x = 1
+		bomb.scale.y = 1
+		bomb.position = global_position
+		bomb.explode()
