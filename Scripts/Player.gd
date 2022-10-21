@@ -2,8 +2,8 @@ extends KinematicBody2D
 
 #Stats + itens
 var max_hearts: int = 4
-var keys: int  = 0
 var hearts: int = 2
+var keys: int  = 0
 var coins: int = 0
 var bombs: int = 0
 
@@ -22,12 +22,15 @@ export var BOMB: PackedScene
 var can_attack: bool = false
 var player_direction: Vector2 = Vector2.ZERO
 
+
 func _ready():
 	pass
+
 
 func _process(delta: float) -> void:
 	#print("Vida atual: " + hearts as String)
 	pass
+
 
 func _physics_process(delta: float) -> void:
 	move()
@@ -37,6 +40,7 @@ func _physics_process(delta: float) -> void:
 	use_bomb()
 	#print("Numero de bombas: " + bombs as String)
 	
+	
 func move() -> void:
 	var direction_vector: Vector2 = Vector2(
 		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
@@ -45,6 +49,7 @@ func move() -> void:
 	
 	velocity = direction_vector * speed
 	velocity = move_and_slide(velocity)
+
 
 func verify_direction() -> void:
 	if velocity.x > 0:
@@ -93,12 +98,14 @@ func animate() -> void:
 		elif player_direction.y == -1:
 			animated_sprite.play("idle_up")
 			
+			
 func play_animation(anim_name):
 	pass
 	
-func on_animation_finished():
 	
+func on_animation_finished():
 	pass
+
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if can_attack:
@@ -106,11 +113,14 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		can_attack = false
 	pass # Replace with function body.
 
+
 func increase_max_heart() -> void:
 	max_hearts += 1
 
+
 func update_heart_score(heart_value: int) -> void:
 	pass
+
 
 func collect_heart() -> void:
 	if hearts >= max_hearts:
@@ -118,6 +128,7 @@ func collect_heart() -> void:
 	else:
 		hearts += 1
 		update_heart_score(hearts)
+		
 		
 func update_coin_score(coins: int) -> void:
 	pass
@@ -150,3 +161,12 @@ func use_bomb() -> void:
 		bomb.scale.y = 1
 		bomb.position = global_position
 		bomb.explode()
+
+
+func update_key_score(key: int) -> void:
+	pass
+
+
+func collect_key() -> void:
+	keys += 1
+	update_key_score(1)
