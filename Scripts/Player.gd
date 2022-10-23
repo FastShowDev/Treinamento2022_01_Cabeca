@@ -15,6 +15,7 @@ var velocity = Vector2.ZERO
 onready var animated_sprite = $AnimatedSprite
 onready var animation = $AnimationPlayer
 onready var collision = $AttackArea/CollisionShape2D
+onready var ui = $"%UserInterface"
 
 export var BOMB: PackedScene
 
@@ -24,8 +25,9 @@ var player_direction: Vector2 = Vector2.ZERO
 
 
 func _ready():
-	pass
-
+	ui.set_coin_value(coins)
+	ui.set_heart_value(hearts)
+	ui.set_bomb_value(bombs)
 
 func _process(delta: float) -> void:
 	#print("Vida atual: " + hearts as String)
@@ -118,41 +120,29 @@ func increase_max_heart() -> void:
 	max_hearts += 1
 
 
-func update_heart_score(heart_value: int) -> void:
-	pass
-
-
 func collect_heart() -> void:
 	if hearts >= max_hearts:
 		return
 	else:
 		hearts += 1
-		update_heart_score(hearts)
+		ui.set_heart_value(hearts)
 		
-		
-func update_coin_score(coins: int) -> void:
-	pass
-
-
 func collect_coin() -> void:
 	coins += 1
-	update_coin_score(1)
+	ui.set_coin_value(coins)
 
 #Bomb functions:
-func update_bomb_score(bomb: int) -> void:
-	pass
-
-
 func collect_bomb() -> void:
 	print("Coletei!")
 	bombs += 1
-	update_bomb_score(1)
+	ui.set_bomb_value(bombs)
 	
 	
 func use_bomb() -> void:
 	if Input.is_action_just_pressed("use_item") and bombs > 0:
 		print("Usando bomba!")
 		bombs -= 1
+		ui.set_bomb_value(bombs)
 		var bomb = BOMB.instance()
 		get_parent().add_child(bomb)
 		get_parent().call_deferred("add_child", bomb)

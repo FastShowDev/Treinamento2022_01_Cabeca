@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Tiles/Spawn/ThirdLayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/Spawn/SecondLayer.tscn" type="PackedScene" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Models/Structures/CommonScructures/CampFire.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Models/Structures/CommonScructures/Woods.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Models/Enemies/Slime.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Interfaces/UserInterface.tscn" type="PackedScene" id=24]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 5.12006, 10.35, 10.2501, 10.08, 11.0601, 16, 3.86008, 15.93 )
@@ -585,6 +586,9 @@ tile_data = PoolIntArray( 131090, 1, 0, 131093, 15, 0, 131094, 16, 0, 131097, 17
 
 [node name="ThirdLayer" parent="Terrain" instance=ExtResource( 1 )]
 tile_data = PoolIntArray( 196629, 1, 196611, 196630, 1, 196612, 262165, 1, 131072, 262166, 1, 131073, 720899, 0, 5, 720902, 0, 131072, 786444, 0, 3, 917509, 0, 4, 917515, 0, 3, 983049, 0, 131072 )
+
+[node name="UserInterface" parent="." instance=ExtResource( 24 )]
+unique_name_in_owner = true
 
 [node name="Keys" type="Node2D" parent="."]
 
