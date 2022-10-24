@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 #Stats + itens
-var max_hearts: int = 4
+var max_hearts: int = 6
 var hearts: int = 2
 var keys: int  = 0
 var coins: int = 0
@@ -25,9 +25,10 @@ var player_direction: Vector2 = Vector2.ZERO
 
 
 func _ready():
-	ui.set_coin_value(coins)
-	ui.set_heart_value(hearts)
-	ui.set_bomb_value(bombs)
+	#ui.set_coin_value(coins)
+	#ui.set_heart_value(hearts)
+	#ui.set_bomb_value(bombs)
+	pass
 
 func _process(delta: float) -> void:
 	#print("Vida atual: " + hearts as String)

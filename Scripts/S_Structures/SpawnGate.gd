@@ -16,12 +16,12 @@ func _input(event: InputEvent) -> void:
 		self.frame = 1
 	elif event.is_action_pressed("interact_item") and is_open and is_player_inside:
 		print("Entrando na dungeon!!!")
-		get_tree().change_scene("res://Scenes/Dungeon.tscn")
+		get_tree().change_scene("res://Scenes/DungeonRooms/DungeonRoom0.tscn")
 		
-func _on_Area2D_body_entered(_player: KinematicBody2D) -> void:
-	if _player is KinematicBody2D:
+func _on_Area2D_body_entered(body) -> void:
+	if body.name == "Player":
 		is_player_inside = true
 
-func _on_Area2D_body_exited(_player: KinematicBody2D) -> void:
-	if _player is KinematicBody2D:
+func _on_Area2D_body_exited(body) -> void:
+	if body.name == "Player":
 		is_player_inside = false

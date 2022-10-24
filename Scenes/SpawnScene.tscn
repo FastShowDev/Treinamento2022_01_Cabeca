@@ -587,9 +587,6 @@ tile_data = PoolIntArray( 131090, 1, 0, 131093, 15, 0, 131094, 16, 0, 131097, 17
 [node name="ThirdLayer" parent="Terrain" instance=ExtResource( 1 )]
 tile_data = PoolIntArray( 196629, 1, 196611, 196630, 1, 196612, 262165, 1, 131072, 262166, 1, 131073, 720899, 0, 5, 720902, 0, 131072, 786444, 0, 3, 917509, 0, 4, 917515, 0, 3, 983049, 0, 131072 )
 
-[node name="UserInterface" parent="." instance=ExtResource( 24 )]
-unique_name_in_owner = true
-
 [node name="Keys" type="Node2D" parent="."]
 
 [node name="Key" parent="Keys" instance=ExtResource( 12 )]
@@ -631,14 +628,20 @@ position = Vector2( 592, 247 )
 [node name="Coin3" parent="Coins" instance=ExtResource( 10 )]
 position = Vector2( 468, 252 )
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UserInterface" parent="CanvasLayer" instance=ExtResource( 24 )]
+unique_name_in_owner = true
+
 [node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 4 )]
+unique_name_in_owner = true
+position = Vector2( 143, 199 )
+BOMB = ExtResource( 11 )
 
 [node name="Slime" parent="YSort" instance=ExtResource( 23 )]
 position = Vector2( 286, 124 )
-
-[node name="Player" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 143, 199 )
-BOMB = ExtResource( 11 )
 
 [node name="Fence" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( 369, 182 )
