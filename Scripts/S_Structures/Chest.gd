@@ -38,11 +38,11 @@ func play_drop_animation(drop, position: Vector2, offset: float) -> void:
 								Tween.EASE_OUT)
 	tween.start()
 	
-	yield(tween, "tween_completed")
+	#yield(tween, "tween_completed")
 	
-	tween.interpolate_property(drop, "position", position + Vector2(20,0), position + Vector2(20, offset), 0.3, Tween.TRANS_SINE,
-								Tween.EASE_IN)
-	tween.start()
+	#tween.interpolate_property(drop, "position", position + Vector2(20,0), position + Vector2(20, offset), 0.3, Tween.TRANS_SINE,
+								#Tween.EASE_IN)
+	#tween.start()
 	
 	
 func _on_Area2D_body_entered(_player: KinematicBody2D) -> void:
