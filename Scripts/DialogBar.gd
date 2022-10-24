@@ -1,6 +1,6 @@
 extends Control
 
-var is_opened:bool = true
+var is_opened:bool = false
 onready var bar = $ChatDialog
 
 func _ready():
