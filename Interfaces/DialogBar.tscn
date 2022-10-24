@@ -15,3 +15,6 @@ margin_right = 1024.0
 margin_bottom = 596.0
 window_title = ""
 dialog_text = "Texto comum"
+
+[connection signal="about_to_show" from="ChatDialog" to="." method="_on_ChatDialog_about_to_show"]
+[connection signal="confirmed" from="ChatDialog" to="." method="_on_ChatDialog_confirmed"]

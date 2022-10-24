@@ -1,5 +1,6 @@
 extends Control
 
+var is_opened:bool = true
 onready var bar = $ChatDialog
 
 func _ready():
@@ -14,6 +15,12 @@ func set_dialog_bar_tittle(text: String) -> void:
 
 func show_dialog_bar() -> void:
 	bar.show()
+	is_opened = true
 	
 func hide_dialog_bar() -> void:
 	bar.hide()
+	is_opened = false
+
+func _on_ChatDialog_confirmed():
+	is_opened = false
+	print(is_opened)
