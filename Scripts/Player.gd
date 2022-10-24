@@ -16,6 +16,7 @@ onready var animated_sprite = $AnimatedSprite
 onready var animation = $AnimationPlayer
 onready var collision = $AttackArea/CollisionShape2D
 onready var ui = $"%UserInterface"
+onready var bar = $"%DialogBar"
 
 export var BOMB: PackedScene
 
@@ -66,7 +67,7 @@ func verify_direction() -> void:
 
 
 func attack() -> void:
-	if Input.is_action_just_pressed("attack") and not can_attack:
+	if Input.is_action_just_pressed("attack") and not can_attack and not bar.is_opened:
 		can_attack = true
 
 
