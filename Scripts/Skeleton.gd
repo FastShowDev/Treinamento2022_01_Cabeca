@@ -15,9 +15,33 @@ var move_direction_x = -1
 var move_direction_y = 1
 var lado = "down"
 
+
+var rng = RandomNumberGenerator.new()
+
+func geraSentido() -> String:
+	
+	rng.randomize()
+	var rn = rng.randi_range ( 0, 3 )
+	var sentido = null
+	
+	if(rn == 0):
+		sentido = 'right'
+	elif(rn == 1):
+		sentido = 'left'
+	elif(rn == 2):
+		sentido = 'up'
+	elif(rn == 3):
+		sentido = 'down'
+		
+	return sentido
+		
+	
+
 func _physics_process(delta: float) -> void:
 	
-	move('right')
+	var sentido = geraSentido()
+	
+	move(sentido)
 	animate()
 	
 func move(direction: String)->void:
