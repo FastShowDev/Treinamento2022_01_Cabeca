@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Models/Structures/Base/PhysicObject.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 902.884, 342.455, 14.3884, 12.6681 )
+
+[node name="TreeLog" instance=ExtResource( 1 )]
+scale = Vector2( 2, 2 )
+texture = SubResource( 1 )
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2( 0, 5.26367 )
