@@ -28,6 +28,7 @@ shape = SubResource( 1 )
 position = Vector2( 64, 80 )
 scale = Vector2( 3.33333, 3.33333 )
 frames = SubResource( 2 )
+frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
