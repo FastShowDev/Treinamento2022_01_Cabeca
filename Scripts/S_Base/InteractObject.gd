@@ -3,7 +3,6 @@ extends StaticBody2D
 var is_player_close: bool = false
 var text: String = "Meu texto"
 
-onready var chat_bar = $"%DialogBar"
 onready var interact_baloom = $InteractBaloom
 
 
