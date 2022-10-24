@@ -7,6 +7,8 @@ var velocity: Vector2
 onready var slime_animation = $SlimeAnimationPlayer
 onready var sprite = $Sprite
 
+var can_die:bool = false
+
 func _ready():
 	pass
 
@@ -31,7 +33,13 @@ func move() -> void:
 	velocity = move_and_slide(velocity)
 
 func animate() -> void:
-	if velocity != Vector2.ZERO:
+	if can_die:
+		slime_animation.stop()
+		slime_animation.play("dead")
+		set_physics_process(false)
+		yield(slime_animation, "animation_finished")
+		queue_free()
+	elif velocity != Vector2.ZERO:
 		slime_animation.play("walk")
 	else:
 		slime_animation.play("idle")
@@ -50,3 +58,8 @@ func _on_DetectionArea_body_entered(body):
 func _on_DetectionArea_body_exited(body):
 	if body.name == "Player":
 		player_ref = null
+
+func _on_CollisionArea_area_entered(area):
+	if area.is_in_group("player_attack"):
+		can_die = true
+	
