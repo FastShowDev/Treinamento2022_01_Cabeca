@@ -8,9 +8,27 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Resource",
+"class": "Character",
+"language": "GDScript",
+"path": "res://References/resources/Character_Resource.gd"
+}, {
+"base": "Resource",
+"class": "Dialog",
+"language": "GDScript",
+"path": "res://References/resources/Dialog_Resource.gd"
+}, {
+"base": "Reference",
+"class": "SaveGameAsJSON",
+"language": "GDScript",
+"path": "res://References/resources/SaveGameAsJSON.gd"
+} ]
 _global_script_class_icons={
 
+"Character": "",
+"Dialog": "",
+"SaveGameAsJSON": ""
 }
 
 [application]
