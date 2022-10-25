@@ -11,6 +11,8 @@ var bombs: int = 0
 var speed = 175
 var velocity = Vector2.ZERO
 
+var stats:= Character.new()
+
 #Components:
 onready var animated_sprite = $AnimatedSprite
 onready var animation = $AnimationPlayer
@@ -119,31 +121,31 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 
 
 func increase_max_heart() -> void:
-	max_hearts += 1
+	stats.max_hearts += 1
 
 
 func collect_heart() -> void:
-	if hearts >= max_hearts:
+	if stats.hearts >= stats.max_hearts:
 		return
 	else:
-		hearts += 1
-		ui.set_heart_value(hearts)
+		stats.hearts += 1
+		ui.set_heart_value(stats.hearts)
 		
 func collect_coin() -> void:
-	coins += 1
-	ui.set_coin_value(coins)
+	stats.coins += 1
+	ui.set_coin_value(stats.coins)
 
 #Bomb functions:
 func collect_bomb() -> void:
 	print("Coletei!")
-	bombs += 1
-	ui.set_bomb_value(bombs)
+	stats.bombs += 1
+	ui.set_bomb_value(stats.bombs)
 	
 	
 func use_bomb() -> void:
-	if Input.is_action_just_pressed("use_item") and bombs > 0:
+	if Input.is_action_just_pressed("use_item") and stats.bombs > 0:
 		print("Usando bomba!")
-		bombs -= 1
+		stats.bombs -= 1
 		ui.set_bomb_value(bombs)
 		var bomb = BOMB.instance()
 		get_parent().add_child(bomb)
@@ -160,5 +162,22 @@ func update_key_score(key: int) -> void:
 
 
 func collect_key() -> void:
-	keys += 1
-	update_key_score(1)
+	stats.keys += 1
+	update_key_score(stats.keys)
+
+func set_stats(new_stats: Character) -> void:
+	set_physics_process(false)
+	stats.global_position = new_stats.global_position
+	self.global_position = new_stats.global_position
+	print("Posicao que o player recebeu no parametro:")
+	print(new_stats.global_position as String)
+	stats.max_hearts = new_stats.max_hearts
+	stats.hearts = new_stats.hearts
+	stats.bombs = new_stats.bombs
+	stats.keys = new_stats.keys
+	stats.speed = new_stats.speed
+	stats.coins = new_stats.coins
+	set_physics_process(true)
+
+func get_stats() -> Character:
+	return stats
