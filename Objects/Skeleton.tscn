@@ -1,15 +1,16 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Enemies/Skeleton/Walk.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Skeleton.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 32 )
+extents = Vector2( 16, 16 )
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=2]
 resource_name = "stopDown"
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("../Skeleton/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -21,11 +22,11 @@ tracks/0/keys = {
 "values": [ 8 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=3]
 resource_name = "stopLeft"
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("../Skeleton/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -37,11 +38,11 @@ tracks/0/keys = {
 "values": [ 10 ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=4]
 resource_name = "stopRight"
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("../Skeleton/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -53,11 +54,10 @@ tracks/0/keys = {
 "values": [ 11 ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "stopUp"
+[sub_resource type="Animation" id=5]
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("../Skeleton/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -69,11 +69,10 @@ tracks/0/keys = {
 "values": [ 1 ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "walkingDown"
+[sub_resource type="Animation" id=6]
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("../Skeleton/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -85,11 +84,10 @@ tracks/0/keys = {
 "values": [ 4, 12 ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "walkingLeft"
+[sub_resource type="Animation" id=7]
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("../Skeleton/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -101,11 +99,10 @@ tracks/0/keys = {
 "values": [ 14, 6 ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "walkingRight"
+[sub_resource type="Animation" id=8]
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("../Skeleton/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -117,12 +114,11 @@ tracks/0/keys = {
 "values": [ 15, 7 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "walkingUp"
+[sub_resource type="Animation" id=9]
 length = 0.8
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("../Skeleton/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -135,9 +131,10 @@ tracks/0/keys = {
 }
 
 [node name="Skeleton" type="KinematicBody2D"]
+script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 32, 32 )
+position = Vector2( 32, 48 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -146,14 +143,14 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 1 )
 vframes = 4
 hframes = 4
-frame = 4
+frame = 8
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/stopDown = SubResource( 7 )
-anims/stopLeft = SubResource( 8 )
-anims/stopRight = SubResource( 9 )
-anims/stopUp = SubResource( 4 )
-anims/walkingDown = SubResource( 2 )
-anims/walkingLeft = SubResource( 5 )
-anims/walkingRight = SubResource( 6 )
-anims/walkingUp = SubResource( 3 )
+[node name="Animation" type="AnimationPlayer" parent="."]
+anims/stopDown = SubResource( 2 )
+anims/stopLeft = SubResource( 3 )
+anims/stopRight = SubResource( 4 )
+anims/stopUp = SubResource( 5 )
+anims/walkingDown = SubResource( 6 )
+anims/walkingLeft = SubResource( 7 )
+anims/walkingRight = SubResource( 8 )
+anims/walkingUp = SubResource( 9 )
