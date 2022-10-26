@@ -56,14 +56,14 @@ func geraSentido() -> String:
 
 func _physics_process(delta: float) -> void:
 	
-	
+	var sentido = geraSentido()
 	
 	updateTimer(delta)
 	
 	if(timer_on):
 		if(time >= 2):	
-			print("akjlsdhflaksjhasdklf")
-			var sentido = geraSentido()
+			
+			sentido = geraSentido()
 			trocaSentido(sentido)
 			animate()
 			resetTimer()
@@ -109,8 +109,7 @@ func animate()->void:
 		elif(move_direction_y == -1):
 			animation.play("walkingUp")
 			return
-		
-		if move_direction_x == 1:
+		elif move_direction_x == 1:
 			animation.play("walkingRight")
 			return
 		elif(move_direction_x == -1):
@@ -118,15 +117,20 @@ func animate()->void:
 			return
 		
 	else:
+		pass
 	
-		if lado == "down":
-			animation.play("stopDown")
-		elif lado == "up":
-			animation.play("stopUp")
-		elif lado == "right":
-			animation.play("stopRight")
-		elif lado == "left":
-			animation.play("stopLeft")
+#		if lado == "down":
+#			animation.play("stopDown")
+#			return
+#		elif lado == "up":
+#			animation.play("stopUp")
+#			return
+#		elif lado == "right":
+#			animation.play("stopRight")
+#			return
+#		elif lado == "left":
+#			animation.play("stopLeft")
+#			return
 		
 
 	
