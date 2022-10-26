@@ -29,10 +29,8 @@ func _create_or_load_save() -> void:
 	
 func _save_game() -> void:
 	print("Salvando jogo!")
-	_save.global_position = _player.global_position
-	print(_player.global_position as String)
 	_save.map_name = "Spawn"
-	_save.character = _player.stats
+	_save.character = _player.get_stats()
 	_save.write_savegame()
 
 
