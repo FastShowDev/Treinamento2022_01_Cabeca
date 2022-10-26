@@ -15,8 +15,27 @@ var move_direction_x = -1
 var move_direction_y = 1
 var lado = "down"
 
+var timer_on = false
+var time = 86395
 
 var rng = RandomNumberGenerator.new()
+
+func resetTimer() -> void:
+	time = 0
+	pass
+
+func startTimer() -> void:
+	timer_on = true
+	pass
+	
+func stopTimer() -> void:
+	timer_on = false
+	pass
+	
+func updateTimer(delta) -> void:
+	if(timer_on):
+		time += delta
+	
 
 func geraSentido() -> String:
 	
@@ -34,17 +53,27 @@ func geraSentido() -> String:
 		sentido = 'down'
 		
 	return sentido
-		
-	
 
 func _physics_process(delta: float) -> void:
 	
-	var sentido = geraSentido()
 	
-	move(sentido)
-	animate()
 	
-func move(direction: String)->void:
+	updateTimer(delta)
+	
+	if(timer_on):
+		if(time >= 2):	
+			print("akjlsdhflaksjhasdklf")
+			var sentido = geraSentido()
+			trocaSentido(sentido)
+			animate()
+			resetTimer()
+	else:
+		startTimer()
+		
+	move()	
+	
+	
+func trocaSentido(direction: String) -> void:
 	
 	if(direction == 'down'):
 		move_direction_x = 0
@@ -58,6 +87,9 @@ func move(direction: String)->void:
 	elif(direction == 'left'):
 		move_direction_x = -1
 		move_direction_y = 0
+	
+	
+func move()->void:
 	
 	velocity.x = speed * move_direction_x
 	velocity = move_and_slide(velocity)
