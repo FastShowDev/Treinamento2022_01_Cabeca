@@ -22,13 +22,11 @@ func write_savegame() -> void:
 	if error != OK:
 		printerr("Could not open the file %s. Aborting save operation. Error code: %s" % [SAVE_GAME_PATH, error])
 		return
-	print(global_position as String)
-	print("Posicao ao salvar!")
 	var data := {
 		"global_position":
 		{
-			"x": global_position.x,
-			"y": global_position.y,
+			"x": character.global_position.x,
+			"y": character.global_position.y,
 		},
 		"map_name": map_name,
 		"player":
@@ -46,6 +44,8 @@ func write_savegame() -> void:
 	var json_string := JSON.print(data)
 	_file.store_string(json_string)
 	_file.close()
+	print("Salvo com sucesso!")
+	emit_signal("script_changed")
 
 
 func load_savegame() -> void:
