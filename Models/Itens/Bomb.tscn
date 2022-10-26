@@ -147,7 +147,7 @@ tracks/0/keys = {
 "values": [ 1 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("ExplosionArea/CollisionShape2D:disabled")
+tracks/1/path = NodePath("ExplosionArea/ExplosionShape:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -187,7 +187,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 18 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("ExplosionArea/CollisionShape2D:disabled")
+tracks/2/path = NodePath("ExplosionArea/ExplosionShape:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -241,9 +241,9 @@ visible = false
 position = Vector2( 0, 5.5 )
 shape = SubResource( 5 )
 
-[node name="ExplosionArea" type="Area2D" parent="."]
+[node name="ExplosionArea" type="Area2D" parent="." groups=["bomb_explosion", "damage"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionArea"]
+[node name="ExplosionShape" type="CollisionShape2D" parent="ExplosionArea"]
 shape = SubResource( 29 )
 
 [node name="BombAnimation" type="AnimationPlayer" parent="."]

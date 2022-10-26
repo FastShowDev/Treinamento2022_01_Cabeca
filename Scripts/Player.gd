@@ -12,11 +12,13 @@ var speed = 175
 var velocity = Vector2.ZERO
 
 var stats:= Character.new()
+var _save:= SaveGameAsJSON.new()
 
 #Components:
 onready var animated_sprite = $AnimatedSprite
 onready var animation = $AnimationPlayer
 onready var collision = $AttackArea/CollisionShape2D
+onready var timer = $DamageDelay
 onready var ui = $"%UserInterface"
 onready var bar = $"%DialogBar"
 
@@ -24,10 +26,12 @@ export var BOMB: PackedScene
 
 #Permissions:
 var can_attack: bool = false
-var player_direction: Vector2 = Vector2.ZERO
-
+var player_direction: Vector2 = Vector2(1,0)
+var can_take_damage: bool = true
 
 func _ready():
+	animated_sprite.visible = true
+	animated_sprite.modulate = Color(1,1,1,1)
 	#ui.set_coin_value(coins)
 	#ui.set_heart_value(hearts)
 	#ui.set_bomb_value(bombs)
@@ -40,8 +44,8 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	move()
-	attack()
 	verify_direction()
+	attack()
 	animate()
 	use_bomb()
 	#print("Numero de bombas: " + bombs as String)
@@ -71,10 +75,13 @@ func verify_direction() -> void:
 func attack() -> void:
 	if Input.is_action_just_pressed("attack") and not can_attack and not bar.is_opened:
 		can_attack = true
+		print("Atack!!!")
 
 
 func animate() -> void:
 	if can_attack:
+		print("oi")
+		set_physics_process(false)
 		if player_direction.x == 1:
 			animation.play("attack_right")
 		if player_direction.x == -1:
@@ -83,7 +90,10 @@ func animate() -> void:
 			animation.play("attack_down")
 		if player_direction.y == -1:
 			animation.play("attack_up")
-		set_physics_process(false)
+		yield(animation, "animation_finished")
+		set_physics_process(true)
+		print("sALV")
+		can_attack = false
 	elif velocity != Vector2.ZERO:
 		if velocity.x > 0:
 			animation.play("move_right")
@@ -111,14 +121,6 @@ func play_animation(anim_name):
 	
 func on_animation_finished():
 	pass
-
-
-func _on_AnimationPlayer_animation_finished(anim_name):
-	if can_attack:
-		set_physics_process(true)
-		can_attack = false
-	pass # Replace with function body.
-
 
 func increase_max_heart() -> void:
 	stats.max_hearts += 1
@@ -169,8 +171,6 @@ func set_stats(new_stats: Character) -> void:
 	set_physics_process(false)
 	stats.global_position = new_stats.global_position
 	self.global_position = new_stats.global_position
-	print("Posicao que o player recebeu no parametro:")
-	print(new_stats.global_position as String)
 	stats.max_hearts = new_stats.max_hearts
 	stats.hearts = new_stats.hearts
 	stats.bombs = new_stats.bombs
@@ -178,6 +178,46 @@ func set_stats(new_stats: Character) -> void:
 	stats.speed = new_stats.speed
 	stats.coins = new_stats.coins
 	set_physics_process(true)
-
+	
+func set_stats_to_default():
+	stats.global_position = Vector2(143,199)
+	stats.bombs = 0
+	stats.coins = 0
+	stats.keys = 0
+	stats.hearts = 4
+	
 func get_stats() -> Character:
 	return stats
+
+func kill():
+	set_stats_to_default()
+	set_physics_process(false)
+	animation.stop()
+	_save.character = stats
+	_save.write_savegame()
+	if player_direction.x == 1:
+		animation.play("die_right")
+	elif player_direction.x == -1:
+		animation.play("die_left")
+	elif player_direction.y == 1:
+		animation.play("die_down")
+	elif player_direction.y == -1:
+		animation.play("die_up")
+		
+	yield(animation, "animation_finished")
+	get_tree().reload_current_scene()
+	
+func damage() -> void:
+	if can_take_damage:
+		stats.hearts -= 1
+		ui.set_heart_value(stats.hearts)
+		if stats.hearts == 0:
+			kill()
+		can_take_damage = false
+		timer.start()
+		yield(timer, "timeout")
+		can_take_damage = true
+
+func _on_DamageArea_area_entered(area):
+	if area.is_in_group("damage"):
+		damage()

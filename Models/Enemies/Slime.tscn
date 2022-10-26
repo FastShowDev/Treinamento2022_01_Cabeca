@@ -75,6 +75,7 @@ tracks/0/keys = {
 radius = 64.0956
 
 [sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 8.5, 6.25 )
 
 [node name="Slime" type="KinematicBody2D"]
 position = Vector2( 0, -1 )
@@ -102,9 +103,10 @@ anims/walk = SubResource( 5 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource( 6 )
 
-[node name="CollisionArea" type="Area2D" parent="."]
+[node name="CollisionArea" type="Area2D" parent="." groups=["damage"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea"]
+position = Vector2( 0, 1.75 )
 shape = SubResource( 8 )
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_DetectionArea_body_entered"]

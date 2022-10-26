@@ -2,8 +2,10 @@ extends AnimatedSprite
 
 var exploding: bool = false
 onready var bomb_anim = $BombAnimation
+onready var explosion = $ExplosionArea/ExplosionShape
 
 func _ready():
+	explosion.disabled = true
 	pass
 
 

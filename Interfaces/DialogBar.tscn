@@ -12,7 +12,7 @@ visible = true
 modulate = Color( 0.996078, 0.996078, 0.996078, 1 )
 margin_top = 506.0
 margin_right = 1024.0
-margin_bottom = 596.0
+margin_bottom = 600.0
 window_title = ""
 dialog_text = "Texto comum"
 

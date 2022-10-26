@@ -60,6 +60,6 @@ func _on_DetectionArea_body_exited(body):
 		player_ref = null
 
 func _on_CollisionArea_area_entered(area):
-	if area.is_in_group("player_attack"):
+	if area.is_in_group("player_attack") or area.is_in_group("bomb_explosion"):
 		can_die = true
 	
