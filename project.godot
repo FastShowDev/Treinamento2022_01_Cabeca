@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "SaveGameAsJSON",
 "language": "GDScript",
-"path": "res://References/resources/SaveGameAsJSON.gd"
+"path": "res://References/saves/SaveGameAsJSON.gd"
 } ]
 _global_script_class_icons={
 "Character": "",
