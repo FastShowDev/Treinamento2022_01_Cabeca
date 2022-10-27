@@ -7,7 +7,7 @@ var version := 1
 
 var character: Resource = Character.new()
 
-var map_name := ""
+var map_name : String
 var global_position :Vector2
 
 var _file := File.new()
@@ -22,6 +22,8 @@ func write_savegame() -> void:
 	if error != OK:
 		printerr("Could not open the file %s. Aborting save operation. Error code: %s" % [SAVE_GAME_PATH, error])
 		return
+	print("Na função write: ")
+	print(character.global_position)
 	var data := {
 		"global_position":
 		{
@@ -44,8 +46,7 @@ func write_savegame() -> void:
 	var json_string := JSON.print(data)
 	_file.store_string(json_string)
 	_file.close()
-	print("Salvo com sucesso!")
-	emit_signal("script_changed")
+	#emit_signal("save_completed")
 
 
 func load_savegame() -> void:
@@ -61,7 +62,6 @@ func load_savegame() -> void:
 	character = Character.new()
 	character.global_position = Vector2(data.global_position.x, data.global_position.y)
 	map_name = data.map_name
-	print("A posicao do personagem: x = " + data.global_position.x as String + " y = " + data.global_position.y as String)
 	character.display_name = data.player.display_name
 	character.speed = data.player.speed
 	character.max_hearts = data.player.max_hearts

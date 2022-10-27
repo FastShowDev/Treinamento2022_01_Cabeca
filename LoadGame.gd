@@ -2,11 +2,12 @@
 # resources to the user interface and the player.
 extends Node2D
 
-var map_name = ""
+var map_name = get_node(".").name
 var _save := SaveGameAsJSON.new()
 
 onready var _player := $YSort/Player
 onready var _interface := $CanvasLayer/UserInterface
+onready var _bar := $CanvasLayer/DialogBar
 
 func _ready() -> void:
 	_create_or_load_save()
@@ -29,10 +30,9 @@ func _create_or_load_save() -> void:
 	
 func _save_game() -> void:
 	print("Salvando jogo!")
-	_save.map_name = "Spawn"
-	_save.character = _player.get_stats()
+	_save.map_name = map_name
+	_save.character = _player.get_actual_stats()
 	_save.write_savegame()
-
 
 func _on_Spawn_tree_exiting():
 	print("Saindo do jogo!")

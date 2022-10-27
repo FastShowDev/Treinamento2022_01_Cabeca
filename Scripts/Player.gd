@@ -179,22 +179,29 @@ func set_stats(new_stats: Character) -> void:
 	stats.coins = new_stats.coins
 	set_physics_process(true)
 	
+func get_actual_stats() -> Character:
+	stats.global_position = self.global_position
+	return stats
+	
 func set_stats_to_default():
-	stats.global_position = Vector2(143,199)
+	global_position = Vector2(143,199)
 	stats.bombs = 0
 	stats.coins = 0
 	stats.keys = 0
-	stats.hearts = 4
-	
+	stats.hearts = 1
+
 func get_stats() -> Character:
 	return stats
 
 func kill():
-	set_stats_to_default()
 	set_physics_process(false)
 	animation.stop()
-	_save.character = stats
-	_save.write_savegame()
+	#_save.character = stats
+	
+	#_save.write_savegame()
+	
+	#yield(_save, "save_completed")
+	
 	if player_direction.x == 1:
 		animation.play("die_right")
 	elif player_direction.x == -1:
@@ -205,6 +212,7 @@ func kill():
 		animation.play("die_up")
 		
 	yield(animation, "animation_finished")
+	set_stats_to_default()
 	get_tree().reload_current_scene()
 	
 func damage() -> void:
