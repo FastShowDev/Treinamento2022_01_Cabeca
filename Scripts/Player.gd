@@ -11,6 +11,7 @@ var bombs: int = 0
 var speed = 175
 var velocity = Vector2.ZERO
 
+#Resources
 var stats:= Character.new()
 var _save:= SaveGameAsJSON.new()
 
@@ -57,7 +58,7 @@ func move() -> void:
 		Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 	).normalized()
 	
-	velocity = direction_vector * speed
+	velocity = direction_vector * stats.speed
 	velocity = move_and_slide(velocity)
 
 
@@ -75,12 +76,10 @@ func verify_direction() -> void:
 func attack() -> void:
 	if Input.is_action_just_pressed("attack") and not can_attack and not bar.is_opened:
 		can_attack = true
-		print("Atack!!!")
 
 
 func animate() -> void:
 	if can_attack:
-		print("oi")
 		set_physics_process(false)
 		if player_direction.x == 1:
 			animation.play("attack_right")
@@ -92,7 +91,6 @@ func animate() -> void:
 			animation.play("attack_up")
 		yield(animation, "animation_finished")
 		set_physics_process(true)
-		print("sALV")
 		can_attack = false
 	elif velocity != Vector2.ZERO:
 		if velocity.x > 0:
@@ -115,13 +113,6 @@ func animate() -> void:
 			animated_sprite.play("idle_up")
 			
 			
-func play_animation(anim_name):
-	pass
-	
-	
-func on_animation_finished():
-	pass
-
 func increase_max_heart() -> void:
 	stats.max_hearts += 1
 
@@ -133,9 +124,11 @@ func collect_heart() -> void:
 		stats.hearts += 1
 		ui.set_heart_value(stats.hearts)
 		
+		
 func collect_coin() -> void:
 	stats.coins += 1
 	ui.set_coin_value(stats.coins)
+
 
 #Bomb functions:
 func collect_bomb() -> void:
@@ -167,6 +160,7 @@ func collect_key() -> void:
 	stats.keys += 1
 	update_key_score(stats.keys)
 
+#Player status functions:
 func set_stats(new_stats: Character) -> void:
 	set_physics_process(false)
 	stats.global_position = new_stats.global_position
