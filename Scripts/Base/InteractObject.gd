@@ -8,9 +8,10 @@ onready var interact_baloom = $InteractBaloom
 
 func _ready():
 	interact_baloom.hide()
-		
+	
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":
+		print("on")
 		interact_baloom.show()
 		is_player_close = true
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Models/Structures/Base/InteractiveObject.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Structures/StructuresDialogBar.gd" type="Script" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
@@ -10,6 +11,7 @@ region = Rect2( 323.598, 2.67089, 15.1224, 13.6101 )
 [node name="SignT2_" instance=ExtResource( 1 )]
 scale = Vector2( 2, 2 )
 texture = SubResource( 1 )
+script = ExtResource( 3 )
 
 [node name="CollisionShape2D" parent="StaticBody2D" index="1"]
 position = Vector2( 0, 4 )

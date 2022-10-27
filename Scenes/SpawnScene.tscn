@@ -24,8 +24,8 @@
 [ext_resource path="res://Models/Structures/CommonScructures/Woods.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Models/Enemies/Slime.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Interfaces/UserInterface.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Scripts/Structures/ISignT1.gd" type="Script" id=25]
 [ext_resource path="res://Interfaces/DialogBar.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Scripts/Spawn.gd" type="Script" id=27]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 5.12006, 10.35, 10.2501, 10.08, 11.0601, 16, 3.86008, 15.93 )
@@ -636,6 +636,7 @@ margin_right = -1.0
 margin_bottom = 10.0
 
 [node name="YSort" type="YSort" parent="."]
+script = ExtResource( 27 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 143, 199 )
@@ -721,10 +722,11 @@ position = Vector2( 976, 279 )
 
 [node name="Sign01" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 240, 243 )
-script = ExtResource( 25 )
+script = null
 
 [node name="SignT2_" parent="YSort" instance=ExtResource( 15 )]
 position = Vector2( 656, 178 )
+script = null
 
 [node name="Grave" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( 817, 112 )
@@ -737,15 +739,19 @@ position = Vector2( 945, 112 )
 
 [node name="IGrave" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 753, 176 )
+script = null
 
 [node name="IGrave2" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 881, 177 )
+script = null
 
 [node name="IGrave3" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 945, 176 )
+script = null
 
 [node name="IGrave4" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 817, 176 )
+script = null
 
 [node name="TreeLog" parent="YSort" instance=ExtResource( 18 )]
 position = Vector2( 369, 273 )
