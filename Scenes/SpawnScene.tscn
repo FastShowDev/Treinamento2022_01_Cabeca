@@ -624,8 +624,16 @@ position = Vector2( 468, 252 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBar" parent="CanvasLayer" instance=ExtResource( 26 )]
+unique_name_in_owner = true
+margin_left = -1.0
+margin_bottom = 7.0
 
 [node name="UserInterface" parent="CanvasLayer" instance=ExtResource( 24 )]
+unique_name_in_owner = true
+margin_left = -1.0
+margin_top = 10.0
+margin_right = -1.0
+margin_bottom = 10.0
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -803,4 +811,5 @@ scale = Vector2( 2, 2 )
 [node name="Gate" parent="YSort/Structures" instance=ExtResource( 8 )]
 position = Vector2( 687, 176 )
 scale = Vector2( 2, 2 )
+
 [connection signal="tree_exiting" from="." to="." method="_on_Spawn_tree_exiting"]
