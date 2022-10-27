@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=1]
 [ext_resource path="res://Models/Structures/Base/InteractiveObject.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scripts/Structures/StructuresDialogBar.gd" type="Script" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -11,7 +10,6 @@ region = Rect2( 869.899, 187.51, 11.5063, 15.8969 )
 [node name="IGrave" instance=ExtResource( 2 )]
 scale = Vector2( 2, 2 )
 texture = SubResource( 1 )
-script = ExtResource( 3 )
 
 [node name="CollisionShape2D2" parent="Area2D" index="0"]
 position = Vector2( 0, 0.5 )
