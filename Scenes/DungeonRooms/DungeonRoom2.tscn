@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scenes/Dungeon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=2]
-[ext_resource path="res://Objects/Skeleton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Models/Enemies/Skeleton.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )

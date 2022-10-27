@@ -24,7 +24,7 @@
 [ext_resource path="res://Models/Structures/CommonScructures/Woods.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Models/Enemies/Slime.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Interfaces/UserInterface.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Scripts/S_Structures/ISignT1.gd" type="Script" id=25]
+[ext_resource path="res://Scripts/Structures/ISignT1.gd" type="Script" id=25]
 [ext_resource path="res://Interfaces/DialogBar.tscn" type="PackedScene" id=26]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]

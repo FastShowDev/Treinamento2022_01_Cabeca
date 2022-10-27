@@ -19,7 +19,7 @@
 [ext_resource path="res://Assets/bomb-assets/2-Bomb On/1.png" type="Texture" id=17]
 [ext_resource path="res://Assets/bomb-assets/3-Explotion/9.png" type="Texture" id=18]
 [ext_resource path="res://Assets/bomb-assets/2-Bomb On/3.png" type="Texture" id=19]
-[ext_resource path="res://Scripts/S_Itens/Bomb.gd" type="Script" id=20]
+[ext_resource path="res://Scripts/Itens/Bomb.gd" type="Script" id=20]
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 17 )
