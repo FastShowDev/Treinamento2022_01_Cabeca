@@ -639,6 +639,7 @@ margin_bottom = 10.0
 script = ExtResource( 27 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
+unique_name_in_owner = true
 position = Vector2( 143, 199 )
 BOMB = ExtResource( 11 )
 

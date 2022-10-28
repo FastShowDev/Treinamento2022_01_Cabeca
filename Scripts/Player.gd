@@ -76,6 +76,7 @@ func verify_direction() -> void:
 func attack() -> void:
 	if Input.is_action_just_pressed("attack") and not can_attack and not bar.is_opened:
 		can_attack = true
+		print(stats.keys)
 
 
 func animate() -> void:

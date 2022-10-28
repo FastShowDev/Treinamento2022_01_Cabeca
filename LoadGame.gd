@@ -5,7 +5,7 @@ extends Node2D
 var map_name = get_node(".").name
 var _save := SaveGameAsJSON.new()
 
-onready var _player := $YSort/Player
+onready var _player := $"%Player"
 onready var _interface := $CanvasLayer/UserInterface
 onready var _bar := $CanvasLayer/DialogBar
 
