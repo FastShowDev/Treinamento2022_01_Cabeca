@@ -141,7 +141,7 @@ func use_bomb() -> void:
 	if Input.is_action_just_pressed("use_item") and stats.bombs > 0:
 		print("Usando bomba!")
 		stats.bombs -= 1
-		ui.set_bomb_value(bombs)
+		ui.set_bomb_value(stats.bombs)
 		var bomb = BOMB.instance()
 		get_parent().add_child(bomb)
 		get_parent().call_deferred("add_child", bomb)
