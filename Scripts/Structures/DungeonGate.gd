@@ -20,7 +20,7 @@ func _ready():
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact_item") and is_player_inside and player.stats.keys > 0 and not is_open:
-		player.stats.keys -= 1
+		player.use_key()
 		is_open = true
 		interact_baloom.hide()
 		self.frame = 1

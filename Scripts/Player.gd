@@ -76,7 +76,6 @@ func verify_direction() -> void:
 func attack() -> void:
 	if Input.is_action_just_pressed("attack") and not can_attack and not bar.is_opened:
 		can_attack = true
-		print(stats.keys)
 
 
 func animate() -> void:
@@ -153,13 +152,13 @@ func use_bomb() -> void:
 		bomb.explode()
 
 
-func update_key_score(key: int) -> void:
-	pass
-
-
 func collect_key() -> void:
 	stats.keys += 1
-	update_key_score(stats.keys)
+	ui.set_key_value(stats.keys)
+	
+func use_key() -> void:
+	stats.keys -= 1
+	ui.set_key_value(stats.keys)
 
 #Player status functions:
 func set_stats(new_stats: Character) -> void:
