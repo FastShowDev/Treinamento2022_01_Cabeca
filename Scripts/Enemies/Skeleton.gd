@@ -101,20 +101,20 @@ func move()->void:
 
 func animate()->void:
 	
-	if velocity != Vector2.ZERO:
+#	if velocity != Vector2.ZERO:
 		
-		if move_direction_y == 1:
-			animation.play("walkingDown")
-			return
-		elif(move_direction_y == -1):
-			animation.play("walkingUp")
-			return
-		elif move_direction_x == 1:
-			animation.play("walkingRight")
-			return
-		elif(move_direction_x == -1):
-			animation.play("walkingLeft")
-			return
+	if move_direction_y == 1:
+		animation.play("walkingDown")
+		return
+	elif(move_direction_y == -1):
+		animation.play("walkingUp")
+		return
+	elif move_direction_x == 1:
+		animation.play("walkingRight")
+		return
+	elif(move_direction_x == -1):
+		animation.play("walkingLeft")
+		return
 		
 	else:
 		pass
