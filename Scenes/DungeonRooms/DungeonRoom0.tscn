@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Dungeon.tscn" type="PackedScene" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://Interfaces/UserInterface.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Interfaces/DialogBar.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Models/Structures/Gates/TopDungeonGate.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Models/Structures/Gates/LeftDungeonGate.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Models/Structures/Gates/RightDungeonGate.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Models/Structures/Gates/BottomDungeonGate.tscn" type="PackedScene" id=10]
 
 [sub_resource type="TileSet" id=1]
 0/name = "roguelikeSheet_transparent.png 0"
@@ -229,24 +232,6 @@ script = ExtResource( 3 )
 
 [node name="Dungeon" parent="." instance=ExtResource( 2 )]
 
-[node name="Gates" type="Node2D" parent="."]
-
-[node name="TopDungeonGate" parent="Gates" instance=ExtResource( 7 )]
-position = Vector2( 512, 20 )
-scale = Vector2( 4, 4 )
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="DialogBar" parent="CanvasLayer" instance=ExtResource( 6 )]
-unique_name_in_owner = true
-margin_left = 1.0
-margin_top = 42.0
-margin_right = 1.0
-margin_bottom = 42.0
-
-[node name="UserInterface" parent="CanvasLayer" instance=ExtResource( 5 )]
-unique_name_in_owner = true
-
 [node name="Terrain" type="Node2D" parent="."]
 
 [node name="FirstLayer" type="TileMap" parent="Terrain"]
@@ -263,7 +248,38 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 131078, 0, 0, 131081, 0, 0, 131085, 7, 0, 196610, 1, 0, 196620, 1, 0, 262146, 0, 0, 262150, 0, 0, 262152, 7, 0, 262153, 0, 0, 262156, 0, 0, 393218, 0, 0, 393220, 7, 0, 393223, 10, 0, 393228, 0, 0, 458765, 10, 0, 524293, 7, 0, 524298, 10, 0 )
 
+[node name="Gates" type="Node2D" parent="."]
+
+[node name="TopDungeonGate" parent="Gates" instance=ExtResource( 7 )]
+position = Vector2( 512, 20 )
+scale = Vector2( 4, 4 )
+
+[node name="LeftDungeonGate" parent="Gates" instance=ExtResource( 8 )]
+position = Vector2( 20, 319 )
+scale = Vector2( 4, 4 )
+
+[node name="RightDungeonGate" parent="Gates" instance=ExtResource( 9 )]
+position = Vector2( 1005, 320 )
+scale = Vector2( 4, 4 )
+
+[node name="BottomDungeonGate" parent="Gates" instance=ExtResource( 10 )]
+position = Vector2( 512, 620 )
+scale = Vector2( 4, 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogBar" parent="CanvasLayer" instance=ExtResource( 6 )]
+unique_name_in_owner = true
+visible = false
+margin_left = 1.0
+margin_top = 42.0
+margin_right = 1.0
+margin_bottom = 42.0
+
+[node name="UserInterface" parent="CanvasLayer" instance=ExtResource( 5 )]
+unique_name_in_owner = true
+
 [node name="Player" parent="." instance=ExtResource( 4 )]
 unique_name_in_owner = true
-position = Vector2( 503, 532 )
+position = Vector2( 519, 488 )
 scale = Vector2( 2, 2 )
