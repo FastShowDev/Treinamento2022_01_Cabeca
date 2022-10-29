@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Tiles/Spawn/ThirdLayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/Spawn/SecondLayer.tscn" type="PackedScene" id=2]
@@ -8,8 +8,6 @@
 [ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=6]
 [ext_resource path="res://Models/Structures/RightGate.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Models/Structures/LeftGate.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Models/Itens/Heart.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Models/Itens/Coin.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Models/Itens/Bomb.tscn" type="PackedScene" id=11]
 [ext_resource path="res://LoadGame.gd" type="Script" id=12]
 [ext_resource path="res://Models/Structures/IntectiveStructures/ISignT1.tscn" type="PackedScene" id=13]
@@ -22,7 +20,6 @@
 [ext_resource path="res://Models/Structures/CommonScructures/TreeLogT2_.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Models/Structures/CommonScructures/CampFire.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Models/Structures/CommonScructures/Woods.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Models/Enemies/Slime.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Interfaces/UserInterface.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Interfaces/DialogBar.tscn" type="PackedScene" id=26]
 [ext_resource path="res://Scripts/Structures/SpawnStructuresDialog.gd" type="Script" id=27]
@@ -592,42 +589,17 @@ tile_data = PoolIntArray( 131090, 1, 0, 131093, 15, 0, 131094, 16, 0, 131097, 17
 [node name="ThirdLayer" parent="Terrain" instance=ExtResource( 1 )]
 tile_data = PoolIntArray( 196629, 1, 196611, 196630, 1, 196612, 262165, 1, 131072, 262166, 1, 131073, 720899, 0, 5, 720902, 0, 131072, 786444, 0, 3, 917509, 0, 4, 917515, 0, 3, 983049, 0, 131072 )
 
-[node name="Keys" type="Node2D" parent="."]
-
-[node name="Hearts" type="Node2D" parent="."]
-
-[node name="Heart" parent="Hearts" instance=ExtResource( 9 )]
-position = Vector2( 430, 229 )
-
-[node name="Heart2" parent="Hearts" instance=ExtResource( 9 )]
-position = Vector2( 550, 233 )
-
-[node name="Heart3" parent="Hearts" instance=ExtResource( 9 )]
-position = Vector2( 506, 231 )
-
-[node name="Heart4" parent="Hearts" instance=ExtResource( 9 )]
-position = Vector2( 362, 224 )
-
-[node name="Bombs" type="Node2D" parent="."]
-
-[node name="Coins" type="Node2D" parent="."]
-
-[node name="Coin" parent="Coins" instance=ExtResource( 10 )]
-position = Vector2( 636, 232 )
-
-[node name="Coin2" parent="Coins" instance=ExtResource( 10 )]
-position = Vector2( 592, 247 )
-
-[node name="Coin3" parent="Coins" instance=ExtResource( 10 )]
-position = Vector2( 468, 252 )
+[node name="Drops" type="Node2D" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBar" parent="CanvasLayer" instance=ExtResource( 26 )]
+unique_name_in_owner = true
 margin_left = -1.0
 margin_bottom = 7.0
 
 [node name="UserInterface" parent="CanvasLayer" instance=ExtResource( 24 )]
+unique_name_in_owner = true
 margin_left = -1.0
 margin_top = 10.0
 margin_right = -1.0
@@ -637,11 +609,9 @@ margin_bottom = 10.0
 script = ExtResource( 27 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
+unique_name_in_owner = true
 position = Vector2( 143, 199 )
 BOMB = ExtResource( 11 )
-
-[node name="Slime" parent="YSort" instance=ExtResource( 23 )]
-position = Vector2( 286, 124 )
 
 [node name="Fence" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( 369, 182 )
@@ -796,17 +766,16 @@ position = Vector2( 175, 209 )
 [node name="Woods" parent="YSort" instance=ExtResource( 22 )]
 position = Vector2( 114, 208 )
 
-[node name="Structures" type="Node2D" parent="YSort"]
-
-[node name="Chest" parent="YSort/Structures" instance=ExtResource( 3 )]
+[node name="Chest" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( 624, 180 )
 scale = Vector2( 1.5, 1.5 )
 
-[node name="Gate2" parent="YSort/Structures" instance=ExtResource( 7 )]
+[node name="Gate2" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 719, 176 )
 scale = Vector2( 2, 2 )
 
-[node name="Gate" parent="YSort/Structures" instance=ExtResource( 8 )]
+[node name="Gate" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 687, 176 )
 scale = Vector2( 2, 2 )
+
 [connection signal="tree_exiting" from="." to="." method="_on_Spawn_tree_exiting"]
