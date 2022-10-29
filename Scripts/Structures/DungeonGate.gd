@@ -18,6 +18,11 @@ func _ready():
 	self.playing = false
 	self.frame = 0
 
+func open_gate() -> void:
+	is_open = true
+	self.frame = 1
+	interact_baloom.hide()
+
 func set_dungeon_path(path: String) -> void:
 	dungeon_room_path = path
 
@@ -27,17 +32,19 @@ func _input(event: InputEvent) -> void:
 		is_open = true
 		interact_baloom.hide()
 		self.frame = 1
-	elif event.is_action_pressed("interact_item") and is_open:
+	elif event.is_action_pressed("interact_item") and is_open and is_player_inside:
 		_save.character = player.get_actual_stats()
 		_save.write_savegame()
 		get_tree().change_scene(dungeon_room_path)
 		
 func _on_Area2D_body_entered(body) -> void:
-	if body.name == "Player" and not is_open:
+	if body.name == "Player":
 		is_player_inside = true
-		interact_baloom.show()
+		if not is_open:
+			interact_baloom.show()
 
 func _on_Area2D_body_exited(body) -> void:
-	if body.name == "Player" and not is_open:
+	if body.name == "Player":
 		is_player_inside = false
-		interact_baloom.hide()
+		if not is_open:
+			interact_baloom.hide()
