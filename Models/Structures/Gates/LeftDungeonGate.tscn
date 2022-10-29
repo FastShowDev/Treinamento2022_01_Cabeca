@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Models/Structures/Base/BaseDungeonGate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Dungeon-assets/sheet-sem-fundo.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 154, 176, 22, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 154, 144, 22, 32 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="LeftDungeonGate" instance=ExtResource( 1 )]
+frames = SubResource( 3 )
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2( 1.5, 0 )
+
+[node name="InteractBaloom" parent="StaticBody2D" index="1"]
+position = Vector2( -1, 1 )
