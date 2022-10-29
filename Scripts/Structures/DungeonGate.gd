@@ -18,6 +18,9 @@ func _ready():
 	self.playing = false
 	self.frame = 0
 
+func set_dungeon_path(path: String) -> void:
+	dungeon_room_path = path
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact_item") and is_player_inside and player.stats.keys > 0 and not is_open:
 		player.use_key()

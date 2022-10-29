@@ -28,8 +28,8 @@ func drop_object() -> void:
 	var drop2 = object2.instance()
 	#var object = object_scene.instance()
 	#owner.get_node("Bombs").add_child(object)
-	owner.get_node("YSort").add_child(drop1)
-	owner.get_node("Keys").add_child(drop2)
+	owner.get_node("Drops").add_child(drop1)
+	owner.get_node("Drops").add_child(drop2)
 	play_drop_animation(drop1, position, 10)
 	play_drop_animation(drop2, position, 50)	
 
