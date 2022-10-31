@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Dungeon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Models/Structures/Gates/LeftDungeonGate.tscn" type="PackedScene" id=3]
 
 [sub_resource type="TileSet" id=1]
 0/name = "roguelikeSheet_transparent.png 0"
@@ -668,6 +669,12 @@ points = PoolVector2Array( 0, 16, 16, 16, 16, 33, 0, 33 )
 [node name="Node2D" type="Node2D"]
 
 [node name="Dungeon" parent="." instance=ExtResource( 2 )]
+
+[node name="Gates" type="Node2D" parent="."]
+
+[node name="LeftDungeonGate" parent="Gates" instance=ExtResource( 3 )]
+position = Vector2( 20, 320 )
+scale = Vector2( 4, 4 )
 
 [node name="Terrain" type="Node2D" parent="."]
 
