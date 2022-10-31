@@ -6,6 +6,7 @@ const SAVE_GAME_PATH := "C://Users//zlFas//Documents//Saves//save.json"
 var version := 1
 
 var character: Resource = Character.new()
+var dungeon: Resource = Dungeon.new()
 
 var map_name : String
 var global_position :Vector2
