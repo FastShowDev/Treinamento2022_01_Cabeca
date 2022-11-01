@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Tiles/Spawn/ThirdLayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/Spawn/SecondLayer.tscn" type="PackedScene" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=6]
 [ext_resource path="res://Models/Structures/RightGate.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Models/Structures/LeftGate.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Models/Itens/Bomb.tscn" type="PackedScene" id=11]
 [ext_resource path="res://LoadGame.gd" type="Script" id=12]
 [ext_resource path="res://Models/Structures/IntectiveStructures/ISignT1.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Models/Structures/IntectiveStructures/IGrave.tscn" type="PackedScene" id=14]
@@ -566,6 +565,7 @@ points = PoolVector2Array( 4.3761, 9.82083, 12.5859, 9.55164, 12.7206, 13.7239, 
 27/z_index = 0
 
 [node name="Spawn" type="Node2D"]
+position = Vector2( -2, -4 )
 script = ExtResource( 12 )
 
 [node name="Interfaces" type="Control" parent="."]
@@ -605,13 +605,14 @@ margin_top = 10.0
 margin_right = -1.0
 margin_bottom = 10.0
 
+[node name="Instances" type="Node2D" parent="."]
+
 [node name="YSort" type="YSort" parent="."]
 script = ExtResource( 27 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
 unique_name_in_owner = true
 position = Vector2( 143, 199 )
-BOMB = ExtResource( 11 )
 
 [node name="Fence" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( 369, 182 )
