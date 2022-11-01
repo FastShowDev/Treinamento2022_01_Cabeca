@@ -34,6 +34,6 @@ func _save_game() -> void:
 	_save.character = _player.get_actual_stats()
 	_save.write_savegame()
 
-func _on_Spawn_tree_exiting():
+func _on_scene_tree_exiting():
 	print("Saindo do jogo!")
 	_save_game()
