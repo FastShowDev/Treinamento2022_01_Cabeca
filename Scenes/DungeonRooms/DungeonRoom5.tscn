@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Dungeon.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Models/Structures/Gates/LeftDungeonGate.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Interfaces/DialogBar.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Interfaces/UserInterface.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Models/Player.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -190,6 +191,10 @@ position = Vector2( 448, 312 )
 
 [node name="Bat4" parent="Enemies" instance=ExtResource( 3 )]
 position = Vector2( 536, 88 )
+
+[node name="Player" parent="." instance=ExtResource( 8 )]
+position = Vector2( 96, 311 )
+scale = Vector2( 2, 2 )
 
 [node name="Interfaces" type="Control" parent="."]
 margin_right = 40.0
