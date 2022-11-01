@@ -779,4 +779,4 @@ scale = Vector2( 2, 2 )
 position = Vector2( 687, 176 )
 scale = Vector2( 2, 2 )
 
-[connection signal="tree_exiting" from="." to="." method="_on_Spawn_tree_exiting"]
+[connection signal="tree_exiting" from="." to="." method="_on_scene_tree_exiting"]
