@@ -12,8 +12,9 @@ var speed = 175
 var velocity = Vector2.ZERO
 
 #Resources
-var stats:= Character.new()
-var _save:= SaveGameAsJSON.new()
+var stats := Character.new()
+var _save := SaveGameAsJSON.new()
+var map := Map.new()
 
 #Components:
 onready var animated_sprite = $AnimatedSprite
@@ -23,7 +24,7 @@ onready var timer = $DamageDelay
 onready var ui = $"%UserInterface"
 onready var bar = $"%DialogBar"
 
-export var BOMB: PackedScene
+var BOMB: PackedScene = preload("res://Models/Itens/Bomb.tscn")
 
 #Permissions:
 var can_attack: bool = false
@@ -143,11 +144,10 @@ func use_bomb() -> void:
 		stats.bombs -= 1
 		ui.set_bomb_value(stats.bombs)
 		var bomb = BOMB.instance()
-		get_parent().add_child(bomb)
-		get_parent().call_deferred("add_child", bomb)
+		owner.get_node("Instances").add_child(bomb)
 		bomb.exploding = true
-		bomb.scale.x = 1
-		bomb.scale.y = 1
+		#bomb.scale.x = 1
+		#bomb.scale.y = 1
 		bomb.position = global_position
 		bomb.explode()
 
