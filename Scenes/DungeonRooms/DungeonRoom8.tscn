@@ -209,6 +209,7 @@ position = Vector2( 848, 464 )
 position = Vector2( 848, 80 )
 
 [node name="Player" parent="." instance=ExtResource( 8 )]
+unique_name_in_owner = true
 position = Vector2( 87, 302 )
 scale = Vector2( 2, 2 )
 
