@@ -6,7 +6,6 @@ const SAVE_GAME_PATH := "C://Users//zlFas//Documents//Saves//save.json"
 var version := 1
 
 var character: Resource = Character.new()
-var dungeon: Resource = Dungeon.new()
 
 var map_name : String
 var global_position :Vector2
@@ -47,6 +46,7 @@ func write_savegame() -> void:
 	var json_string := JSON.print(data)
 	_file.store_string(json_string)
 	_file.close()
+	data_saved(character)
 	#emit_signal("save_completed")
 
 
@@ -72,3 +72,13 @@ func load_savegame() -> void:
 	character.coins = data.player.coins
 	
 	
+func data_saved(data:Character) -> void:
+	print("")
+	print("Dados escritos no arquivo de save: ")
+	print("Player: ")
+	print("Posição: " + data.global_position as String)
+	print("Hearts: " + data.hearts as String)
+	print("Bombs: " + data.bombs as String)
+	print("Coins: " + data.coins as String)
+	print("Keys: " + data.coins as String)
+	print("")
