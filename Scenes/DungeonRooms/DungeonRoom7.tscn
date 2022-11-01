@@ -394,6 +394,8 @@ scale = Vector2( 4, 4 )
 position = Vector2( 512, 620 )
 scale = Vector2( 4, 4 )
 
+[node name="Instances" type="Node2D" parent="."]
+
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 510, 531 )
 scale = Vector2( 2, 2 )

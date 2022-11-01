@@ -192,6 +192,8 @@ scale = Vector2( 4, 4 )
 position = Vector2( 512, 21 )
 scale = Vector2( 4, 4 )
 
+[node name="Instances" type="Node2D" parent="."]
+
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Ball" parent="Enemies" instance=ExtResource( 3 )]

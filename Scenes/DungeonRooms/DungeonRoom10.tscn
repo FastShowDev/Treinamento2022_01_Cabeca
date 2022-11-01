@@ -702,6 +702,8 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 196612, 5, 0, 196613, 10, 0, 196614, 4, 0, 196617, 6, 0, 196618, 10, 0, 196619, 5, 0, 262148, 4, 0, 262150, 7, 0, 262155, 9, 0, 327684, 9, 0, 327691, 7, 0 )
 
+[node name="Instances" type="Node2D" parent="."]
+
 [node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( 98, 307 )
 scale = Vector2( 2, 2 )
