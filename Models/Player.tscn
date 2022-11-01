@@ -998,7 +998,6 @@ extents = Vector2( 11.5, 7.5 )
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-modulate = Color( 1, 1, 1, 0 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 29 )
 animation = "move_right"
