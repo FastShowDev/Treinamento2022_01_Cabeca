@@ -1,9 +1,11 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Dungeon.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Models/Structures/Gates/BottomDungeonGate.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Models/Structures/Gates/RightDungeonGate.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Interfaces/UserInterface.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Interfaces/DialogBar.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -575,7 +577,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 12/shapes = [  ]
 12/z_index = 0
 
-[node name="Node2D" type="Node2D"]
+[node name="DungeonRoom9" type="Node2D"]
 
 [node name="Dungeon" parent="." instance=ExtResource( 2 )]
 
@@ -604,3 +606,13 @@ tile_set = SubResource( 18 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 65548, 8, 0, 65550, 5, 0, 131082, 5, 0, 196616, 2, 0, 262151, 0, 0, 262153, 0, 0, 262157, 0, 0, 327691, 0, 0, 327692, 2, 0, 327694, 1, 0, 393228, 7, 0, 458762, 6, 0, 458766, 6, 0 )
+
+[node name="Interfaces" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="DialogBar" parent="Interfaces" instance=ExtResource( 6 )]
+unique_name_in_owner = true
+
+[node name="UserInterface" parent="Interfaces" instance=ExtResource( 5 )]
+unique_name_in_owner = true

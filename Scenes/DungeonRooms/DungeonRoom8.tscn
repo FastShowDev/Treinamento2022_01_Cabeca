@@ -1,10 +1,12 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Dungeon.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Models/Enemies/Ball.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Models/Structures/Gates/TopDungeonGate.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Models/Structures/Gates/LeftDungeonGate.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Interfaces/UserInterface.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Interfaces/DialogBar.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -166,7 +168,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 6/z_index = 0
 
-[node name="Node2D" type="Node2D"]
+[node name="DungeonRoom88" type="Node2D"]
 
 [node name="Dungeon" parent="." instance=ExtResource( 2 )]
 
@@ -202,3 +204,13 @@ position = Vector2( 848, 464 )
 
 [node name="Ball2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 848, 80 )
+
+[node name="Interfaces" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="DialogBar" parent="Interfaces" instance=ExtResource( 7 )]
+unique_name_in_owner = true
+
+[node name="UserInterface" parent="Interfaces" instance=ExtResource( 6 )]
+unique_name_in_owner = true
