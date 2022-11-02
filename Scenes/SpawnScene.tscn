@@ -568,10 +568,6 @@ points = PoolVector2Array( 4.3761, 9.82083, 12.5859, 9.55164, 12.7206, 13.7239, 
 position = Vector2( -2, -4 )
 script = ExtResource( 12 )
 
-[node name="Interfaces" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-
 [node name="Terrain" type="Node2D" parent="."]
 
 [node name="FirstLayer" parent="Terrain" instance=ExtResource( 5 )]
@@ -591,21 +587,25 @@ tile_data = PoolIntArray( 196629, 1, 196611, 196630, 1, 196612, 262165, 1, 13107
 
 [node name="Drops" type="Node2D" parent="."]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="DialogBar" parent="CanvasLayer" instance=ExtResource( 26 )]
-unique_name_in_owner = true
-margin_left = -1.0
-margin_bottom = 7.0
-
-[node name="UserInterface" parent="CanvasLayer" instance=ExtResource( 24 )]
-unique_name_in_owner = true
-margin_left = -1.0
-margin_top = 10.0
-margin_right = -1.0
-margin_bottom = 10.0
-
 [node name="Instances" type="Node2D" parent="."]
+
+[node name="Interfaces" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="DialogBar" parent="Interfaces" instance=ExtResource( 26 )]
+unique_name_in_owner = true
+margin_left = 1.0
+margin_top = 4.0
+margin_right = 2.0
+margin_bottom = 11.0
+
+[node name="UserInterface" parent="Interfaces" instance=ExtResource( 24 )]
+unique_name_in_owner = true
+margin_left = -2.0
+margin_top = -2.0
+margin_right = -2.0
+margin_bottom = -2.0
 
 [node name="YSort" type="YSort" parent="."]
 script = ExtResource( 27 )

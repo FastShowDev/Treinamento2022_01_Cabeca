@@ -1,13 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Zelda-pack/objects.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Interfaces/UserInterface.gd" type="Script" id=2]
 [ext_resource path="res://Assets/bomb-assets/1-Bomb Off/1.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Flying_Key/Key1.png" type="Texture" id=4]
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 1 )
-region = Rect2( 63.8559, 289.141, 64.7044, 28.2111 )
 
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 3 )
@@ -24,17 +20,17 @@ region = Rect2( 0.942162, 65.2848, 12.958, 12.5308 )
 [node name="UserInterface" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
 script = ExtResource( 2 )
 
-[node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 4.0
-margin_top = -2.0
-margin_right = 68.0
-margin_bottom = 28.0
-rect_scale = Vector2( 5, 4 )
-texture = SubResource( 4 )
+[node name="Icons" type="Control" parent="."]
+margin_left = -100.0
+margin_top = -22.0
+margin_right = -60.0
+margin_bottom = 18.0
 
-[node name="BombIcon" type="TextureRect" parent="."]
+[node name="BombIcon" type="TextureRect" parent="Icons"]
 margin_left = 170.0
 margin_top = 26.0
 margin_right = 220.0
@@ -43,7 +39,7 @@ texture = SubResource( 3 )
 expand = true
 stretch_mode = 4
 
-[node name="BombsLabel" type="Label" parent="BombIcon"]
+[node name="BombsLabel" type="Label" parent="Icons/BombIcon"]
 margin_left = 7.0
 margin_top = 10.0
 margin_right = 57.0
@@ -58,7 +54,7 @@ text = "0"
 align = 1
 valign = 1
 
-[node name="HeartIcon" type="TextureRect" parent="."]
+[node name="HeartIcon" type="TextureRect" parent="Icons"]
 margin_left = 128.0
 margin_top = 33.0
 margin_right = 178.0
@@ -67,7 +63,7 @@ rect_scale = Vector2( 0.8, 0.8 )
 texture = SubResource( 1 )
 expand = true
 
-[node name="HeartsLabel" type="Label" parent="HeartIcon"]
+[node name="HeartsLabel" type="Label" parent="Icons/HeartIcon"]
 rect_min_size = Vector2( 50, 50 )
 size_flags_vertical = 5
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -78,7 +74,7 @@ align = 1
 valign = 1
 uppercase = true
 
-[node name="CoinIcon" type="TextureRect" parent="."]
+[node name="CoinIcon" type="TextureRect" parent="Icons"]
 margin_left = 223.0
 margin_top = 36.0
 margin_right = 273.0
@@ -87,7 +83,7 @@ rect_scale = Vector2( 0.7, 0.7 )
 texture = SubResource( 2 )
 expand = true
 
-[node name="CoinsLabel" type="Label" parent="CoinIcon"]
+[node name="CoinsLabel" type="Label" parent="Icons/CoinIcon"]
 margin_left = 21.25
 margin_top = 17.5
 margin_right = 29.25
@@ -98,7 +94,7 @@ text = "0"
 align = 1
 valign = 1
 
-[node name="KeyIcon" type="TextureRect" parent="."]
+[node name="KeyIcon" type="TextureRect" parent="Icons"]
 margin_left = 235.0
 margin_top = -1.0
 margin_right = 299.0
@@ -107,7 +103,7 @@ rect_scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 4 )
 expand = true
 
-[node name="KeysLabel" type="Label" parent="KeyIcon"]
+[node name="KeysLabel" type="Label" parent="Icons/KeyIcon"]
 margin_left = 30.0
 margin_top = 32.0
 margin_right = 38.0

@@ -19,6 +19,7 @@ var map := Map.new()
 #Components:
 onready var animated_sprite = $AnimatedSprite
 onready var animation = $AnimationPlayer
+onready var sound = $DamageFX
 onready var collision = $AttackArea/CollisionShape2D
 onready var timer = $DamageDelay
 onready var ui = $"%UserInterface"
@@ -179,10 +180,10 @@ func get_actual_stats() -> Character:
 	
 func set_stats_to_default():
 	global_position = Vector2(143,199)
-	stats.bombs = 0
-	stats.coins = 0
-	stats.keys = 0
-	stats.hearts = 1
+	stats.bombs = 10
+	stats.coins = 10
+	stats.keys = 10
+	stats.hearts = 10
 
 func get_stats() -> Character:
 	return stats
@@ -212,14 +213,18 @@ func kill():
 func damage() -> void:
 	if can_take_damage:
 		stats.hearts -= 1
+		sound.playing = true
+		sound.play()
 		ui.set_heart_value(stats.hearts)
-		if stats.hearts == 0:
+		if stats.hearts <= 0:
 			kill()
 		can_take_damage = false
 		timer.start()
 		yield(timer, "timeout")
 		can_take_damage = true
 
+	
 func _on_DamageArea_area_entered(area):
 	if area.is_in_group("damage"):
 		damage()
+

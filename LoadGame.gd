@@ -6,8 +6,8 @@ var map_name = get_node(".").name
 var _save := SaveGameAsJSON.new()
 
 onready var _player := $"%Player"
-onready var _interface := $CanvasLayer/UserInterface
-onready var _bar := $CanvasLayer/DialogBar
+onready var _interface := $Interfaces/UserInterface
+onready var _bar := $Interfaces/DialogBar
 
 func _ready() -> void:
 	_create_or_load_save()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=85 format=2]
+[gd_scene load_steps=86 format=2]
 
 [ext_resource path="res://Assets/Zelda-pack/character.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Sounds/Player/Minecraft Damage (Oof).mp3" type="AudioStream" id=3]
 
 [sub_resource type="AtlasTexture" id=58]
 atlas = ExtResource( 1 )
@@ -998,6 +999,7 @@ extents = Vector2( 11.5, 7.5 )
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 29 )
 animation = "move_right"
@@ -1016,6 +1018,9 @@ anims/move_down = SubResource( 78 )
 anims/move_left = SubResource( 77 )
 anims/move_right = SubResource( 76 )
 anims/move_up = SubResource( 79 )
+
+[node name="DamageFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 15.5 )

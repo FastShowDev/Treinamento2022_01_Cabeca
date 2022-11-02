@@ -1,9 +1,9 @@
 extends Control
 
-onready var bomb_lb  = $BombIcon/BombsLabel
-onready var heart_lb = $HeartIcon/HeartsLabel
-onready var coin_lb = $CoinIcon/CoinsLabel
-onready var key_lb = $KeyIcon/KeysLabel
+onready var bomb_lb  = $Icons/BombIcon/BombsLabel
+onready var heart_lb = $Icons/HeartIcon/HeartsLabel
+onready var coin_lb = $Icons/CoinIcon/CoinsLabel
+onready var key_lb = $Icons/KeyIcon/KeysLabel
 onready var player = $"%Player"
 
 #var stats: Character setget set_stats

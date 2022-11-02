@@ -281,9 +281,11 @@ scale = Vector2( 3, 3 )
 position = Vector2( 181, 128 )
 scale = Vector2( 3, 3 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Interfaces" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
 
-[node name="DialogBar" parent="CanvasLayer" instance=ExtResource( 6 )]
+[node name="DialogBar" parent="Interfaces" instance=ExtResource( 6 )]
 unique_name_in_owner = true
 visible = false
 margin_left = 1.0
@@ -291,8 +293,10 @@ margin_top = 42.0
 margin_right = 1.0
 margin_bottom = 42.0
 
-[node name="UserInterface" parent="CanvasLayer" instance=ExtResource( 5 )]
+[node name="UserInterface" parent="Interfaces" instance=ExtResource( 5 )]
 unique_name_in_owner = true
+margin_top = -4.0
+margin_bottom = -4.0
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 unique_name_in_owner = true
