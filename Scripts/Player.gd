@@ -19,7 +19,10 @@ var map := Map.new()
 #Components:
 onready var animated_sprite = $AnimatedSprite
 onready var animation = $AnimationPlayer
-onready var sound = $DamageFX
+
+onready var damage_sound = $DamageFX
+onready var hit_sound = $HitFX
+
 onready var collision = $AttackArea/CollisionShape2D
 onready var timer = $DamageDelay
 onready var ui = $"%UserInterface"
@@ -83,6 +86,7 @@ func attack() -> void:
 func animate() -> void:
 	if can_attack:
 		set_physics_process(false)
+		hit_sound.play()
 		if player_direction.x == 1:
 			animation.play("attack_right")
 		if player_direction.x == -1:
@@ -213,8 +217,8 @@ func kill():
 func damage() -> void:
 	if can_take_damage:
 		stats.hearts -= 1
-		sound.playing = true
-		sound.play()
+		damage_sound.playing = true
+		damage_sound.play()
 		ui.set_heart_value(stats.hearts)
 		if stats.hearts <= 0:
 			kill()
