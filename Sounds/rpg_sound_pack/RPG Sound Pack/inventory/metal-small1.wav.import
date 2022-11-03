@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/metal-small1.wav-35ceb39b50d736be9727a054a8cbe4cd.sample"
+
+[deps]
+
+source_file="res://Sounds/rpg_sound_pack/RPG Sound Pack/inventory/metal-small1.wav"
+dest_files=[ "res://.import/metal-small1.wav-35ceb39b50d736be9727a054a8cbe4cd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
