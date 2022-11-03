@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/mystic_woods_free_v0.2/sprites/characters/slime.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Enemies/Slime.gd" type="Script" id=2]
+[ext_resource path="res://Sounds/rpg_sound_pack/RPG Sound Pack/NPC/slime/slime9.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 8.5, 6.75 )
@@ -92,6 +93,10 @@ hframes = 7
 vframes = 5
 frame = 1
 
+[node name="WalkFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -30.0
+
 [node name="SlimeAnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
 anims/dead = SubResource( 3 )
@@ -109,6 +114,7 @@ shape = SubResource( 6 )
 position = Vector2( 0, 1.75 )
 shape = SubResource( 8 )
 
+[connection signal="finished" from="WalkFX" to="." method="_on_WalkFX_finished"]
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_DetectionArea_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_DetectionArea_body_exited"]
 [connection signal="area_entered" from="CollisionArea" to="." method="_on_CollisionArea_area_entered"]

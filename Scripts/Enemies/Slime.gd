@@ -6,8 +6,10 @@ var velocity: Vector2
 
 onready var slime_animation = $SlimeAnimationPlayer
 onready var sprite = $Sprite
+onready var walk_sound = $WalkFX
 
-var can_die:bool = false
+var can_die: bool = false
+var can_play: bool = false
 
 func _ready():
 	pass
@@ -41,8 +43,16 @@ func animate() -> void:
 		queue_free()
 	elif velocity != Vector2.ZERO:
 		slime_animation.play("walk")
+		play_sound()
 	else:
 		slime_animation.play("idle")
+		can_play = true
+		walk_sound.playing = false
+		
+func play_sound() -> void:
+	if can_play:
+		walk_sound.playing = true
+		can_play = false
 
 func verify_direction() -> void:
 	if velocity.x > 0:
@@ -63,3 +73,6 @@ func _on_CollisionArea_area_entered(area):
 	if area.is_in_group("player_attack") or area.is_in_group("bomb_explosion"):
 		can_die = true
 	
+	
+func _on_WalkFX_finished():
+	can_play = true
