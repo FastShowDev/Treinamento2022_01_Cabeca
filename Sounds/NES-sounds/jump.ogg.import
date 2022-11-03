@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/jump.ogg-36e01ba388959060aa2b5d42407735cd.oggstr"
+
+[deps]
+
+source_file="res://Sounds/NES-sounds/jump.ogg"
+dest_files=[ "res://.import/jump.ogg-36e01ba388959060aa2b5d42407735cd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
