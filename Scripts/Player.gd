@@ -20,8 +20,9 @@ var map := Map.new()
 onready var animated_sprite = $AnimatedSprite
 onready var animation = $AnimationPlayer
 
-onready var damage_sound = $DamageFX
-onready var hit_sound = $HitFX
+onready var damage_sound = $Sounds/DamageFX
+onready var hit_sound = $Sounds/HitFX
+onready var walk_sound = $Sounds/WalkFX
 
 onready var collision = $AttackArea/CollisionShape2D
 onready var timer = $DamageDelay
@@ -34,6 +35,7 @@ var BOMB: PackedScene = preload("res://Models/Itens/Bomb.tscn")
 var can_attack: bool = false
 var player_direction: Vector2 = Vector2(1,0)
 var can_take_damage: bool = true
+var can_play_sound: bool = false
 
 func _ready():
 	animated_sprite.visible = true
@@ -107,6 +109,7 @@ func animate() -> void:
 			animation.play("move_down")
 		elif velocity.y < 0:
 			animation.play("move_up")
+		play_walk_sound()
 	else:
 		animation.stop()
 		if player_direction.x == 1:
@@ -117,8 +120,14 @@ func animate() -> void:
 			animated_sprite.play("idle_down")
 		elif player_direction.y == -1:
 			animated_sprite.play("idle_up")
-			
-			
+		can_play_sound = true
+
+func play_walk_sound() -> void:
+	if can_play_sound:
+		walk_sound.playing = true
+		can_play_sound = false
+
+	
 func increase_max_heart() -> void:
 	stats.max_hearts += 1
 
@@ -232,3 +241,7 @@ func _on_DamageArea_area_entered(area):
 	if area.is_in_group("damage"):
 		damage()
 
+
+
+func _on_WalkFX_finished():
+	can_play_sound = true

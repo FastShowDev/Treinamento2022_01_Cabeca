@@ -1,9 +1,10 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=88 format=2]
 
 [ext_resource path="res://Assets/Zelda-pack/character.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://Sounds/Player/hurt.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Sounds/Player/hit.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Sounds/Player/FootStep/sfx_movement_footstepsloop4_slow.wav" type="AudioStream" id=5]
 
 [sub_resource type="AtlasTexture" id=58]
 atlas = ExtResource( 1 )
@@ -1020,10 +1021,15 @@ anims/move_left = SubResource( 77 )
 anims/move_right = SubResource( 76 )
 anims/move_up = SubResource( 79 )
 
-[node name="DamageFX" type="AudioStreamPlayer" parent="."]
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="WalkFX" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 5 )
+
+[node name="DamageFX" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 3 )
 
-[node name="HitFX" type="AudioStreamPlayer" parent="."]
+[node name="HitFX" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -1046,4 +1052,5 @@ shape = SubResource( 117 )
 [node name="DamageDelay" type="Timer" parent="."]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="finished" from="Sounds/WalkFX" to="." method="_on_WalkFX_finished"]
 [connection signal="area_entered" from="DamageArea" to="." method="_on_DamageArea_area_entered"]
