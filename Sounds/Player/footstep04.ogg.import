@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/footstep04.ogg-1434b557ba94125eb615b00f1d009f4e.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Player/footstep04.ogg"
+dest_files=[ "res://.import/footstep04.ogg-1434b557ba94125eb615b00f1d009f4e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

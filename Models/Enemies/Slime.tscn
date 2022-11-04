@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/mystic_woods_free_v0.2/sprites/characters/slime.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Enemies/Slime.gd" type="Script" id=2]
-[ext_resource path="res://Sounds/rpg_sound_pack/RPG Sound Pack/NPC/slime/slime9.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/Enemies/slime/slime9.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 8.5, 6.75 )
