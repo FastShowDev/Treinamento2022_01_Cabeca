@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_wpn_missilelaunch.wav-7a59dbee41520a19d988eb52803cd3bc.sample"
+path="res://.import/sfx_wpn_missilelaunch.wav-aa8ac5d6a82f797380e3e2ec2e881fbe.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Weapons/Grenade Whistles/sfx_wpn_missilelaunch.wav"
-dest_files=[ "res://.import/sfx_wpn_missilelaunch.wav-7a59dbee41520a19d988eb52803cd3bc.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Weapons/Grenade Whistles/sfx_wpn_missilelaunch.wav"
+dest_files=[ "res://.import/sfx_wpn_missilelaunch.wav-aa8ac5d6a82f797380e3e2ec2e881fbe.sample" ]
 
 [params]
 

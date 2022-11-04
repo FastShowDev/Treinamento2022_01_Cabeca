@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_deathscream_alien1.wav-14924f4b3d8e965dca1823b90015d5ac.sample"
+path="res://.import/sfx_deathscream_alien1.wav-25ee3a75bbbf2a5203029d0a0a33d778.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Death Screams/Alien/sfx_deathscream_alien1.wav"
-dest_files=[ "res://.import/sfx_deathscream_alien1.wav-14924f4b3d8e965dca1823b90015d5ac.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Death Screams/Alien/sfx_deathscream_alien1.wav"
+dest_files=[ "res://.import/sfx_deathscream_alien1.wav-25ee3a75bbbf2a5203029d0a0a33d778.sample" ]
 
 [params]
 

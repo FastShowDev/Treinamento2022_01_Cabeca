@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_alarm_loop1.wav-3165237477ecb239022fc055ed52e189.sample"
+path="res://.import/sfx_alarm_loop1.wav-2e8f340d67cc5677dbfe9969ff541b1d.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/Alarms/Alarms/sfx_alarm_loop1.wav"
-dest_files=[ "res://.import/sfx_alarm_loop1.wav-3165237477ecb239022fc055ed52e189.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/General Sounds/Alarms/Alarms/sfx_alarm_loop1.wav"
+dest_files=[ "res://.import/sfx_alarm_loop1.wav-2e8f340d67cc5677dbfe9969ff541b1d.sample" ]
 
 [params]
 

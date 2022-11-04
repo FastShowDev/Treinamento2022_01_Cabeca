@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_deathscream_android1.wav-ad77e28f18e8b652bf46f47d0c10c2e0.sample"
+path="res://.import/sfx_deathscream_android1.wav-0d1a0e2ec2096be7e7cd9f3b9461841d.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Death Screams/Android/sfx_deathscream_android1.wav"
-dest_files=[ "res://.import/sfx_deathscream_android1.wav-ad77e28f18e8b652bf46f47d0c10c2e0.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Death Screams/Android/sfx_deathscream_android1.wav"
+dest_files=[ "res://.import/sfx_deathscream_android1.wav-0d1a0e2ec2096be7e7cd9f3b9461841d.sample" ]
 
 [params]
 

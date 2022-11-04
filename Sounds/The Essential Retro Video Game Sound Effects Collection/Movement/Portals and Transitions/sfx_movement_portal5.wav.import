@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_movement_portal5.wav-c5d2caf8d9a9c450d3054d6083edbdff.sample"
+path="res://.import/sfx_movement_portal5.wav-62ed8089fdc2febfb49c411c6e6d473d.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Movement/Portals and Transitions/sfx_movement_portal5.wav"
-dest_files=[ "res://.import/sfx_movement_portal5.wav-c5d2caf8d9a9c450d3054d6083edbdff.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Movement/Portals and Transitions/sfx_movement_portal5.wav"
+dest_files=[ "res://.import/sfx_movement_portal5.wav-62ed8089fdc2febfb49c411c6e6d473d.sample" ]
 
 [params]
 

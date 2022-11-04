@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_sound_refereewhistle.wav-2cb8997bcb5bb98b1977ca1fa48998a8.sample"
+path="res://.import/sfx_sound_refereewhistle.wav-8913925fda8e42263af9787c46922321.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/Weird Sounds/sfx_sound_refereewhistle.wav"
-dest_files=[ "res://.import/sfx_sound_refereewhistle.wav-2cb8997bcb5bb98b1977ca1fa48998a8.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/General Sounds/Weird Sounds/sfx_sound_refereewhistle.wav"
+dest_files=[ "res://.import/sfx_sound_refereewhistle.wav-8913925fda8e42263af9787c46922321.sample" ]
 
 [params]
 

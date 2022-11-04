@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_sounds_button11.wav-3b8788c26353aa208a0fb4ca95f96cd3.sample"
+path="res://.import/sfx_sounds_button11.wav-70c32a43b3aa68d24ef109c9178537bc.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/Buttons/sfx_sounds_button11.wav"
-dest_files=[ "res://.import/sfx_sounds_button11.wav-3b8788c26353aa208a0fb4ca95f96cd3.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/General Sounds/Buttons/sfx_sounds_button11.wav"
+dest_files=[ "res://.import/sfx_sounds_button11.wav-70c32a43b3aa68d24ef109c9178537bc.sample" ]
 
 [params]
 

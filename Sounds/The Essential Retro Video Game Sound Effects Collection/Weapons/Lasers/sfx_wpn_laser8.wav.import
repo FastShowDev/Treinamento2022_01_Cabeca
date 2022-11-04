@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_wpn_laser8.wav-c6c112ea9c498338a74746247c90ba86.sample"
+path="res://.import/sfx_wpn_laser8.wav-ab7e1118ed24cccf38f92371a9e720dc.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Weapons/Lasers/sfx_wpn_laser8.wav"
-dest_files=[ "res://.import/sfx_wpn_laser8.wav-c6c112ea9c498338a74746247c90ba86.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Weapons/Lasers/sfx_wpn_laser8.wav"
+dest_files=[ "res://.import/sfx_wpn_laser8.wav-ab7e1118ed24cccf38f92371a9e720dc.sample" ]
 
 [params]
 

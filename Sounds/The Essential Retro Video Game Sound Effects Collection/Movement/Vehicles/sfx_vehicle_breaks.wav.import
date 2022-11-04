@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_vehicle_breaks.wav-168bfbf268930dd5de7ecf4f22d31c88.sample"
+path="res://.import/sfx_vehicle_breaks.wav-096028978417dac13d080680a5094478.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Movement/Vehicles/sfx_vehicle_breaks.wav"
-dest_files=[ "res://.import/sfx_vehicle_breaks.wav-168bfbf268930dd5de7ecf4f22d31c88.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Movement/Vehicles/sfx_vehicle_breaks.wav"
+dest_files=[ "res://.import/sfx_vehicle_breaks.wav-096028978417dac13d080680a5094478.sample" ]
 
 [params]
 

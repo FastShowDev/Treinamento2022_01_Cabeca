@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_wpn_reload.wav-00adb75b1feccb7a69d43ddbd1d52d38.sample"
+path="res://.import/sfx_wpn_reload.wav-7ec95a338c12df7e1a8794ca39f0e864.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Weapons/Out of Ammo/sfx_wpn_reload.wav"
-dest_files=[ "res://.import/sfx_wpn_reload.wav-00adb75b1feccb7a69d43ddbd1d52d38.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Weapons/Out of Ammo/sfx_wpn_reload.wav"
+dest_files=[ "res://.import/sfx_wpn_reload.wav-7ec95a338c12df7e1a8794ca39f0e864.sample" ]
 
 [params]
 

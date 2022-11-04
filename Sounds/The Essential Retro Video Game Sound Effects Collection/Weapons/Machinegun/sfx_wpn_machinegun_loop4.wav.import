@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_wpn_machinegun_loop4.wav-35f627e26c5521653f4249489e1feb6f.sample"
+path="res://.import/sfx_wpn_machinegun_loop4.wav-348c2714de2348e32b2d1aef8aeeb897.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Weapons/Machinegun/sfx_wpn_machinegun_loop4.wav"
-dest_files=[ "res://.import/sfx_wpn_machinegun_loop4.wav-35f627e26c5521653f4249489e1feb6f.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Weapons/Machinegun/sfx_wpn_machinegun_loop4.wav"
+dest_files=[ "res://.import/sfx_wpn_machinegun_loop4.wav-348c2714de2348e32b2d1aef8aeeb897.sample" ]
 
 [params]
 

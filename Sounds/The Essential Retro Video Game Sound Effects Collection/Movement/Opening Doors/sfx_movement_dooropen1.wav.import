@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_movement_dooropen1.wav-128673603f2b2d076e04b949a182041d.sample"
+path="res://.import/sfx_movement_dooropen1.wav-2641f10cddbd01bd2ecf5750a908988d.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Movement/Opening Doors/sfx_movement_dooropen1.wav"
-dest_files=[ "res://.import/sfx_movement_dooropen1.wav-128673603f2b2d076e04b949a182041d.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Movement/Opening Doors/sfx_movement_dooropen1.wav"
+dest_files=[ "res://.import/sfx_movement_dooropen1.wav-2641f10cddbd01bd2ecf5750a908988d.sample" ]
 
 [params]
 

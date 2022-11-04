@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_movement_ladder6a.wav-28222a0d57a6db7b5ea1e569ef0148ab.sample"
+path="res://.import/sfx_movement_ladder6a.wav-ed56d2e2f64678bba6a032fdfdd68435.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Movement/Climbing Ladder/sfx_movement_ladder6a.wav"
-dest_files=[ "res://.import/sfx_movement_ladder6a.wav-28222a0d57a6db7b5ea1e569ef0148ab.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Movement/Climbing Ladder/sfx_movement_ladder6a.wav"
+dest_files=[ "res://.import/sfx_movement_ladder6a.wav-ed56d2e2f64678bba6a032fdfdd68435.sample" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_deathscream_robot1.wav-c9fde57f763d64d907b148645602469b.sample"
+path="res://.import/sfx_deathscream_robot1.wav-129cfcee5d8b80ea41419cb4d7da22a8.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Death Screams/Robot/sfx_deathscream_robot1.wav"
-dest_files=[ "res://.import/sfx_deathscream_robot1.wav-c9fde57f763d64d907b148645602469b.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Death Screams/Robot/sfx_deathscream_robot1.wav"
+dest_files=[ "res://.import/sfx_deathscream_robot1.wav-129cfcee5d8b80ea41419cb4d7da22a8.sample" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_wpn_sword3.wav-24511992ebc0a10ef623ab9cd3c19be1.sample"
+path="res://.import/sfx_wpn_sword3.wav-0f20396e8934993fde80f6ba4155269f.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Weapons/Melee/sfx_wpn_sword3.wav"
-dest_files=[ "res://.import/sfx_wpn_sword3.wav-24511992ebc0a10ef623ab9cd3c19be1.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Weapons/Melee/sfx_wpn_sword3.wav"
+dest_files=[ "res://.import/sfx_wpn_sword3.wav-0f20396e8934993fde80f6ba4155269f.sample" ]
 
 [params]
 

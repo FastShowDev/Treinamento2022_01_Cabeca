@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_sounds_Blip2.wav-c7bd8a96d79e31302375009a3f1e6039.sample"
+path="res://.import/sfx_sounds_Blip2.wav-8cd20e07bf71e405f48eeabccb6cb22e.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/Simple Bleeps/sfx_sounds_Blip2.wav"
-dest_files=[ "res://.import/sfx_sounds_Blip2.wav-c7bd8a96d79e31302375009a3f1e6039.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/General Sounds/Simple Bleeps/sfx_sounds_Blip2.wav"
+dest_files=[ "res://.import/sfx_sounds_Blip2.wav-8cd20e07bf71e405f48eeabccb6cb22e.sample" ]
 
 [params]
 

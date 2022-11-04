@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_damage_hit9.wav-4c6dc1ee1ed73a5d0023b37621a563a5.sample"
+path="res://.import/sfx_damage_hit9.wav-8b5126d1d3a2e078bbdbca53a6160396.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/Simple Damage Sounds/sfx_damage_hit9.wav"
-dest_files=[ "res://.import/sfx_damage_hit9.wav-4c6dc1ee1ed73a5d0023b37621a563a5.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/General Sounds/Simple Damage Sounds/sfx_damage_hit9.wav"
+dest_files=[ "res://.import/sfx_damage_hit9.wav-8b5126d1d3a2e078bbdbca53a6160396.sample" ]
 
 [params]
 

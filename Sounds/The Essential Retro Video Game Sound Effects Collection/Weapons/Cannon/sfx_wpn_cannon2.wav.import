@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_wpn_cannon2.wav-5b317d184dee60db0b6307790a8c9ffe.sample"
+path="res://.import/sfx_wpn_cannon2.wav-2ab3e0dd519393c47d0d023f3f5dd0e1.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Weapons/Cannon/sfx_wpn_cannon2.wav"
-dest_files=[ "res://.import/sfx_wpn_cannon2.wav-5b317d184dee60db0b6307790a8c9ffe.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Weapons/Cannon/sfx_wpn_cannon2.wav"
+dest_files=[ "res://.import/sfx_wpn_cannon2.wav-2ab3e0dd519393c47d0d023f3f5dd0e1.sample" ]
 
 [params]
 

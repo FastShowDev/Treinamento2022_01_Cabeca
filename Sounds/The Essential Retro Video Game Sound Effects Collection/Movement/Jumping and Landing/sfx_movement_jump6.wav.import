@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_movement_jump6.wav-be51091f92386eb8378222668d8cf8a0.sample"
+path="res://.import/sfx_movement_jump6.wav-0f1862a2c8b2fedde50097e53f5e3f3f.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Movement/Jumping and Landing/sfx_movement_jump6.wav"
-dest_files=[ "res://.import/sfx_movement_jump6.wav-be51091f92386eb8378222668d8cf8a0.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Movement/Jumping and Landing/sfx_movement_jump6.wav"
+dest_files=[ "res://.import/sfx_movement_jump6.wav-0f1862a2c8b2fedde50097e53f5e3f3f.sample" ]
 
 [params]
 

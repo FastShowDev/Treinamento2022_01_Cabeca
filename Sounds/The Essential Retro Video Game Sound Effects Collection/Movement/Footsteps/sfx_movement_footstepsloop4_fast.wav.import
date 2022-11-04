@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_movement_footstepsloop4_fast.wav-403308ebeec80b53e5e6eec8c7cd057c.sample"
+path="res://.import/sfx_movement_footstepsloop4_fast.wav-14d20abda625996771648451c9392392.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Movement/Footsteps/sfx_movement_footstepsloop4_fast.wav"
-dest_files=[ "res://.import/sfx_movement_footstepsloop4_fast.wav-403308ebeec80b53e5e6eec8c7cd057c.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Movement/Footsteps/sfx_movement_footstepsloop4_fast.wav"
+dest_files=[ "res://.import/sfx_movement_footstepsloop4_fast.wav-14d20abda625996771648451c9392392.sample" ]
 
 [params]
 

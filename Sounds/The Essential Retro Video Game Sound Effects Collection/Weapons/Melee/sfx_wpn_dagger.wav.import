@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_wpn_dagger.wav-119fb46438039193c998f211f0542f43.sample"
+path="res://.import/sfx_wpn_dagger.wav-cdb1577a2aef1bb1329b9a72b3c09239.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Weapons/Melee/sfx_wpn_dagger.wav"
-dest_files=[ "res://.import/sfx_wpn_dagger.wav-119fb46438039193c998f211f0542f43.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Weapons/Melee/sfx_wpn_dagger.wav"
+dest_files=[ "res://.import/sfx_wpn_dagger.wav-cdb1577a2aef1bb1329b9a72b3c09239.sample" ]
 
 [params]
 

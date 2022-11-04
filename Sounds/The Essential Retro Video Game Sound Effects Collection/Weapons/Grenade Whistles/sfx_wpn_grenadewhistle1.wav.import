@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_wpn_grenadewhistle1.wav-b995c74dcf725dcb3706abf26e5b5835.sample"
+path="res://.import/sfx_wpn_grenadewhistle1.wav-db0476f3fc7d3145b010c053c653c6b3.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Weapons/Grenade Whistles/sfx_wpn_grenadewhistle1.wav"
-dest_files=[ "res://.import/sfx_wpn_grenadewhistle1.wav-b995c74dcf725dcb3706abf26e5b5835.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Weapons/Grenade Whistles/sfx_wpn_grenadewhistle1.wav"
+dest_files=[ "res://.import/sfx_wpn_grenadewhistle1.wav-db0476f3fc7d3145b010c053c653c6b3.sample" ]
 
 [params]
 

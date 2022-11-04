@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_vehicle_carloop1.wav-d4dc86820784f74cc66cfea456bfb672.sample"
+path="res://.import/sfx_vehicle_carloop1.wav-074790b82b57b38918b96b92f3a022a4.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Movement/Vehicles/sfx_vehicle_carloop1.wav"
-dest_files=[ "res://.import/sfx_vehicle_carloop1.wav-d4dc86820784f74cc66cfea456bfb672.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Movement/Vehicles/sfx_vehicle_carloop1.wav"
+dest_files=[ "res://.import/sfx_vehicle_carloop1.wav-074790b82b57b38918b96b92f3a022a4.sample" ]
 
 [params]
 

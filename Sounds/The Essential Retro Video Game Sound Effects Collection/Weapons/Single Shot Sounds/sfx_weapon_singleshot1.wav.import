@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_weapon_singleshot1.wav-66b0c09492aa6ac1d0d00c8cb6f03c95.sample"
+path="res://.import/sfx_weapon_singleshot1.wav-c939a553cd00b0a72bfd308b0e8fd2ba.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Weapons/Single Shot Sounds/sfx_weapon_singleshot1.wav"
-dest_files=[ "res://.import/sfx_weapon_singleshot1.wav-66b0c09492aa6ac1d0d00c8cb6f03c95.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Weapons/Single Shot Sounds/sfx_weapon_singleshot1.wav"
+dest_files=[ "res://.import/sfx_weapon_singleshot1.wav-c939a553cd00b0a72bfd308b0e8fd2ba.sample" ]
 
 [params]
 

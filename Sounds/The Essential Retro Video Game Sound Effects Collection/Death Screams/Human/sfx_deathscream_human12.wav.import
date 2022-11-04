@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_deathscream_human12.wav-4aa88bb088d862078f218313fe784a3e.sample"
+path="res://.import/sfx_deathscream_human12.wav-7456d9f954ab3dfe7f2c9f79cce21d2a.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Death Screams/Human/sfx_deathscream_human12.wav"
-dest_files=[ "res://.import/sfx_deathscream_human12.wav-4aa88bb088d862078f218313fe784a3e.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Death Screams/Human/sfx_deathscream_human12.wav"
+dest_files=[ "res://.import/sfx_deathscream_human12.wav-7456d9f954ab3dfe7f2c9f79cce21d2a.sample" ]
 
 [params]
 

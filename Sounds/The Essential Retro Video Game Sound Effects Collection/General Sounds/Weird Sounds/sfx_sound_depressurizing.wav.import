@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_sound_depressurizing.wav-68dcc69b1cc8aa3901dbedb42ec277f9.sample"
+path="res://.import/sfx_sound_depressurizing.wav-33577263ef695baa0198e69be27a835d.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/Weird Sounds/sfx_sound_depressurizing.wav"
-dest_files=[ "res://.import/sfx_sound_depressurizing.wav-68dcc69b1cc8aa3901dbedb42ec277f9.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/General Sounds/Weird Sounds/sfx_sound_depressurizing.wav"
+dest_files=[ "res://.import/sfx_sound_depressurizing.wav-33577263ef695baa0198e69be27a835d.sample" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_exp_medium13.wav-742f71fbe6450877cb763af3ed089f0f.sample"
+path="res://.import/sfx_exp_medium13.wav-8c6aeba64d03d020c01c7127c96a4e0c.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Explosions/Medium Length/sfx_exp_medium13.wav"
-dest_files=[ "res://.import/sfx_exp_medium13.wav-742f71fbe6450877cb763af3ed089f0f.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Explosions/Medium Length/sfx_exp_medium13.wav"
+dest_files=[ "res://.import/sfx_exp_medium13.wav-8c6aeba64d03d020c01c7127c96a4e0c.sample" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_movement_stairs4a.wav-f0ca8670f330bcb882b7f4d2087cf906.sample"
+path="res://.import/sfx_movement_stairs4a.wav-fd9758781a863201ec8edbf56d0e3c7c.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Movement/Climbing Stairs/sfx_movement_stairs4a.wav"
-dest_files=[ "res://.import/sfx_movement_stairs4a.wav-f0ca8670f330bcb882b7f4d2087cf906.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Movement/Climbing Stairs/sfx_movement_stairs4a.wav"
+dest_files=[ "res://.import/sfx_movement_stairs4a.wav-fd9758781a863201ec8edbf56d0e3c7c.sample" ]
 
 [params]
 

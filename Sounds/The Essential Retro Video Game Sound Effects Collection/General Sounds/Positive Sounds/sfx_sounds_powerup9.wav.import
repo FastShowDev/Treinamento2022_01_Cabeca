@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_sounds_powerup9.wav-e1f1167d38863345d0e45e0c6e4e7e0a.sample"
+path="res://.import/sfx_sounds_powerup9.wav-d8124cc7c9505ae42b7cb0d0301d93c3.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/Positive Sounds/sfx_sounds_powerup9.wav"
-dest_files=[ "res://.import/sfx_sounds_powerup9.wav-e1f1167d38863345d0e45e0c6e4e7e0a.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/General Sounds/Positive Sounds/sfx_sounds_powerup9.wav"
+dest_files=[ "res://.import/sfx_sounds_powerup9.wav-d8124cc7c9505ae42b7cb0d0301d93c3.sample" ]
 
 [params]
 

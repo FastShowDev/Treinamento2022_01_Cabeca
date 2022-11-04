@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_sounds_fanfare3.wav-cbfaf9028aad428dcd65ee678a9fe31f.sample"
+path="res://.import/sfx_sounds_fanfare3.wav-e98cf7896667cac05852c0da5d1ac624.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/Fanfares/sfx_sounds_fanfare3.wav"
-dest_files=[ "res://.import/sfx_sounds_fanfare3.wav-cbfaf9028aad428dcd65ee678a9fe31f.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/General Sounds/Fanfares/sfx_sounds_fanfare3.wav"
+dest_files=[ "res://.import/sfx_sounds_fanfare3.wav-e98cf7896667cac05852c0da5d1ac624.sample" ]
 
 [params]
 

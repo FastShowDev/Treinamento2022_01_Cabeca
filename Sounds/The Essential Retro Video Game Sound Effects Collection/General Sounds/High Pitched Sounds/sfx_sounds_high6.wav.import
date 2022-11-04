@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_sounds_high6.wav-aae56ee6ca72fd388a3c4b96ed3ae146.sample"
+path="res://.import/sfx_sounds_high6.wav-543d56174f0f20f499ee82e1c0c3def2.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/High Pitched Sounds/sfx_sounds_high6.wav"
-dest_files=[ "res://.import/sfx_sounds_high6.wav-aae56ee6ca72fd388a3c4b96ed3ae146.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/General Sounds/High Pitched Sounds/sfx_sounds_high6.wav"
+dest_files=[ "res://.import/sfx_sounds_high6.wav-543d56174f0f20f499ee82e1c0c3def2.sample" ]
 
 [params]
 

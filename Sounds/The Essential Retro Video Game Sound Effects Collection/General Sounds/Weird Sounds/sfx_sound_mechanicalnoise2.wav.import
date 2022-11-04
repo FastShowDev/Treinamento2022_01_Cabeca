@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_sound_mechanicalnoise2.wav-4f1711d8d3fa1da6a345114ce9995981.sample"
+path="res://.import/sfx_sound_mechanicalnoise2.wav-fa5d0adf970200a1a435b65785b4ba96.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/Weird Sounds/sfx_sound_mechanicalnoise2.wav"
-dest_files=[ "res://.import/sfx_sound_mechanicalnoise2.wav-4f1711d8d3fa1da6a345114ce9995981.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/General Sounds/Weird Sounds/sfx_sound_mechanicalnoise2.wav"
+dest_files=[ "res://.import/sfx_sound_mechanicalnoise2.wav-fa5d0adf970200a1a435b65785b4ba96.sample" ]
 
 [params]
 

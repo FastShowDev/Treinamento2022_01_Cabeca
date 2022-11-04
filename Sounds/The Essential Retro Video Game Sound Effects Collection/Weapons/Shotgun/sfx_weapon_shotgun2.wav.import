@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_weapon_shotgun2.wav-e2c188ce38edb62356b45e9404b73525.sample"
+path="res://.import/sfx_weapon_shotgun2.wav-ae86b0e349f788dc676771453902d2a3.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Weapons/Shotgun/sfx_weapon_shotgun2.wav"
-dest_files=[ "res://.import/sfx_weapon_shotgun2.wav-e2c188ce38edb62356b45e9404b73525.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Weapons/Shotgun/sfx_weapon_shotgun2.wav"
+dest_files=[ "res://.import/sfx_weapon_shotgun2.wav-ae86b0e349f788dc676771453902d2a3.sample" ]
 
 [params]
 

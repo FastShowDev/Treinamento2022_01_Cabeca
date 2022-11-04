@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_sound_bling.wav-e3993c3c55097db838760169f91f4a05.sample"
+path="res://.import/sfx_sound_bling.wav-5de72f721a84bf7d372df80a8a9eae37.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/Weird Sounds/sfx_sound_bling.wav"
-dest_files=[ "res://.import/sfx_sound_bling.wav-e3993c3c55097db838760169f91f4a05.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/General Sounds/Weird Sounds/sfx_sound_bling.wav"
+dest_files=[ "res://.import/sfx_sound_bling.wav-5de72f721a84bf7d372df80a8a9eae37.sample" ]
 
 [params]
 

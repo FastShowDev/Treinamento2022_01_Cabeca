@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_coin_single3.wav-e5de1a459ffa83476ab2d30609f07e45.sample"
+path="res://.import/sfx_coin_single3.wav-caa80b88de26a77ef14f092722bc29bf.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/Coins/sfx_coin_single3.wav"
-dest_files=[ "res://.import/sfx_coin_single3.wav-e5de1a459ffa83476ab2d30609f07e45.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/General Sounds/Coins/sfx_coin_single3.wav"
+dest_files=[ "res://.import/sfx_coin_single3.wav-caa80b88de26a77ef14f092722bc29bf.sample" ]
 
 [params]
 

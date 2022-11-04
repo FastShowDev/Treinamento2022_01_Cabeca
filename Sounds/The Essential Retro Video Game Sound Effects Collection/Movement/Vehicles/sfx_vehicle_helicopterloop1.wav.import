@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_vehicle_helicopterloop1.wav-2f6d6d0337ba0dff6d1c6be56b7d4132.sample"
+path="res://.import/sfx_vehicle_helicopterloop1.wav-9c7b33d1e77a348bfd4beb9799cebe63.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Movement/Vehicles/sfx_vehicle_helicopterloop1.wav"
-dest_files=[ "res://.import/sfx_vehicle_helicopterloop1.wav-2f6d6d0337ba0dff6d1c6be56b7d4132.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Movement/Vehicles/sfx_vehicle_helicopterloop1.wav"
+dest_files=[ "res://.import/sfx_vehicle_helicopterloop1.wav-9c7b33d1e77a348bfd4beb9799cebe63.sample" ]
 
 [params]
 

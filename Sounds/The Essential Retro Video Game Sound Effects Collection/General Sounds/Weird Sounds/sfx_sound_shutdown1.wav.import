@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_sound_shutdown1.wav-de208c5a2bb52ff338c5f31341524bc5.sample"
+path="res://.import/sfx_sound_shutdown1.wav-0facd88a529471a7227d91262df1ef29.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/Weird Sounds/sfx_sound_shutdown1.wav"
-dest_files=[ "res://.import/sfx_sound_shutdown1.wav-de208c5a2bb52ff338c5f31341524bc5.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/General Sounds/Weird Sounds/sfx_sound_shutdown1.wav"
+dest_files=[ "res://.import/sfx_sound_shutdown1.wav-0facd88a529471a7227d91262df1ef29.sample" ]
 
 [params]
 

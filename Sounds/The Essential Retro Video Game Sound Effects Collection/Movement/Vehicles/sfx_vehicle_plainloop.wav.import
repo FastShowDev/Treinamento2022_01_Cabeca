@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sfx_vehicle_plainloop.wav-1996553e73a7646a27609207d7872bea.sample"
+path="res://.import/sfx_vehicle_plainloop.wav-892c413f0e0de0674797ec36deed23fa.sample"
 
 [deps]
 
-source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Movement/Vehicles/sfx_vehicle_plainloop.wav"
-dest_files=[ "res://.import/sfx_vehicle_plainloop.wav-1996553e73a7646a27609207d7872bea.sample" ]
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection/Movement/Vehicles/sfx_vehicle_plainloop.wav"
+dest_files=[ "res://.import/sfx_vehicle_plainloop.wav-892c413f0e0de0674797ec36deed23fa.sample" ]
 
 [params]
 
