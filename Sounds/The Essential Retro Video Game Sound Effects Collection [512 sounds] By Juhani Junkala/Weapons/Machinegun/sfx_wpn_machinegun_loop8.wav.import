@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_wpn_machinegun_loop8.wav-cf7e1aaae4dbc7d1c486b7626bd9f95f.sample"
+
+[deps]
+
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Weapons/Machinegun/sfx_wpn_machinegun_loop8.wav"
+dest_files=[ "res://.import/sfx_wpn_machinegun_loop8.wav-cf7e1aaae4dbc7d1c486b7626bd9f95f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

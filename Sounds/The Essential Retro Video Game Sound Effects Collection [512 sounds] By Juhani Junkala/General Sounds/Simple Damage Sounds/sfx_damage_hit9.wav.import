@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_damage_hit9.wav-4c6dc1ee1ed73a5d0023b37621a563a5.sample"
+
+[deps]
+
+source_file="res://Sounds/The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/Simple Damage Sounds/sfx_damage_hit9.wav"
+dest_files=[ "res://.import/sfx_damage_hit9.wav-4c6dc1ee1ed73a5d0023b37621a563a5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
