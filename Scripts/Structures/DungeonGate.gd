@@ -6,6 +6,7 @@ var is_player_inside: bool = false
 onready var interact_baloom = $StaticBody2D/InteractBaloom
 onready var player = $"%Player"
 onready var open_sound = $OpenFX
+onready var transition_sound = $TransitionFX
 
 #var _player := Character.new()
 var _save := SaveGameAsJSON.new()
@@ -38,6 +39,8 @@ func _input(event: InputEvent) -> void:
 		interact_baloom.hide()
 		self.frame = 1
 	elif event.is_action_pressed("interact_item") and is_open and is_player_inside:
+		transition_sound.playing = true
+		yield(transition_sound, "finished")
 		_save.character = player.get_actual_stats()
 		_save.write_savegame()
 		get_tree().change_scene(dungeon_room_path)
