@@ -160,8 +160,6 @@ func use_bomb() -> void:
 		var bomb = BOMB.instance()
 		owner.get_node("Instances").add_child(bomb)
 		bomb.exploding = true
-		#bomb.scale.x = 1
-		#bomb.scale.y = 1
 		bomb.position = global_position
 		bomb.explode()
 
