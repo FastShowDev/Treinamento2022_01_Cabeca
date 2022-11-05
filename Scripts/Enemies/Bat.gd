@@ -6,9 +6,16 @@ extends KinematicBody2D
 
 export var speed = 55
 export var health = 1 
+
+onready var fly_sound = $FlyingFX
+var can_play_sound: bool = false
+
 var velocity = Vector2.ZERO
 var move_direction_x = -1
 var move_direction_y = 1
+
+func _ready():
+	fly_sound.play()
 
 func _physics_process(delta: float) -> void:
 	velocity.x = speed * move_direction_x
@@ -16,7 +23,6 @@ func _physics_process(delta: float) -> void:
 	
 	velocity.y = speed * move_direction_y
 	velocity = move_and_slide(velocity)
-	
 	if move_direction_x == 1:
 		$texture.flip_h = true
 	else:
@@ -35,9 +41,3 @@ func _physics_process(delta: float) -> void:
 		$ray_wall_y.scale *= -1
 		move_direction_x *= 1
 		move_direction_y *= -1
-#
-		
-
-	
-	
-	
