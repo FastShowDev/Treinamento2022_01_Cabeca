@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Assets/bomb-assets/2-Bomb On/10.png" type="Texture" id=1]
 [ext_resource path="res://Assets/bomb-assets/3-Explotion/5.png" type="Texture" id=2]
@@ -20,6 +20,8 @@
 [ext_resource path="res://Assets/bomb-assets/3-Explotion/9.png" type="Texture" id=18]
 [ext_resource path="res://Assets/bomb-assets/2-Bomb On/3.png" type="Texture" id=19]
 [ext_resource path="res://Scripts/Itens/Bomb.gd" type="Script" id=20]
+[ext_resource path="res://Sounds/Itens/Bomb/8bit_bomb_explosion.wav" type="AudioStream" id=21]
+[ext_resource path="res://Sounds/Itens/Bomb/sfx_sounds_pause1_in.wav" type="AudioStream" id=22]
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 17 )
@@ -158,6 +160,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [ false ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("ExplosionFX:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=31]
 resource_name = "explode"
@@ -193,10 +207,22 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1, 1.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 1, 1.1, 1.2, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ true, false, true ]
+"values": [ true, true, false, true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ExplosionFX:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
 }
 
 [sub_resource type="Animation" id=32]
@@ -234,19 +260,21 @@ frame = 1
 script = ExtResource( 20 )
 
 [node name="CollectFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
 
 [node name="ExplosionFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
 
 [node name="CollectArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectArea"]
-visible = false
 position = Vector2( 0, 5.5 )
 shape = SubResource( 5 )
 
 [node name="ExplosionArea" type="Area2D" parent="." groups=["bomb_explosion", "damage"]]
 
 [node name="ExplosionShape" type="CollisionShape2D" parent="ExplosionArea"]
+visible = false
 shape = SubResource( 29 )
 
 [node name="BombAnimation" type="AnimationPlayer" parent="."]
@@ -255,9 +283,4 @@ anims/RESET = SubResource( 30 )
 anims/explode = SubResource( 31 )
 anims/idle = SubResource( 32 )
 
-[node name="DamageTime" type="Timer" parent="."]
-wait_time = 0.5
-
-[connection signal="body_entered" from="CollectArea" to="." method="_on_Area2D_body_entered"]
-[connection signal="animation_finished" from="BombAnimation" to="." method="_on_BombAnimation_animation_finished"]
-[connection signal="timeout" from="DamageTime" to="." method="_on_DamageTime_timeout"]
+[connection signal="body_entered" from="CollectArea" to="." method="_on_CollectArea_body_entered"]
