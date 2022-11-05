@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/coin3.wav-a5056693e6b3e1baa878709d78708835.sample"
+path="res://.import/sfx_sounds_powerup6.wav-e2199e49d1c5f32b98e5403b142f9481.sample"
 
 [deps]
 
-source_file="res://Sounds/Itens/Coins/coin3.wav"
-dest_files=[ "res://.import/coin3.wav-a5056693e6b3e1baa878709d78708835.sample" ]
+source_file="res://Sounds/Itens/Heart/sfx_sounds_powerup6.wav"
+dest_files=[ "res://.import/sfx_sounds_powerup6.wav-e2199e49d1c5f32b98e5403b142f9481.sample" ]
 
 [params]
 
