@@ -76,3 +76,4 @@ func _on_CollisionArea_area_entered(area):
 	
 func _on_WalkFX_finished():
 	can_play = true
+
