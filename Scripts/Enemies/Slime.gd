@@ -6,7 +6,12 @@ var velocity: Vector2
 
 onready var slime_animation = $SlimeAnimationPlayer
 onready var sprite = $Sprite
+
+onready var damage_area = $DamageArea/CollisionShape2D
+onready var slime_collision = $Collision
+
 onready var walk_sound = $WalkFX
+onready var death_sound = $DeathFX
 
 var can_die: bool = false
 var can_play: bool = false
@@ -36,8 +41,11 @@ func move() -> void:
 
 func animate() -> void:
 	if can_die:
+		damage_area.disabled = true
+		slime_collision.disabled = true
 		slime_animation.stop()
 		slime_animation.play("dead")
+		death_sound.playing = true
 		set_physics_process(false)
 		yield(slime_animation, "animation_finished")
 		queue_free()
