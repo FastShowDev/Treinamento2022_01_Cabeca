@@ -5,6 +5,7 @@ var is_player_inside: bool = false
 
 onready var interact_baloom = $StaticBody2D/InteractBaloom
 onready var player = $"%Player"
+onready var open_sound = $OpenFX
 
 #var _player := Character.new()
 var _save := SaveGameAsJSON.new()
@@ -23,6 +24,9 @@ func open_gate() -> void:
 	self.frame = 1
 	interact_baloom.hide()
 
+func play_sound() -> void:
+	open_sound.playing = true
+
 func set_dungeon_path(path: String) -> void:
 	dungeon_room_path = path
 
@@ -30,6 +34,7 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact_item") and is_player_inside and player.stats.keys > 0 and not is_open:
 		player.use_key()
 		is_open = true
+		play_sound()
 		interact_baloom.hide()
 		self.frame = 1
 	elif event.is_action_pressed("interact_item") and is_open and is_player_inside:
@@ -48,3 +53,7 @@ func _on_Area2D_body_exited(body) -> void:
 		is_player_inside = false
 		if not is_open:
 			interact_baloom.hide()
+
+
+func _on_OpenFX_finished():
+	open_sound.playing = false
