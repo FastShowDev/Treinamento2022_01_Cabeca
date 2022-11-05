@@ -233,9 +233,9 @@ animation = "explode"
 frame = 1
 script = ExtResource( 20 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="CollectFX" type="AudioStreamPlayer" parent="."]
 
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+[node name="ExplosionFX" type="AudioStreamPlayer" parent="."]
 
 [node name="CollectArea" type="Area2D" parent="."]
 
