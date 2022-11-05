@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bird.ogg-f31de8592c9b086cd11ac06029bb6c24.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Enemies/Bat/bird.ogg"
+dest_files=[ "res://.import/bird.ogg-f31de8592c9b086cd11ac06029bb6c24.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

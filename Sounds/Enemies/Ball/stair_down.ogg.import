@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/stair_down.ogg-80dbb2750c1e2a32348a482c5aed5f91.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Enemies/Ball/stair_down.ogg"
+dest_files=[ "res://.import/stair_down.ogg-80dbb2750c1e2a32348a482c5aed5f91.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
