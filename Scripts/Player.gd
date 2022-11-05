@@ -242,6 +242,5 @@ func _on_DamageArea_area_entered(area):
 		damage()
 
 
-
 func _on_WalkFX_finished():
 	can_play_sound = true
