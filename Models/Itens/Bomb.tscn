@@ -210,7 +210,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 1, 1.1, 1.2, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ true, true, false, true, true ]
+"values": [ true, false, true, true, true ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("ExplosionFX:playing")
