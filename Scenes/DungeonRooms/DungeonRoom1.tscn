@@ -69,7 +69,6 @@ scale = Vector2( 4, 4 )
 tile_set = SubResource( 3 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 7, 1, 0, 8, 1, 0, 262144, 0, 0, 327680, 0, 0, 589831, 1, 0, 589832, 1, 0 )
 
 [node name="Gates" type="Node2D" parent="."]
 

@@ -175,7 +175,7 @@ scale = Vector2( 4, 4 )
 tile_set = SubResource( 7 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 7, 0, 0, 8, 0, 0, 131075, 2, 0, 131076, 3, 0, 131083, 2, 0, 131084, 3, 0, 196611, 4, 0, 196612, 5, 0, 196619, 4, 0, 196620, 5, 0, 262144, 1, 0, 327680, 1, 0 )
+tile_data = PoolIntArray( 131075, 2, 0, 131076, 3, 0, 131083, 2, 0, 131084, 3, 0, 196611, 4, 0, 196612, 5, 0, 196619, 4, 0, 196620, 5, 0 )
 
 [node name="Enemies" type="Node2D" parent="."]
 
@@ -191,6 +191,7 @@ margin_bottom = 40.0
 
 [node name="DialogBar" parent="Interfaces" instance=ExtResource( 5 )]
 unique_name_in_owner = true
+visible = false
 
 [node name="UserInterface" parent="Interfaces" instance=ExtResource( 6 )]
 unique_name_in_owner = true

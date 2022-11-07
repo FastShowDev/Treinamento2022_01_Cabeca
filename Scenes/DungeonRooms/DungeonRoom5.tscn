@@ -166,7 +166,7 @@ scale = Vector2( 4, 4 )
 tile_set = SubResource( 7 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 131075, 0, 0, 131076, 1, 0, 131083, 0, 0, 131084, 1, 0, 196611, 2, 0, 196612, 3, 0, 196619, 2, 0, 196620, 3, 0, 262159, 4, 0, 327695, 4, 0, 393219, 0, 0, 393220, 1, 0, 393227, 0, 0, 393228, 1, 0, 458755, 2, 0, 458756, 3, 0, 458763, 2, 0, 458764, 3, 0, 589831, 5, 0, 589832, 5, 0 )
+tile_data = PoolIntArray( 131075, 0, 0, 131076, 1, 0, 131083, 0, 0, 131084, 1, 0, 196611, 2, 0, 196612, 3, 0, 196619, 2, 0, 196620, 3, 0, 393219, 0, 0, 393220, 1, 0, 393227, 0, 0, 393228, 1, 0, 458755, 2, 0, 458756, 3, 0, 458763, 2, 0, 458764, 3, 0 )
 
 [node name="Gates" type="Node2D" parent="."]
 
@@ -204,6 +204,7 @@ margin_bottom = 40.0
 
 [node name="DialogBar" parent="Interfaces" instance=ExtResource( 6 )]
 unique_name_in_owner = true
+visible = false
 
 [node name="UserInterface" parent="Interfaces" instance=ExtResource( 7 )]
 unique_name_in_owner = true
