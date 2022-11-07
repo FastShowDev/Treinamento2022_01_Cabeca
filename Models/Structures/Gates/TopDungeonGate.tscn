@@ -46,13 +46,14 @@ volume_db = -10.0
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 position = Vector2( 0.5, 1.5 )
 shape = SubResource( 4 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 0, 6 )
+position = Vector2( 0, 4 )
 shape = SubResource( 5 )
 
 [node name="InteractBaloom" type="Sprite" parent="StaticBody2D"]
