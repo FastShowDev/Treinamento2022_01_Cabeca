@@ -6,8 +6,6 @@ class_name LoadGame
 var save_game_path: String
 
 var _save := SaveGameAsJSON.new()
-var _enemies : Resource = Enemies.new()
-var _map : Resource = Map.new()
 
 var top_dungeon_path : String 
 var bottom_dungeon_path : String 
