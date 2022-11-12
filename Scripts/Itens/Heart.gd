@@ -3,6 +3,8 @@ extends AnimatedSprite
 onready var animation_player = $HeartAnimationPlayer
 onready var sound = $CollectFX
 
+var path: String = "res://Models/Itens/Heart.tscn"
+
 func _ready():
 	pass
 	

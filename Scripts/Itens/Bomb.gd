@@ -2,11 +2,13 @@ extends AnimatedSprite
 
 var exploding: bool = false
 
-onready var bomb_anim = $BombAnimation
-onready var explosion_shape = $ExplosionArea/ExplosionShape
+onready var bomb_anim: AnimationPlayer = $BombAnimation
+onready var explosion_shape: CollisionShape2D = $ExplosionArea/ExplosionShape
 
-onready var explosion_sound = $ExplosionFX
-onready var collect_sound = $CollectFX
+onready var explosion_sound: AudioStreamPlayer = $ExplosionFX
+onready var collect_sound: AudioStreamPlayer = $CollectFX
+
+var path: String = "res://Models/Itens/Bomb.tscn"
 
 func _ready():
 	explosion_shape.disabled = true
