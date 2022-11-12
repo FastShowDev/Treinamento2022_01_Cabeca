@@ -1,12 +1,5 @@
 extends KinematicBody2D
 
-#Stats + itens
-var max_hearts: int = 6
-var hearts: int = 2
-var keys: int  = 0
-var coins: int = 0
-var bombs: int = 0
-
 #Player physics
 var speed = 175
 var velocity = Vector2.ZERO
@@ -30,6 +23,7 @@ onready var ui = $"%UserInterface"
 onready var bar = $"%DialogBar"
 
 var BOMB: PackedScene = preload("res://Models/Itens/Bomb.tscn")
+const save_path: String = "C://Users//zlFas//Documents//Saves//player.json" 
 
 #Permissions:
 var can_attack: bool = false
@@ -38,11 +32,6 @@ var can_take_damage: bool = true
 var can_play_sound: bool = false
 
 func _ready():
-	animated_sprite.visible = true
-	animated_sprite.modulate = Color(1,1,1,1)
-	#ui.set_coin_value(coins)
-	#ui.set_heart_value(hearts)
-	#ui.set_bomb_value(bombs)
 	pass
 
 func _process(delta: float) -> void:
@@ -173,18 +162,18 @@ func use_key() -> void:
 	ui.set_key_value(stats.keys)
 
 #Player status functions:
-func set_stats(new_stats: Character) -> void:
+func load_stats(data: Dictionary) -> void:
 	set_physics_process(false)
-	stats.global_position = new_stats.global_position
-	self.global_position = new_stats.global_position
-	stats.max_hearts = new_stats.max_hearts
-	stats.hearts = new_stats.hearts
-	stats.bombs = new_stats.bombs
-	stats.keys = new_stats.keys
-	stats.speed = new_stats.speed
-	stats.coins = new_stats.coins
+	stats.global_position = Vector2(data.x, data.y)
+	self.global_position = stats.global_position
+	stats.max_hearts = data.max_hearts
+	stats.hearts = data.hearts
+	stats.coins = data.coins
+	stats.bombs = data.bombs
+	stats.keys = data.keys
+	stats.speed = data.speed
 	set_physics_process(true)
-	
+
 func get_actual_stats() -> Character:
 	stats.global_position = self.global_position
 	return stats
@@ -201,13 +190,7 @@ func get_stats() -> Character:
 
 func kill():
 	set_physics_process(false)
-	animation.stop()
-	#_save.character = stats
-	
-	#_save.write_savegame()
-	
-	#yield(_save, "save_completed")
-	
+	animation.stop()	
 	if player_direction.x == 1:
 		animation.play("die_right")
 	elif player_direction.x == -1:
@@ -234,7 +217,7 @@ func damage() -> void:
 		yield(timer, "timeout")
 		can_take_damage = true
 
-	
+
 func _on_DamageArea_area_entered(area):
 	if area.is_in_group("damage"):
 		damage()

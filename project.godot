@@ -19,6 +19,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://References/resources/Dialog_Resource.gd"
 }, {
+"base": "AnimatedSprite",
+"class": "DungeonGate",
+"language": "GDScript",
+"path": "res://Scripts/Structures/DungeonGate.gd"
+}, {
+"base": "Node2D",
+"class": "LoadGame",
+"language": "GDScript",
+"path": "res://LoadGame.gd"
+}, {
 "base": "Resource",
 "class": "Map",
 "language": "GDScript",
@@ -28,12 +38,26 @@ _global_script_classes=[ {
 "class": "SaveGameAsJSON",
 "language": "GDScript",
 "path": "res://References/saves/SaveGameAsJSON.gd"
+}, {
+"base": "LoadGame",
+"class": "SetupGame",
+"language": "GDScript",
+"path": "res://Scripts/SetupGame.gd"
+}, {
+"base": "Node2D",
+"class": "SetupGates",
+"language": "GDScript",
+"path": "res://Scripts/DungeonRoom/GatesSetup.gd"
 } ]
 _global_script_class_icons={
 "Character": "",
 "Dialog": "",
+"DungeonGate": "",
+"LoadGame": "",
 "Map": "",
-"SaveGameAsJSON": ""
+"SaveGameAsJSON": "",
+"SetupGame": "",
+"SetupGates": ""
 }
 
 [application]
@@ -44,6 +68,7 @@ config/icon="res://icon.png"
 
 [display]
 
+window/size/height=700
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 

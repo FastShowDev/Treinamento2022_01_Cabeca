@@ -1,57 +1,92 @@
 class_name SaveGameAsJSON
 extends Reference
 
-const SAVE_GAME_PATH := "C://Users//zlFas//Documents//Saves//save.json"
+var SAVE_GAME_PATH : String = "C://Users//zlFas//Documents//Saves//save.json" 
+const SAVE_PLAYER_DATA: String = "C://Users//zlFas//Documents//Saves//player.json" 
 
 var version := 1
 
-var character: Resource = Character.new()
+var enemies_data : Dictionary
+var player_data : Dictionary
+var gate_data : Dictionary
+var itens_data : Dictionary
+var all_data : Dictionary
 
-var map_name : String
-var global_position :Vector2
+var loading_room: bool
+var room_name: String
 
-var _file := File.new()
+var _file : File = File.new()
 
 
 func save_exists() -> bool:
-	return _file.file_exists(SAVE_GAME_PATH)
+	return _file.file_exists(SAVE_GAME_PATH) and _file.file_exists(SAVE_PLAYER_DATA)
 
 
 func write_savegame() -> void:
-	var error := _file.open(SAVE_GAME_PATH, File.WRITE)
+	
+	var error:= _file.open(SAVE_PLAYER_DATA, File.WRITE)
+	if error != OK:
+		printerr("Could not open the file %s. Aborting save operation. Error code: %s" %
+		[SAVE_PLAYER_DATA, error])
+		return
+	
+	if player_data != null:
+		var player_json := JSON.print(player_data)
+		_file.store_string(player_json)
+		_file.close()
+	else:
+		print("Could not open player data. Aborting save operation.")
+		return
+		
+	error = _file.open(SAVE_GAME_PATH, File.WRITE)
 	if error != OK:
 		printerr("Could not open the file %s. Aborting save operation. Error code: %s" % [SAVE_GAME_PATH, error])
 		return
-	print("Na função write: ")
-	print(character.global_position)
-	var data := {
-		"global_position":
-		{
-			"x": character.global_position.x,
-			"y": character.global_position.y,
-		},
-		"map_name": map_name,
-		"player":
-		{
-			"display_name": character.display_name,
-			"speed": character.speed,
-			"max_hearts": character.max_hearts,
-			"hearts": character.hearts,
-			"bombs": character.bombs,
-			"coins": character.coins,
-			"keys": character.keys,
-		},
+	
+	var data : Dictionary = {
+		"Enemies": {},
+		"Gates": {},
+		"Instances": {},
 	}
+			
+	if enemies_data != null:
+		data["Enemies"] = enemies_data
+	else:
+		print("Could not open enemies data. Aborting save operation.")
+		return
+		
+	if gate_data != null:
+		data["Gates"] = gate_data
+	else:
+		print("Could not open gate data. Aborting save operation.")
+		return
+		
+	if itens_data != null:
+		data["Instances"] = itens_data
+	else:
+		print("Could not open itens data. Aborting save operation.")
+		return
 	
 	var json_string := JSON.print(data)
 	_file.store_string(json_string)
 	_file.close()
-	data_saved(character)
-	#emit_signal("save_completed")
 
 
 func load_savegame() -> void:
-	var error := _file.open(SAVE_GAME_PATH, File.READ)
+	var error := _file.open(SAVE_PLAYER_DATA, File.READ)
+	if error != OK:
+		printerr("Could not open the file %s. Aborting load operation. Error code: %s" 
+		% [SAVE_PLAYER_DATA, error])
+		return
+	var player_content : String = _file.get_as_text()
+	var player_dict: Dictionary = {
+		"Player": {},
+	}
+	player_dict["Player"] = player_content
+	_file.close()
+	all_data = JSON.parse(player_content).result
+
+	error = _file.open(SAVE_GAME_PATH, File.READ)
 	if error != OK:
 		printerr("Could not open the file %s. Aborting load operation. Error code: %s" % [SAVE_GAME_PATH, error])
 		return
@@ -59,26 +94,18 @@ func load_savegame() -> void:
 	var content := _file.get_as_text()
 	_file.close()
 
-	var data: Dictionary = JSON.parse(content).result
-	character = Character.new()
-	character.global_position = Vector2(data.global_position.x, data.global_position.y)
-	map_name = data.map_name
-	character.display_name = data.player.display_name
-	character.speed = data.player.speed
-	character.max_hearts = data.player.max_hearts
-	character.keys = data.player.keys
-	character.bombs = data.player.bombs
-	character.hearts = data.player.hearts
-	character.coins = data.player.coins
+	all_data.merge(JSON.parse(content).result)
 	
-	
-func data_saved(data:Character) -> void:
-	print("")
-	print("Dados escritos no arquivo de save: ")
-	print("Player: ")
-	print("Posição: " + data.global_position as String)
-	print("Hearts: " + data.hearts as String)
-	print("Bombs: " + data.bombs as String)
-	print("Coins: " + data.coins as String)
-	print("Keys: " + data.coins as String)
-	print("")
+func read_player_data() -> Dictionary:
+	var error := _file.open(SAVE_PLAYER_DATA, File.READ)
+	if error != OK:
+		printerr("Could not open the file %s. Aborting load operation. Error code: %s" 
+		% [SAVE_PLAYER_DATA, error])
+		return {}
+	var player_content : String = _file.get_as_text()
+	var player_dict: Dictionary = {
+		"Player": {},
+	}
+	player_dict["Player"] = player_content
+	_file.close()
+	return player_dict

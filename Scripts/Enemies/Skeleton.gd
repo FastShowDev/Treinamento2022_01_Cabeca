@@ -7,6 +7,7 @@ extends KinematicBody2D
 #	4: volta ao passo "1"
 
 onready var animation: AnimationPlayer = get_node("Animation")
+const path: String = "res://Models/Enemies/Skeleton.tscn"
 
 export var speed = 55
 export var health = 1 

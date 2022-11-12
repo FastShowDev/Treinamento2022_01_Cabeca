@@ -3,6 +3,8 @@ extends AnimatedSprite
 onready var anim = $CoinAnimationPlayer
 onready var sound = $CollectFX
 
+var path: String = "res://Models/Itens/Coin.tscn"
+
 func _ready():
 	pass
 	

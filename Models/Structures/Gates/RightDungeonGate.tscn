@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Models/Structures/Base/BaseDungeonGate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Dungeon-assets/sheet-sem-fundo.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Structures/RightDungeonGate.gd" type="Script" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
@@ -24,6 +25,7 @@ extents = Vector2( 9.5, 16 )
 
 [node name="RightDungeonGate" instance=ExtResource( 1 )]
 frames = SubResource( 3 )
+script = ExtResource( 3 )
 
 [node name="CollisionShape2D" parent="StaticBody2D" index="0"]
 position = Vector2( 0.5, 0 )

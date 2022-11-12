@@ -3,6 +3,8 @@ extends AnimatedSprite
 onready var anim = $KeyAnimationPlayer
 onready var sound = $CollectFX
 
+var path: String = "res://Models/Itens/Key.tscn"
+
 func _ready():
 	pass
 	
