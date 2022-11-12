@@ -1,12 +1,16 @@
 class_name Character
 extends Resource
 
-export var max_hearts: int = 6
-export var hearts: int = 2
-export var keys: int  = 0
-export var coins: int = 0
-export var bombs: int = 0
-export var display_name = "FastShow"
+#Path:
+export var path: String = "res://Models/Player.tscn"
+
+#Player stats:
+export var max_hearts: float = 6
+export var hearts: float = 2
+export var keys: float  = 10
+export var coins: float = 0
+export var bombs: float = 0
+export var display_name: String = "FastShow-Player"
 
 #Player physics
 export var speed = 175
