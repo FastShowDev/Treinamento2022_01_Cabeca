@@ -3,6 +3,7 @@ extends KinematicBody2D
 var player_ref = null
 var speed: int = 100
 var velocity: Vector2
+var path: String = "res://Models/Enemies/Slime.tscn"
 
 onready var slime_animation = $SlimeAnimationPlayer
 onready var sprite = $Sprite

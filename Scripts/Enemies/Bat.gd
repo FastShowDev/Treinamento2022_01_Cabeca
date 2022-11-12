@@ -13,6 +13,7 @@ var can_play_sound: bool = false
 var velocity = Vector2.ZERO
 var move_direction_x = -1
 var move_direction_y = 1
+var path: String = "res://Models/Enemies/Bat.tscn"
 
 func _ready():
 	fly_sound.play()
