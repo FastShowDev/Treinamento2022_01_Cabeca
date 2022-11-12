@@ -8,7 +8,7 @@
 [ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=6]
 [ext_resource path="res://Models/Structures/RightGate.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Models/Structures/LeftGate.tscn" type="PackedScene" id=8]
-[ext_resource path="res://LoadGame.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/SetupGame.gd" type="Script" id=9]
 [ext_resource path="res://Models/Structures/IntectiveStructures/ISignT1.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Models/Structures/IntectiveStructures/IGrave.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Models/Structures/IntectiveStructures/ISignT2.tscn" type="PackedScene" id=15]
@@ -566,7 +566,7 @@ points = PoolVector2Array( 4.3761, 9.82083, 12.5859, 9.55164, 12.7206, 13.7239, 
 
 [node name="Spawn" type="Node2D"]
 position = Vector2( -2, -4 )
-script = ExtResource( 12 )
+script = ExtResource( 9 )
 
 [node name="Terrain" type="Node2D" parent="."]
 
