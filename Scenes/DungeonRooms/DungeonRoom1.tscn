@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Models/Enemies/Bat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Dungeon.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Models/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Interfaces/UserInterface.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Interfaces/DialogBar.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scripts/SetupGame.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/DungeonRoom/GatesSetup.gd" type="Script" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -59,6 +61,8 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 1/z_index = 0
 
 [node name="DungeonRoom1" type="Node2D"]
+position = Vector2( 0, 25 )
+script = ExtResource( 8 )
 
 [node name="Dungeon" parent="." instance=ExtResource( 2 )]
 
@@ -71,9 +75,10 @@ cell_size = Vector2( 16, 16 )
 format = 1
 
 [node name="Gates" type="Node2D" parent="."]
+script = ExtResource( 9 )
 
 [node name="RightDungeonGate" parent="Gates" instance=ExtResource( 4 )]
-position = Vector2( 1004, 320 )
+position = Vector2( 1005, 320 )
 scale = Vector2( 4, 4 )
 
 [node name="Enemies" type="Node2D" parent="."]
@@ -89,11 +94,6 @@ position = Vector2( 144, 80 )
 
 [node name="Instances" type="Node2D" parent="."]
 
-[node name="Player" parent="." instance=ExtResource( 5 )]
-unique_name_in_owner = true
-position = Vector2( 893, 338 )
-scale = Vector2( 2, 2 )
-
 [node name="Interfaces" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
@@ -104,3 +104,12 @@ visible = false
 
 [node name="UserInterface" parent="Interfaces" instance=ExtResource( 6 )]
 unique_name_in_owner = true
+
+[node name="Player" type="Node2D" parent="."]
+
+[node name="Player" parent="Player" instance=ExtResource( 5 )]
+unique_name_in_owner = true
+position = Vector2( 893, 338 )
+scale = Vector2( 2, 2 )
+
+[connection signal="tree_exiting" from="." to="." method="_on_scene_tree_exiting"]
