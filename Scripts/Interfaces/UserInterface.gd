@@ -10,10 +10,10 @@ onready var player = $"%Player"
 
 func _ready():
 	if player != null:
-		bomb_lb.text = player.bombs as String
-		heart_lb.text = player.hearts as String
-		coin_lb.text = player.coins as String
-		key_lb.text = player.keys as String
+		bomb_lb.text = player.stats.bombs as String
+		heart_lb.text = player.stats.hearts as String
+		coin_lb.text = player.stats.coins as String
+		key_lb.text = player.stats.keys as String
 	
 func set_heart_value(value: int):
 	heart_lb.text = value as String
