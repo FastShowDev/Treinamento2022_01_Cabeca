@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Dungeon.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Models/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scripts/DungeonRoom/GatesSetup.gd" type="Script" id=8]
 [ext_resource path="res://Scripts/SetupGame.gd" type="Script" id=9]
+[ext_resource path="res://Assets/roguelike-cave-pack/Spritesheet/roguelikeDungeon_transparent.png" type="Texture" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -365,6 +366,69 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 5/shape_one_way_margin = 0.0
 5/shapes = [  ]
 5/z_index = 0
+6/name = "Water"
+6/texture = ExtResource( 10 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 238, 169, 67 )
+6/tile_mode = 2
+6/autotile/icon_coordinate = Vector2( 0, 0 )
+6/autotile/tile_size = Vector2( 16, 16 )
+6/autotile/spacing = 1
+6/autotile/occluder_map = [  ]
+6/autotile/navpoly_map = [  ]
+6/autotile/priority_map = [  ]
+6/autotile/z_index_map = [  ]
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "dECORATION3"
+7/texture = ExtResource( 1 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 918, 391, 50, 33 )
+7/tile_mode = 2
+7/autotile/icon_coordinate = Vector2( 0, 0 )
+7/autotile/tile_size = Vector2( 16, 16 )
+7/autotile/spacing = 1
+7/autotile/occluder_map = [  ]
+7/autotile/navpoly_map = [  ]
+7/autotile/priority_map = [  ]
+7/autotile/z_index_map = [  ]
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "Decoration4"
+8/texture = ExtResource( 10 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 135, 84 )
+8/tile_mode = 2
+8/autotile/icon_coordinate = Vector2( 0, 0 )
+8/autotile/tile_size = Vector2( 16, 16 )
+8/autotile/spacing = 1
+8/autotile/occluder_map = [  ]
+8/autotile/navpoly_map = [  ]
+8/autotile/priority_map = [  ]
+8/autotile/z_index_map = [  ]
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
 
 [node name="DungeonRoom7" type="Node2D"]
 script = ExtResource( 9 )
@@ -385,13 +449,13 @@ scale = Vector2( 4, 4 )
 tile_set = SubResource( 12 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 65539, 2, 0, 65547, 2, 0, 131077, 1, 0, 131085, 3, 0, 327686, 3, 0, 458754, 0, 0, 524299, 2, 0, 524302, 1, 0 )
+tile_data = PoolIntArray( 1, 8, 262149, 2, 6, 131076, 3, 8, 196613, 4, 6, 65536, 5, 6, 65538, 6, 8, 262148, 9, 8, 262148, 11, 8, 262149, 12, 6, 65536, 13, 6, 65538, 14, 8, 262149, 65539, 2, 0, 65542, 7, 65536, 65543, 8, 131073, 65544, 8, 131074, 65547, 2, 0, 65549, 7, 65536, 131074, 7, 65537, 131077, 1, 0, 131081, 8, 65543, 131085, 3, 0, 196610, 8, 131078, 196615, 7, 65538, 196616, 8, 131078, 262145, 8, 131072, 262147, 8, 7, 262153, 7, 65538, 262157, 8, 65543, 262158, 8, 131072, 327681, 8, 7, 327684, 8, 131078, 327686, 3, 0, 327688, 8, 131078, 327691, 8, 131078, 327694, 8, 131078, 393219, 7, 65537, 393221, 8, 131074, 393227, 8, 65543, 458754, 0, 0, 458758, 8, 65543, 458760, 8, 131078, 458761, 7, 65537, 458765, 7, 65537, 524299, 2, 0, 524302, 1, 0 )
 
 [node name="Gates" type="Node2D" parent="."]
 script = ExtResource( 8 )
 
 [node name="TopDungeonGate" parent="Gates" instance=ExtResource( 3 )]
-position = Vector2( 513, 20 )
+position = Vector2( 512, 20 )
 scale = Vector2( 4, 4 )
 
 [node name="BottomDungeonGate" parent="Gates" instance=ExtResource( 4 )]
