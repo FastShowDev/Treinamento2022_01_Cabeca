@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Dungeon.tscn" type="PackedScene" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://Scripts/DungeonRoom/GatesSetup.gd" type="Script" id=8]
 [ext_resource path="res://Scripts/SetupGame.gd" type="Script" id=9]
 [ext_resource path="res://Assets/roguelike-cave-pack/Spritesheet/roguelikeDungeon_transparent.png" type="Texture" id=10]
+[ext_resource path="res://Models/Itens/Heart.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Models/Itens/Coin.tscn" type="PackedScene" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -463,6 +465,15 @@ position = Vector2( 512, 620 )
 scale = Vector2( 4, 4 )
 
 [node name="Instances" type="Node2D" parent="."]
+
+[node name="Heart" parent="Instances" instance=ExtResource( 11 )]
+position = Vector2( 97, 352 )
+
+[node name="Coin" parent="Instances" instance=ExtResource( 12 )]
+position = Vector2( 220, 223 )
+
+[node name="Coin2" parent="Instances" instance=ExtResource( 12 )]
+position = Vector2( 928, 352 )
 
 [node name="Enemies" type="Node2D" parent="."]
 
