@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Dungeon.tscn" type="PackedScene" id=2]
@@ -13,9 +13,8 @@
 [ext_resource path="res://Scripts/DungeonRoom/GatesSetup.gd" type="Script" id=11]
 [ext_resource path="res://Models/Enemies/Slime.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Models/Itens/Coin.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Models/Itens/Bomb.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Models/Itens/Key.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Models/Itens/Heart.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Assets/roguelike-cave-pack/Spritesheet/roguelikeDungeon_transparent.png" type="Texture" id=17]
 
 [sub_resource type="TileSet" id=1]
 0/name = "roguelikeSheet_transparent.png 0"
@@ -260,6 +259,48 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 12/shape_one_way_margin = 0.0
 12/shapes = [  ]
 12/z_index = 0
+13/name = "Decoration"
+13/texture = ExtResource( 17 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 135, 84 )
+13/tile_mode = 2
+13/autotile/icon_coordinate = Vector2( 0, 0 )
+13/autotile/tile_size = Vector2( 16, 16 )
+13/autotile/spacing = 1
+13/autotile/occluder_map = [  ]
+13/autotile/navpoly_map = [  ]
+13/autotile/priority_map = [  ]
+13/autotile/z_index_map = [  ]
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "Decoration2"
+14/texture = ExtResource( 17 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 170, 170, 101, 135 )
+14/tile_mode = 2
+14/autotile/icon_coordinate = Vector2( 0, 0 )
+14/autotile/tile_size = Vector2( 16, 16 )
+14/autotile/spacing = 1
+14/autotile/occluder_map = [  ]
+14/autotile/navpoly_map = [  ]
+14/autotile/priority_map = [  ]
+14/autotile/z_index_map = [  ]
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
 
 [node name="DungeonRoom0" type="Node2D"]
 position = Vector2( 0, 25 )
@@ -274,7 +315,7 @@ scale = Vector2( 4, 4 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 131085, 1, 0, 196610, 1, 0, 262152, 1, 0, 393220, 1, 0, 393223, 1, 0, 393224, 1, 0, 458758, 1, 0, 458759, 1, 0, 458761, 1, 0, 458765, 1, 0, 524291, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 589831, 1, 0, 589832, 1, 0 )
+tile_data = PoolIntArray( 65537, 1, 0, 65538, 0, 0, 65539, 1, 0, 65540, 0, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 0, 0, 65546, 1, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 1, 0, 131073, 1, 0, 131074, 0, 0, 131075, 1, 0, 131076, 0, 0, 131077, 1, 0, 131078, 1, 0, 131079, 1, 0, 131080, 1, 0, 131081, 1, 0, 131082, 0, 0, 131083, 1, 0, 131084, 0, 0, 131085, 1, 0, 131086, 0, 0, 196609, 0, 0, 196610, 1, 0, 196611, 0, 0, 196612, 1, 0, 196613, 0, 0, 196614, 1, 0, 196615, 1, 0, 196616, 0, 0, 196617, 1, 0, 196618, 1, 0, 196619, 0, 0, 196620, 1, 0, 196621, 0, 0, 196622, 0, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 0, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 0, 0, 262155, 1, 0, 262156, 1, 0, 262157, 1, 0, 262158, 1, 0, 327681, 1, 0, 327682, 1, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 1, 0, 327687, 0, 0, 327688, 0, 0, 327689, 1, 0, 327690, 1, 0, 327691, 0, 0, 327692, 1, 0, 327693, 1, 0, 327694, 1, 0, 393217, 0, 0, 393218, 1, 0, 393219, 0, 0, 393220, 1, 0, 393221, 0, 0, 393222, 0, 0, 393223, 1, 0, 393224, 1, 0, 393225, 0, 0, 393226, 1, 0, 393227, 1, 0, 393228, 1, 0, 393229, 0, 0, 393230, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 0, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 0, 0, 458763, 0, 0, 458764, 1, 0, 458765, 1, 0, 458766, 0, 0, 524289, 0, 0, 524290, 1, 0, 524291, 1, 0, 524292, 0, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 0, 0, 524301, 0, 0, 524302, 1, 0, 589831, 1, 0, 589832, 1, 0 )
 
 [node name="Decoration" type="TileMap" parent="Terrain"]
 scale = Vector2( 4, 4 )
@@ -282,7 +323,7 @@ tile_set = SubResource( 5 )
 cell_size = Vector2( 16, 16 )
 show_collision = true
 format = 1
-tile_data = PoolIntArray( 131078, 12, 0, 131081, 12, 0, 131085, 7, 0, 196610, 1, 0, 196614, 0, 0, 196617, 0, 0, 196620, 1, 0, 262146, 12, 0, 262150, 12, 0, 262152, 7, 0, 262153, 12, 0, 262156, 12, 0, 327682, 0, 0, 327686, 0, 0, 327689, 0, 0, 327692, 0, 0, 393218, 12, 0, 393220, 7, 0, 393223, 10, 0, 393228, 12, 0, 458754, 0, 0, 458764, 0, 0, 458765, 10, 0, 524293, 7, 0, 524298, 10, 0 )
+tile_data = PoolIntArray( 65537, 13, 131075, 65541, 14, 327683, 65546, 14, 262148, 65548, 14, 327683, 65550, 13, 131074, 131075, 13, 196609, 131077, 13, 196609, 131078, 12, 0, 131080, 14, 327683, 131081, 12, 0, 131085, 7, 0, 196609, 14, 262148, 196610, 1, 0, 196614, 0, 0, 196616, 13, 131077, 196617, 0, 0, 196620, 1, 0, 196622, 13, 196610, 262145, 13, 131077, 262146, 12, 0, 262150, 12, 0, 262152, 7, 0, 262153, 12, 0, 262156, 12, 0, 327682, 0, 0, 327684, 14, 327683, 327686, 0, 0, 327689, 0, 0, 327690, 14, 393220, 327692, 0, 0, 393218, 12, 0, 393219, 13, 131076, 393220, 7, 0, 393223, 10, 0, 393225, 13, 131075, 393228, 12, 0, 393230, 13, 131074, 458754, 0, 0, 458755, 13, 131076, 458762, 13, 131076, 458763, 13, 196610, 458764, 0, 0, 458765, 10, 0, 524289, 14, 393220, 524290, 14, 327683, 524292, 13, 131076, 524293, 7, 0, 524298, 10, 0, 524300, 13, 131075 )
 
 [node name="Gates" type="Node2D" parent="."]
 script = ExtResource( 11 )
@@ -305,23 +346,17 @@ scale = Vector2( 4, 4 )
 
 [node name="Instances" type="Node2D" parent="."]
 
-[node name="Key" parent="Instances" instance=ExtResource( 15 )]
-position = Vector2( 373, 438 )
-
 [node name="Heart" parent="Instances" instance=ExtResource( 16 )]
-position = Vector2( 279, 498 )
-
-[node name="Bomb" parent="Instances" instance=ExtResource( 14 )]
-position = Vector2( 248, 219 )
+position = Vector2( 161, 539 )
 
 [node name="Coin" parent="Instances" instance=ExtResource( 13 )]
-position = Vector2( 519, 408 )
+position = Vector2( 96, 159 )
 
 [node name="Coin2" parent="Instances" instance=ExtResource( 13 )]
-position = Vector2( 493, 297 )
+position = Vector2( 865, 98 )
 
 [node name="Coin3" parent="Instances" instance=ExtResource( 13 )]
-position = Vector2( 307, 291 )
+position = Vector2( 864, 474 )
 
 [node name="Enemies" type="Node2D" parent="."]
 
@@ -330,6 +365,9 @@ position = Vector2( 892, 510 )
 
 [node name="Slime2" parent="Enemies" instance=ExtResource( 12 )]
 position = Vector2( 181, 128 )
+
+[node name="Slime3" parent="Enemies" instance=ExtResource( 12 )]
+position = Vector2( 709, 90 )
 
 [node name="Interfaces" type="Control" parent="."]
 margin_right = 40.0
