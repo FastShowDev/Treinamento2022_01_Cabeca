@@ -112,7 +112,6 @@ attenuation = 3.36358
 [node name="DetectionArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
-visible = false
 shape = SubResource( 6 )
 
 [node name="DamageArea" type="Area2D" parent="." groups=["damage"]]
