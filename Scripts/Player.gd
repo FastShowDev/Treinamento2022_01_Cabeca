@@ -101,6 +101,7 @@ func animate() -> void:
 		play_walk_sound()
 	else:
 		animation.stop()
+		walk_sound.stop()
 		if player_direction.x == 1:
 			animated_sprite.play("idle_right")
 		elif player_direction.x == -1:
