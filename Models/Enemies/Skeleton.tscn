@@ -134,6 +134,8 @@ tracks/0/keys = {
 }
 
 [node name="Skeleton" type="KinematicBody2D"]
+collision_layer = 8
+collision_mask = 7
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -148,9 +150,11 @@ frame = 8
 position = Vector2( 32, 48 )
 shape = SubResource( 1 )
 
-[node name="DamageArea" type="Area2D" parent="." groups=["damage"]]
+[node name="AttackArea" type="Area2D" parent="." groups=["damage"]]
+collision_layer = 8
+collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
 visible = false
 position = Vector2( 34, 37 )
 shape = SubResource( 10 )

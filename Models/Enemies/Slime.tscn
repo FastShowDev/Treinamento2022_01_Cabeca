@@ -82,6 +82,8 @@ radius = 5.64026
 [node name="Slime" type="KinematicBody2D"]
 position = Vector2( 0, -1 )
 scale = Vector2( 3, 3 )
+collision_layer = 8
+collision_mask = 5
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -110,11 +112,15 @@ max_distance = 800.0
 attenuation = 3.36358
 
 [node name="DetectionArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource( 6 )
 
 [node name="DamageArea" type="Area2D" parent="." groups=["damage"]]
+collision_layer = 8
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
 visible = false
