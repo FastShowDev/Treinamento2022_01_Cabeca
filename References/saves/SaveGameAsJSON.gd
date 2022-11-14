@@ -85,6 +85,7 @@ func load_savegame() -> void:
 	player_dict["Player"] = player_content
 	_file.close()
 	all_data = JSON.parse(player_content).result
+	print(all_data)
 
 	error = _file.open(SAVE_GAME_PATH, File.READ)
 	if error != OK:

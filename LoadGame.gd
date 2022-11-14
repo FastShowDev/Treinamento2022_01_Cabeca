@@ -6,6 +6,7 @@ class_name LoadGame
 var save_game_path: String
 
 var _save := SaveGameAsJSON.new()
+signal save_completed
 
 var top_dungeon_path : String 
 var bottom_dungeon_path : String 
@@ -20,13 +21,9 @@ var door_type: String
 var room_start_positions : Array
 var start_position: Vector2
 
-onready var _player := $"%Player"
+onready var _player : KinematicBody2D = $"%Player"
 onready var _interface := $Interfaces/UserInterface
 onready var _bar := $Interfaces/DialogBar
-
-
-func _ready() -> void:
-	pass
 
 
 func set_save_path(path: String) -> void:
@@ -48,7 +45,7 @@ func _create_or_load_save() -> void:
 			
 		# After creating or loading a save resource, we need to dispatch its data
 		# to the various nodes that need it.
-		
+	print("Carregando dados:")
 	_load_game(_save.all_data)
 		#_interface.set_values(_save.character)
 	
@@ -65,6 +62,7 @@ func _save_game() -> void:
 func _on_scene_tree_exiting():
 	print("Saindo do jogo!")
 	_save_game()
+	print("Acabouu")
 
 
 func _save_player_data() -> void:
