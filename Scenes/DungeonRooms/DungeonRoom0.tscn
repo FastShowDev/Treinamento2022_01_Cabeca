@@ -386,11 +386,11 @@ unique_name_in_owner = true
 margin_top = -4.0
 margin_bottom = -4.0
 
-[node name="Player" type="Node2D" parent="."]
+[node name="PlayerNode" type="Node2D" parent="."]
 
-[node name="Player" parent="Player" instance=ExtResource( 4 )]
+[node name="Player" parent="PlayerNode" instance=ExtResource( 4 )]
 unique_name_in_owner = true
-position = Vector2( 519, 488 )
+position = Vector2( 509, 500 )
 scale = Vector2( 2, 2 )
 
 [connection signal="tree_exiting" from="." to="." method="_on_scene_tree_exiting"]
