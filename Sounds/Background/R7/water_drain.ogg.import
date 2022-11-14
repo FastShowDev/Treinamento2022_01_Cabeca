@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/water_drain.ogg-afb0a3e233de657cc50e99395c43168e.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Background/R7/water_drain.ogg"
+dest_files=[ "res://.import/water_drain.ogg-afb0a3e233de657cc50e99395c43168e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

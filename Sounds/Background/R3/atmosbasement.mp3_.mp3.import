@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/atmosbasement.mp3_.mp3-dcc5c0682b62326bc3d7a59f0ea7ef52.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Background/R3/atmosbasement.mp3_.mp3"
+dest_files=[ "res://.import/atmosbasement.mp3_.mp3-dcc5c0682b62326bc3d7a59f0ea7ef52.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
