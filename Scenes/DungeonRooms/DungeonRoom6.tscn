@@ -196,9 +196,9 @@ visible = false
 [node name="UserInterface" parent="Interfaces" instance=ExtResource( 6 )]
 unique_name_in_owner = true
 
-[node name="Player" type="Node2D" parent="."]
+[node name="PlayerNode" type="Node2D" parent="."]
 
-[node name="Player" parent="Player" instance=ExtResource( 7 )]
+[node name="Player" parent="PlayerNode" instance=ExtResource( 7 )]
 unique_name_in_owner = true
 position = Vector2( 938, 315 )
 scale = Vector2( 2, 2 )
