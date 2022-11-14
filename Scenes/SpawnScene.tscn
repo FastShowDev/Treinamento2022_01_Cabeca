@@ -589,24 +589,6 @@ tile_data = PoolIntArray( 196629, 1, 196611, 196630, 1, 196612, 262165, 1, 13107
 
 [node name="Instances" type="Node2D" parent="."]
 
-[node name="Interfaces" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="DialogBar" parent="Interfaces" instance=ExtResource( 26 )]
-unique_name_in_owner = true
-margin_left = 1.0
-margin_top = 4.0
-margin_right = 2.0
-margin_bottom = 11.0
-
-[node name="UserInterface" parent="Interfaces" instance=ExtResource( 24 )]
-unique_name_in_owner = true
-margin_left = -2.0
-margin_top = -2.0
-margin_right = -2.0
-margin_bottom = -2.0
-
 [node name="YSort" type="YSort" parent="."]
 script = ExtResource( 27 )
 
@@ -778,5 +760,23 @@ scale = Vector2( 2, 2 )
 [node name="Gate" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 687, 176 )
 scale = Vector2( 2, 2 )
+
+[node name="Interfaces" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="DialogBar" parent="Interfaces" instance=ExtResource( 26 )]
+unique_name_in_owner = true
+margin_left = 1.0
+margin_top = 4.0
+margin_right = 2.0
+margin_bottom = 11.0
+
+[node name="UserInterface" parent="Interfaces" instance=ExtResource( 24 )]
+unique_name_in_owner = true
+margin_left = -2.0
+margin_top = -2.0
+margin_right = -2.0
+margin_bottom = -2.0
 
 [connection signal="tree_exiting" from="." to="." method="_on_scene_tree_exiting"]
