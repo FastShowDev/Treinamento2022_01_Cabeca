@@ -5,7 +5,7 @@ var is_open: bool = false
 var is_player_inside: bool = false
 
 onready var interact_baloom = $StaticBody2D/InteractBaloom
-onready var player = get_parent().get_parent().get_node("Player").get_node("Player")
+onready var player = get_parent().get_parent().get_node("PlayerNode").get_node("Player")
 onready var open_sound = $OpenFX
 onready var transition_sound = $TransitionFX
 onready var main = get_parent().get_parent()
