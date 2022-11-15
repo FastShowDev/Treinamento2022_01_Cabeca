@@ -7,8 +7,12 @@ extends KinematicBody2D
 export var speed = 55
 export var health = 1 
 
+onready var collision = $DamageArea/CollisionShape2D
 onready var fly_sound = $FlyingFX
+onready var die_sound = $DieFX
+
 var can_play_sound: bool = false
+var can_die: bool = true
 
 var velocity = Vector2.ZERO
 var move_direction_x = -1
@@ -42,3 +46,15 @@ func _physics_process(delta: float) -> void:
 		$ray_wall_y.scale *= -1
 		move_direction_x *= 1
 		move_direction_y *= -1
+
+func die() -> void:
+	set_physics_process(false)
+	collision.disabled = true
+	self.visible = false
+	die_sound.play()
+	yield(die_sound, "finished")
+	queue_free()
+
+func _on_DamageArea_area_entered(area):
+	if area.is_in_group("player_attack"):
+		die()
