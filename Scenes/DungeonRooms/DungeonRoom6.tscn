@@ -1,6 +1,6 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=1]
+[ext_resource path="res://Models/Itens/Coin.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Dungeon.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Models/Structures/Gates/RightDungeonGate.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Models/Structures/Gates/BottomDungeonGate.tscn" type="PackedScene" id=4]
@@ -9,157 +9,42 @@
 [ext_resource path="res://Models/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scripts/SetupGame.gd" type="Script" id=8]
 [ext_resource path="res://Scripts/DungeonRoom/GatesSetup.gd" type="Script" id=9]
-
-[sub_resource type="ConvexPolygonShape2D" id=1]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=2]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=3]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=4]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=5]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=6]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-
-[sub_resource type="TileSet" id=7]
-0/name = "roguelikeSheet_transparent.png 0"
-0/texture = ExtResource( 1 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 476, 204, 16, 16 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 1 )
-0/shape_one_way = false
-0/shape_one_way_margin = 1.0
-0/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-0/z_index = 0
-1/name = "roguelikeSheet_transparent.png 1"
-1/texture = ExtResource( 1 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 493, 221, 16, 16 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 2 )
-1/shape_one_way = false
-1/shape_one_way_margin = 1.0
-1/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 2 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-1/z_index = 0
-2/name = "roguelikeSheet_transparent.png 2"
-2/texture = ExtResource( 1 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 510, 204, 16, 16 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 3 )
-2/shape_one_way = false
-2/shape_one_way_margin = 1.0
-2/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 3 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-2/z_index = 0
-3/name = "roguelikeSheet_transparent.png 3"
-3/texture = ExtResource( 1 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 527, 204, 16, 16 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape = SubResource( 4 )
-3/shape_one_way = false
-3/shape_one_way_margin = 1.0
-3/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 4 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-3/z_index = 0
-4/name = "roguelikeSheet_transparent.png 4"
-4/texture = ExtResource( 1 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 510, 221, 16, 16 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 5 )
-4/shape_one_way = false
-4/shape_one_way_margin = 1.0
-4/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 5 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-4/z_index = 0
-5/name = "roguelikeSheet_transparent.png 5"
-5/texture = ExtResource( 1 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 527, 221, 16, 16 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape = SubResource( 6 )
-5/shape_one_way = false
-5/shape_one_way_margin = 1.0
-5/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 6 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-5/z_index = 0
+[ext_resource path="res://Models/Itens/Bomb.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Models/Enemies/Slime.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Models/Itens/Heart.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Tiles/Ground.tres" type="TileSet" id=13]
+[ext_resource path="res://Tiles/Decoration.tres" type="TileSet" id=14]
 
 [node name="DungeonRoom6" type="Node2D"]
 script = ExtResource( 8 )
 
-[node name="Dungeon" parent="." instance=ExtResource( 2 )]
+[node name="Terrain" type="Node2D" parent="."]
+
+[node name="Ground" type="TileMap" parent="Terrain"]
+scale = Vector2( 4, 4 )
+tile_set = ExtResource( 13 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 2, 65541, 1, 2, 65541, 2, 2, 65541, 3, 2, 65541, 4, 2, 65541, 5, 2, 65541, 6, 2, 65541, 7, 2, 65541, 8, 2, 65541, 9, 2, 65541, 10, 2, 65541, 11, 2, 65541, 12, 2, 65541, 13, 2, 65541, 14, 2, 65541, 15, 2, 65541, 65536, 2, 65541, 65537, 2, 65541, 65538, 2, 65541, 65539, 2, 65541, 65540, 2, 65541, 65541, 2, 65541, 65542, 2, 65541, 65543, 2, 65541, 65544, 2, 65541, 65545, 2, 65541, 65546, 2, 65541, 65547, 2, 65541, 65548, 2, 65541, 65549, 2, 65541, 65550, 2, 65541, 65551, 2, 65541, 131072, 2, 65541, 131073, 2, 65541, 131074, 2, 65541, 131075, 2, 65541, 131076, 2, 65541, 131077, 2, 65541, 131078, 2, 65541, 131079, 2, 65541, 131080, 2, 65541, 131081, 2, 65541, 131082, 2, 65541, 131083, 2, 65541, 131084, 2, 65541, 131085, 2, 65541, 131086, 2, 65541, 131087, 2, 65541, 196608, 2, 65541, 196609, 2, 65541, 196610, 2, 65541, 196611, 2, 65541, 196612, 2, 65541, 196613, 2, 65541, 196614, 2, 65541, 196615, 2, 65541, 196616, 2, 65541, 196617, 2, 65541, 196618, 2, 65541, 196619, 2, 65541, 196620, 2, 65541, 196621, 2, 65541, 196622, 2, 65541, 196623, 2, 65541, 262144, 2, 65541, 262145, 2, 65541, 262146, 2, 65541, 262147, 2, 65541, 262148, 2, 65541, 262149, 2, 65541, 262150, 2, 65541, 262151, 2, 65541, 262152, 2, 65541, 262153, 2, 65541, 262154, 2, 65541, 262155, 2, 65541, 262156, 2, 65541, 262157, 2, 65541, 262158, 2, 65541, 262159, 2, 65541, 327680, 2, 65541, 327681, 2, 65541, 327682, 2, 65541, 327683, 2, 65541, 327684, 2, 65541, 327685, 2, 65541, 327686, 2, 65541, 327687, 2, 65541, 327688, 2, 65541, 327689, 2, 65541, 327690, 2, 65541, 327691, 2, 65541, 327692, 2, 65541, 327693, 2, 65541, 327694, 2, 65541, 327695, 2, 65541, 393216, 2, 65541, 393217, 2, 65541, 393218, 2, 65541, 393219, 2, 65541, 393220, 2, 65541, 393221, 2, 65541, 393222, 2, 65541, 393223, 2, 65541, 393224, 2, 65541, 393225, 2, 65541, 393226, 2, 65541, 393227, 2, 65541, 393228, 2, 65541, 393229, 2, 65541, 393230, 2, 65541, 393231, 2, 65541, 458752, 2, 65541, 458753, 2, 65541, 458754, 2, 65541, 458755, 2, 65541, 458756, 2, 65541, 458757, 2, 65541, 458758, 2, 65541, 458759, 2, 65541, 458760, 2, 65541, 458761, 2, 65541, 458762, 2, 65541, 458763, 2, 65541, 458764, 2, 65541, 458765, 2, 65541, 458766, 2, 65541, 458767, 2, 65541, 524288, 2, 65541, 524289, 2, 65541, 524290, 2, 65541, 524291, 2, 65541, 524292, 2, 65541, 524293, 2, 65541, 524294, 2, 65541, 524295, 2, 65541, 524296, 2, 65541, 524297, 2, 65541, 524298, 2, 65541, 524299, 2, 65541, 524300, 2, 65541, 524301, 2, 65541, 524302, 2, 65541, 524303, 2, 65541, 589824, 2, 65541, 589825, 2, 65541, 589826, 2, 65541, 589827, 2, 65541, 589828, 2, 65541, 589829, 2, 65541, 589830, 2, 65541, 589831, 2, 65541, 589832, 2, 65541, 589833, 2, 65541, 589834, 2, 65541, 589835, 2, 65541, 589836, 2, 65541, 589837, 2, 65541, 589838, 2, 65541, 589839, 2, 65541 )
+
+[node name="Dungeon" parent="Terrain" instance=ExtResource( 2 )]
+
+[node name="Decoration" type="TileMap" parent="Terrain"]
+scale = Vector2( 4, 4 )
+tile_set = ExtResource( 14 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 65541, 3, 14, 65549, 3, 14, 131074, 3, 14, 131077, 3, 65550, 131083, 3, 14, 131085, 3, 65550, 196610, 3, 65550, 196616, 3, 14, 196619, 3, 65550, 262149, 3, 14, 262152, 3, 65550, 262156, 3, 14, 327685, 3, 65550, 327692, 3, 65550, 393219, 3, 14, 393222, 3, 14, 393226, 3, 14, 393229, 3, 14, 458755, 3, 65550, 458758, 3, 65550, 458762, 3, 65550, 458765, 3, 65550 )
+
+[node name="Decoration2" type="TileMap" parent="Terrain"]
+scale = Vector2( 4, 4 )
+tile_set = ExtResource( 14 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 262149, 3, 0, 262149, 4, 0, 262148, 5, 0, 262149, 6, 0, 262151, 7, 0, 262149, 8, 0, 262151, 9, 0, 262148, 10, 0, 262151, 11, 0, 262149, 12, 0, 262148, 13, 0, 262149, 14, 0, 262151, 15, 0, 262149, 65538, 4, 131072, 65539, 3, 65545, 65542, 3, 65545, 65543, 3, 65545, 65544, 0, 131074, 65545, 3, 65545, 65546, 3, 131081, 65547, 4, 131072, 65548, 3, 131081, 65550, 4, 131072, 131073, 3, 131081, 131075, 0, 131074, 131076, 3, 131081, 131080, 4, 131072, 131081, 3, 131081, 131084, 0, 131074, 131086, 3, 65545, 196611, 3, 65545, 196614, 3, 131081, 196621, 3, 65545, 262145, 3, 131081, 262146, 4, 131072, 262148, 0, 131074, 262150, 4, 131072, 262154, 0, 131074, 262155, 3, 65545, 327682, 3, 65545, 327683, 3, 131081, 327687, 3, 131081, 393217, 3, 65545, 393224, 3, 65545, 393227, 3, 65545, 458753, 0, 131074, 458754, 3, 131081, 458757, 3, 65545, 458760, 0, 131074, 458761, 3, 131081, 458763, 4, 131072, 458766, 4, 131072, 524289, 3, 65545, 524290, 4, 131072, 524292, 3, 65545, 524294, 4, 131072, 524297, 3, 65545, 524298, 3, 65545, 524300, 3, 65545, 524302, 3, 65545, 589825, 0, 262149, 589827, 0, 262149, 589832, 3, 65545, 589834, 0, 262149, 589837, 0, 262149 )
+
+[node name="TileMap3" type="TileMap" parent="Terrain"]
+format = 1
 
 [node name="Gates" type="Node2D" parent="."]
 script = ExtResource( 9 )
@@ -172,18 +57,39 @@ scale = Vector2( 4, 4 )
 position = Vector2( 1004, 320 )
 scale = Vector2( 4, 4 )
 
-[node name="Terrain" type="Node2D" parent="."]
-
-[node name="SecondLayer" type="TileMap" parent="Terrain"]
-scale = Vector2( 4, 4 )
-tile_set = SubResource( 7 )
-cell_size = Vector2( 16, 16 )
-format = 1
-tile_data = PoolIntArray( 131075, 2, 0, 131076, 3, 0, 131083, 2, 0, 131084, 3, 0, 196611, 4, 0, 196612, 5, 0, 196619, 4, 0, 196620, 5, 0 )
-
 [node name="Enemies" type="Node2D" parent="."]
 
+[node name="Slime" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 106, 107 )
+
+[node name="Slime2" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 808, 215 )
+
+[node name="Slime3" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 297, 440 )
+
+[node name="Slime4" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 799, 495 )
+
 [node name="Instances" type="Node2D" parent="."]
+
+[node name="Heart" parent="Instances" instance=ExtResource( 12 )]
+position = Vector2( 278, 112 )
+
+[node name="Coin" parent="Instances" instance=ExtResource( 1 )]
+position = Vector2( 542, 351 )
+
+[node name="Coin2" parent="Instances" instance=ExtResource( 1 )]
+position = Vector2( 226, 553 )
+
+[node name="Coin3" parent="Instances" instance=ExtResource( 1 )]
+position = Vector2( 158, 271 )
+
+[node name="Coin4" parent="Instances" instance=ExtResource( 1 )]
+position = Vector2( 866, 203 )
+
+[node name="Bomb" parent="Instances" instance=ExtResource( 10 )]
+position = Vector2( 932, 165 )
 
 [node name="Interfaces" type="Control" parent="."]
 margin_right = 40.0
