@@ -9,8 +9,15 @@ extends KinematicBody2D
 onready var animation: AnimationPlayer = get_node("Animation")
 const path: String = "res://Models/Enemies/Skeleton.tscn"
 
+onready var collision: CollisionShape2D = $DamageArea/Collision
+onready var walk_sound: AudioStreamPlayer = $WalkFX
+onready var die_sound: AudioStreamPlayer = $DieFX
+
+var can_play_sound: bool  = true
+
 export var speed = 55
 export var health = 1 
+
 var velocity = Vector2.ZERO
 var move_direction_x = -1
 var move_direction_y = 1
@@ -39,7 +46,6 @@ func updateTimer(delta) -> void:
 	
 
 func geraSentido() -> String:
-	
 	rng.randomize()
 	var rn = rng.randi_range ( 0, 3 )
 	var sentido = null
@@ -55,8 +61,8 @@ func geraSentido() -> String:
 		
 	return sentido
 
+
 func _physics_process(delta: float) -> void:
-	
 	var sentido = geraSentido()
 	
 	updateTimer(delta)
@@ -72,10 +78,9 @@ func _physics_process(delta: float) -> void:
 		startTimer()
 		
 	move()	
-	
+
 	
 func trocaSentido(direction: String) -> void:
-	
 	if(direction == 'down'):
 		move_direction_x = 0
 		move_direction_y = 1
@@ -91,35 +96,29 @@ func trocaSentido(direction: String) -> void:
 	
 	
 func move()->void:
-	
 	velocity.x = speed * move_direction_x
 	velocity = move_and_slide(velocity)
 	
 	velocity.y = speed * move_direction_y
 	velocity = move_and_slide(velocity)
 	
-	
 
 func animate()->void:
-	
 #	if velocity != Vector2.ZERO:
-		
 	if move_direction_y == 1:
 		animation.play("walkingDown")
-		return
 	elif(move_direction_y == -1):
 		animation.play("walkingUp")
-		return
 	elif move_direction_x == 1:
 		animation.play("walkingRight")
-		return
 	elif(move_direction_x == -1):
 		animation.play("walkingLeft")
-		return
 		
-	else:
-		pass
+	if can_play_sound:
+		can_play_sound = false
+		walk_sound.play()
 	
+	return
 #		if lado == "down":
 #			animation.play("stopDown")
 #			return
@@ -132,8 +131,17 @@ func animate()->void:
 #		elif lado == "left":
 #			animation.play("stopLeft")
 #			return
-		
 
-	
-	
-	
+
+func _on_DamageArea_area_entered(area):
+	print("Entrou")
+	if area.is_in_group("player_attack"):
+		self.visible = false
+		collision.disabled = true
+		die_sound.play()
+		yield(die_sound, "finished")
+		queue_free()
+
+
+func _on_WalkFX_finished():
+	can_play_sound = true
