@@ -1,10 +1,16 @@
-[gd_resource type="TileSet" load_steps=4 format=2]
+[gd_resource type="TileSet" load_steps=6 format=2]
 
 [ext_resource path="res://Assets/roguelike-cave-pack/Spritesheet/roguelikeDungeon_transparent.png" type="Texture" id=1]
 [ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=2]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 3.79946, 6.27014, 6.86806, 5.94713, 10.2597, 6.10863, 14.7818, 8.0467, 13.9743, 10.7923, 13.0053, 12.4073, 11.2287, 13.8609, 6.86806, 13.8609, 3.63795, 12.2458, 2.66892, 9.17724 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 2.125, 8.86719, 3.6875, 7.80469, 5.8125, 6.99219, 9.625, 6.61719, 11.8125, 6.55469, 13.3125, 6.74219, 14.25, 8.74219, 13.6875, 10.4922, 13.6875, 11.6172, 13.375, 12.4922, 12, 13.3672, 9.1875, 14.1172, 6.6875, 14.0547, 4.125, 13.1172, 2.25, 11.6172 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 4.125, 15.8125, 3.875, 13.9375, 5.1875, 14, 5.4375, 4.125, 9.9375, 3.5, 10.0625, 13.8125, 11.0625, 15.875 )
 
 [resource]
 0/name = "Decoration2"
@@ -32,6 +38,12 @@ points = PoolVector2Array( 3.79946, 6.27014, 6.86806, 5.94713, 10.2597, 6.10863,
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 5, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
@@ -94,9 +106,16 @@ points = PoolVector2Array( 3.79946, 6.27014, 6.86806, 5.94713, 10.2597, 6.10863,
 3/navigation_offset = Vector2( 0, 0 )
 3/shape_offset = Vector2( 0, 0 )
 3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 3 )
 3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 14, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 3/z_index = 0
 4/name = "Cog"
 4/texture = ExtResource( 2 )
