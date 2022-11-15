@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Enemies/Bat/character_0024.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Enemies/Bat/character_0025.png" type="Texture" id=2]
@@ -19,6 +19,9 @@ animations = [ {
 radius = 16.0
 height = 0.0
 
+[sub_resource type="CircleShape2D" id=4]
+radius = 30.0
+
 [sub_resource type="CircleShape2D" id=3]
 radius = 30.0666
 
@@ -37,18 +40,23 @@ volume_db = -40.0
 position = Vector2( 64, 80 )
 scale = Vector2( 3.33333, 3.33333 )
 frames = SubResource( 2 )
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 64, 80 )
 shape = SubResource( 1 )
 
-[node name="DamageArea" type="Area2D" parent="." groups=["damage"]]
+[node name="DamageArea" type="Area2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="DamageArea"]
+position = Vector2( 64, 80 )
+shape = SubResource( 4 )
+
+[node name="AttackArea" type="Area2D" parent="." groups=["damage"]]
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
 position = Vector2( 64, 80 )
 shape = SubResource( 3 )
 
