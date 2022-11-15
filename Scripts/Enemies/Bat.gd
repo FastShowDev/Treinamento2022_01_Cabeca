@@ -7,9 +7,9 @@ extends KinematicBody2D
 export var speed = 55
 export var health = 1 
 
-onready var collision = $DamageArea/CollisionShape2D
-onready var fly_sound = $FlyingFX
-onready var die_sound = $DieFX
+onready var collision: CollisionShape2D = $DamageArea/CollisionShape2D
+onready var fly_sound: AudioStreamPlayer = $FlyingFX
+onready var die_sound: AudioStreamPlayer = $DieFX
 
 var can_play_sound: bool = false
 var can_die: bool = true
