@@ -21,10 +21,13 @@ var door_type: String
 var room_start_positions : Array
 var start_position: Vector2
 
+var drop_ammount: Array
+var chest_open: bool = false
+
 onready var _player : KinematicBody2D = $"%Player"
 onready var _interface := $Interfaces/UserInterface
 onready var _bar := $Interfaces/DialogBar
-
+onready var _chest: AnimatedSprite = $Structures/Chest
 
 func set_save_path(path: String) -> void:
 	save_game_path = path
@@ -148,9 +151,14 @@ func _save_map_data() -> void:
 	_save.itens_data = itens_data
 
 
+func load_chest() -> void:
+	if _chest != null:
+		if not drop_ammount.empty():
+			_chest.drop_list = self.drop_ammount
+	return
+
+
 func _load_game(data: Dictionary) -> void:
-	print("Dados lidos: ")
-	print(data["Player"])
 	_player.load_stats(data["Player"])
 	_interface.set_values(_player.stats)
 	
@@ -194,6 +202,8 @@ func _load_game(data: Dictionary) -> void:
 		var new_enemy = load(new["path"]).instance()
 		new_enemy.position = Vector2(new["x"], new["y"])
 		get_node("Enemies").add_child(new_enemy)
+	
+	load_chest()
 
 
 func _load_new_game() -> void:
@@ -222,6 +232,7 @@ func _load_new_game() -> void:
 					
 		#new_gate.is_open = true
 		new_gate.set_data()	
+	load_chest()
 	
 	
 	

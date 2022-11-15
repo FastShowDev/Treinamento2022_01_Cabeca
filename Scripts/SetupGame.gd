@@ -16,6 +16,7 @@ func _ready() -> void:
 			self.room_start_positions = [Vector2(512,570), Vector2(687,186), 
 				Vector2(50,320), Vector2(975, 320)]
 			self.std_gate_values = [false, true, true, true]
+			self.drop_ammount = [] #[heart, bomb, key, coin]
 			
 		"DungeonRoom1":
 			suffix = "room1.json"
@@ -24,6 +25,7 @@ func _ready() -> void:
 				Vector2(50, 320), Vector2(0,0)]
 			self.open_std_gate = "RightDungeonGate"
 			self.std_gate_values = [false, false, true, false]
+			self.drop_ammount = [] #[heart, bomb, key, coin]
 			
 		"DungeonRoom2":
 			suffix = "room2.json"
@@ -32,6 +34,7 @@ func _ready() -> void:
 				Vector2(0, 0), Vector2(975,320)]
 			self.open_std_gate = "LeftDungeonGate"
 			self.std_gate_values = [false, false, false, true]
+			self.drop_ammount = [1,1,1,1] #[heart, bomb, key, coin]
 				
 		"DungeonRoom3":
 			suffix = "room3.json"
@@ -41,6 +44,7 @@ func _ready() -> void:
 				Vector2(0, 0), Vector2(0,0)]
 			self.open_std_gate = "BottomDungeonGate"
 			self.std_gate_values = [true, true, false, false]
+			self.drop_ammount = [] #[heart, bomb, key, coin]
 				
 		"DungeonRoom4":
 			suffix = "room4.json"
@@ -50,6 +54,7 @@ func _ready() -> void:
 				Vector2(70, 320), Vector2(0,0)]
 			self.open_std_gate = "BottomDungeonGate"
 			self.std_gate_values = [false, true, true, false]
+			self.drop_ammount = [] #[heart, bomb, key, coin]
 			
 		"DungeonRoom5":
 			suffix = "room5.json"
@@ -59,6 +64,7 @@ func _ready() -> void:
 				Vector2(0, 0), Vector2(975,320)]
 			self.open_std_gate = "LeftDungeonGate"
 			self.std_gate_values = [true, false, false, true]
+			self.drop_ammount = [] #[heart, bomb, key, coin]
 			
 		"DungeonRoom6":
 			suffix = "room6.json"
@@ -68,6 +74,7 @@ func _ready() -> void:
 				Vector2(70, 320), Vector2(0,0)]
 			self.open_std_gate = "BottomDungeonGate"
 			self.std_gate_values = [false, true, true, false]
+			self.drop_ammount = [] #[heart, bomb, key, coin]
 			
 		"DungeonRoom7":
 			suffix = "room7.json"
@@ -77,6 +84,7 @@ func _ready() -> void:
 				Vector2(0, 0), Vector2(0,0)]
 			self.open_std_gate = "BottomDungeonGate"
 			self.std_gate_values = [true, true, false, false]
+			self.drop_ammount = [] #[heart, bomb, key, coin]
 			
 		"DungeonRoom8":
 			suffix = "room8.json"
@@ -86,6 +94,7 @@ func _ready() -> void:
 				Vector2(0, 0), Vector2(975,320)]
 			self.open_std_gate = "LeftDungeonGate"
 			self.std_gate_values = [false, false, false, true]
+			self.drop_ammount = [] #[heart, bomb, key, coin]
 			
 		"DungeonRoom9":
 			suffix = "room9.json"
@@ -95,6 +104,7 @@ func _ready() -> void:
 				Vector2(70, 320), Vector2(0,0)]
 			self.open_std_gate = "BottomDungeonGate"
 			self.std_gate_values = [false, true, true, false]
+			self.drop_ammount = [] #[heart, bomb, key, coin]
 			
 		"DungeonRoom10":
 			suffix = "room10.json"
@@ -103,6 +113,7 @@ func _ready() -> void:
 				Vector2(0, 0), Vector2(975,320)]
 			self.open_std_gate = "LeftDungeonGate"
 			self.std_gate_values = [false, false, false, true]
+			self.drop_ammount = [] #[heart, bomb, key, coin]
 			
 	var save_game_path: String = save_path + suffix
 	print("Game_Path:" + save_game_path)
