@@ -1,6 +1,6 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Assets/roguelike-pack/Spritesheet/roguelikeSheet_transparent.png" type="Texture" id=1]
+[ext_resource path="res://Tiles/Ground.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Dungeon.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Models/Enemies/Ball.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Models/Structures/Gates/TopDungeonGate.tscn" type="PackedScene" id=4]
@@ -10,178 +10,37 @@
 [ext_resource path="res://Models/Player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scripts/DungeonRoom/GatesSetup.gd" type="Script" id=9]
 [ext_resource path="res://Scripts/SetupGame.gd" type="Script" id=10]
-
-[sub_resource type="ConvexPolygonShape2D" id=1]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=2]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=3]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=4]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=5]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=6]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-
-[sub_resource type="TileSet" id=7]
-0/name = "roguelikeSheet_transparent.png 0"
-0/texture = ExtResource( 1 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 476, 204, 16, 16 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-1/name = "roguelikeSheet_transparent.png 1"
-1/texture = ExtResource( 1 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 476, 204, 16, 16 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 1 )
-1/shape_one_way = false
-1/shape_one_way_margin = 1.0
-1/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-1/z_index = 0
-2/name = "roguelikeSheet_transparent.png 2"
-2/texture = ExtResource( 1 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 493, 221, 16, 16 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 2 )
-2/shape_one_way = false
-2/shape_one_way_margin = 1.0
-2/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 2 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-2/z_index = 0
-3/name = "roguelikeSheet_transparent.png 3"
-3/texture = ExtResource( 1 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 510, 204, 16, 16 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape = SubResource( 3 )
-3/shape_one_way = false
-3/shape_one_way_margin = 1.0
-3/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 3 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-3/z_index = 0
-4/name = "roguelikeSheet_transparent.png 4"
-4/texture = ExtResource( 1 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 527, 204, 16, 16 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 4 )
-4/shape_one_way = false
-4/shape_one_way_margin = 1.0
-4/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 4 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-4/z_index = 0
-5/name = "roguelikeSheet_transparent.png 5"
-5/texture = ExtResource( 1 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 510, 221, 16, 16 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape = SubResource( 5 )
-5/shape_one_way = false
-5/shape_one_way_margin = 1.0
-5/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 5 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-5/z_index = 0
-6/name = "roguelikeSheet_transparent.png 6"
-6/texture = ExtResource( 1 )
-6/tex_offset = Vector2( 0, 0 )
-6/modulate = Color( 1, 1, 1, 1 )
-6/region = Rect2( 527, 221, 16, 16 )
-6/tile_mode = 0
-6/occluder_offset = Vector2( 0, 0 )
-6/navigation_offset = Vector2( 0, 0 )
-6/shape_offset = Vector2( 0, 0 )
-6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape = SubResource( 6 )
-6/shape_one_way = false
-6/shape_one_way_margin = 1.0
-6/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 6 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-6/z_index = 0
+[ext_resource path="res://Tiles/Background.tres" type="TileSet" id=11]
 
 [node name="DungeonRoom8" type="Node2D"]
 script = ExtResource( 10 )
 
-[node name="Dungeon" parent="." instance=ExtResource( 2 )]
-
 [node name="Terrain" type="Node2D" parent="."]
 
-[node name="SecondLayer" type="TileMap" parent="Terrain"]
+[node name="Ground" type="TileMap" parent="Terrain"]
 scale = Vector2( 4, 4 )
-tile_set = SubResource( 7 )
+tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 1, 7, 65538, 0, 0, 65539, 0, 0, 65540, 1, 5, 65541, 0, 0, 65542, 0, 0, 65543, 1, 5, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 1, 5, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 1, 5, 131075, 0, 0, 131076, 1, 5, 131077, 1, 7, 131078, 1, 7, 131079, 0, 0, 131080, 1, 5, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 1, 5, 196610, 0, 0, 196611, 1, 5, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 1, 5, 196617, 0, 0, 196618, 0, 0, 196619, 1, 7, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 1, 7, 262149, 0, 0, 262150, 1, 5, 262151, 0, 0, 262152, 0, 0, 262153, 1, 7, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 1, 5, 262158, 1, 5, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 1, 7, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 1, 5, 327687, 0, 0, 327688, 1, 5, 327689, 0, 0, 327690, 1, 5, 327691, 0, 0, 327692, 0, 0, 327693, 1, 5, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 1, 5, 393220, 1, 7, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 1, 7, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 1, 7, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 1, 5, 458756, 1, 5, 458757, 0, 0, 458758, 1, 7, 458759, 1, 5, 458760, 0, 0, 458761, 0, 0, 458762, 1, 7, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 1, 7, 524290, 0, 0, 524291, 1, 5, 524292, 1, 5, 524293, 0, 0, 524294, 0, 0, 524295, 1, 5, 524296, 1, 5, 524297, 0, 0, 524298, 1, 5, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 1, 7, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 1, 7, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
+
+[node name="Dungeon" parent="Terrain" instance=ExtResource( 2 )]
+
+[node name="Decoration" type="TileMap" parent="Terrain"]
+scale = Vector2( 4, 4 )
+tile_set = ExtResource( 11 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 5, 12, 1, 10, 12, 1, 65537, 5, 131072, 65538, 5, 131074, 65539, 5, 131074, 65540, 5, 131074, 65541, 5, 131074, 65542, 5, 327680, 65543, 5, 327681, 65544, 5, 131074, 65545, 5, 131074, 65546, 5, 131074, 65547, 5, 131074, 65548, 5, 131074, 65549, 5, 131074, 65550, 5, 131073, 131073, 5, 393218, 131074, 5, 131072, 131075, 5, 131074, 131076, 5, 131074, 131077, 5, 131074, 131078, 5, 131074, 131079, 5, 131074, 131080, 5, 131074, 131081, 5, 131074, 131082, 5, 131074, 131083, 5, 131074, 131084, 5, 131074, 131085, 5, 131073, 131086, 5, 196610, 196609, 5, 196610, 196610, 5, 196610, 196621, 5, 196610, 196622, 5, 196610, 262145, 5, 196610, 262146, 5, 393218, 262157, 5, 393219, 262158, 5, 196610, 327681, 5, 196610, 327682, 5, 196610, 327693, 5, 196610, 327694, 5, 393219, 393217, 5, 196610, 393218, 5, 196610, 393229, 5, 196610, 393230, 5, 196610, 458753, 5, 196610, 458754, 5, 196608, 458755, 5, 131074, 458756, 5, 131074, 458757, 5, 131074, 458758, 5, 131074, 458759, 5, 262146, 458760, 5, 131074, 458761, 5, 131074, 458762, 5, 131074, 458763, 5, 131074, 458764, 5, 131074, 458765, 5, 196609, 458766, 5, 196610, 524289, 5, 196608, 524290, 5, 131074, 524291, 5, 131074, 524292, 5, 131074, 524293, 5, 327682, 524294, 5, 131074, 524295, 5, 131074, 524296, 5, 131074, 524297, 5, 131074, 524298, 5, 131074, 524299, 5, 131074, 524300, 5, 131074, 524301, 5, 131074, 524302, 5, 196609 )
+
+[node name="Decoration2" type="TileMap" parent="Terrain"]
+scale = Vector2( 4, 4 )
+tile_set = ExtResource( 11 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 14, 65543, 1, 14, 262151, 3, 14, 262151, 6, 14, 196615, 9, 14, 262150, 11, 14, 262151, 12, 14, 262151, 13, 14, 262151, 14, 14, 65543, 15, 14, 262151, 65545, 4, 262144, 131072, 14, 65543, 196611, 15, 0, 196613, 14, 131074, 196614, 15, 196608, 196617, 15, 131073, 196618, 15, 262145, 196620, 15, 0, 196623, 14, 65543, 262147, 15, 196608, 262150, 15, 0, 262152, 15, 196608, 262153, 14, 131074, 262154, 15, 131073, 262156, 5, 2, 327683, 15, 0, 327685, 14, 131074, 327687, 15, 262144, 327689, 15, 196609, 327690, 15, 0, 393216, 14, 65543, 393217, 4, 2, 393219, 14, 131074, 393221, 15, 0, 393222, 15, 196609, 393224, 14, 131074, 393225, 15, 262145, 393226, 15, 131073, 393227, 15, 0, 393229, 4, 262146, 458767, 14, 65543, 524288, 14, 65543, 524292, 4, 262144, 589829, 14, 65543, 589831, 14, 65543, 589835, 14, 65543, 589838, 14, 65543 )
+
+[node name="Decoration3" type="TileMap" parent="Terrain"]
 format = 1
 
 [node name="Gates" type="Node2D" parent="."]
