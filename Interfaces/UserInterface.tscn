@@ -1,21 +1,40 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/Zelda-pack/objects.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Interfaces/UserInterface.gd" type="Script" id=2]
 [ext_resource path="res://Assets/bomb-assets/1-Bomb Off/1.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Flying_Key/Key1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Text/bit_potion.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 3 )
 region = Rect2( 33.094, 49.5512, 32.2637, 40.6284 )
 
+[sub_resource type="DynamicFont" id=4]
+size = 40
+outline_color = Color( 1, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
 region = Rect2( 63.3443, 1.31028, 15.31, 14.3445 )
 
+[sub_resource type="DynamicFont" id=5]
+size = 40
+font_data = ExtResource( 5 )
+
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
 region = Rect2( 0.942162, 65.2848, 12.958, 12.5308 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 40
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 40
+outline_color = Color( 0.960784, 0.960784, 0.960784, 1 )
+font_data = ExtResource( 5 )
 
 [node name="UserInterface" type="Control"]
 anchor_right = 1.0
@@ -40,16 +59,17 @@ expand = true
 stretch_mode = 4
 
 [node name="BombsLabel" type="Label" parent="Icons/BombIcon"]
-margin_left = 7.0
-margin_top = 10.0
-margin_right = 57.0
-margin_bottom = 60.0
+margin_left = 8.0
+margin_top = 9.0
+margin_right = 58.0
+margin_bottom = 59.0
 rect_min_size = Vector2( 50, 50 )
 rect_scale = Vector2( 0.7, 0.7 )
 size_flags_horizontal = 0
 custom_colors/font_color = Color( 0.996078, 0.996078, 0.996078, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
 text = "0"
 align = 1
 valign = 1
@@ -64,11 +84,16 @@ texture = SubResource( 1 )
 expand = true
 
 [node name="HeartsLabel" type="Label" parent="Icons/HeartIcon"]
+margin_left = 1.25
+margin_top = -3.75
+margin_right = 51.25
+margin_bottom = 46.25
 rect_min_size = Vector2( 50, 50 )
 size_flags_vertical = 5
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
 text = "0"
 align = 1
 valign = 1
@@ -84,12 +109,13 @@ texture = SubResource( 2 )
 expand = true
 
 [node name="CoinsLabel" type="Label" parent="Icons/CoinIcon"]
-margin_left = 21.25
-margin_top = 17.5
-margin_right = 29.25
-margin_bottom = 31.5
+margin_left = 5.71428
+margin_top = 7.14286
+margin_right = 46.7143
+margin_bottom = 39.1429
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
 text = "0"
 align = 1
 valign = 1
@@ -104,15 +130,16 @@ texture = ExtResource( 4 )
 expand = true
 
 [node name="KeysLabel" type="Label" parent="Icons/KeyIcon"]
-margin_left = 30.0
-margin_top = 32.0
-margin_right = 38.0
-margin_bottom = 46.0
+margin_left = 23.3333
+margin_top = 25.3333
+margin_right = 63.3333
+margin_bottom = 65.3333
 grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 0.5, 0.5 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
 text = "0
 "
 align = 1
