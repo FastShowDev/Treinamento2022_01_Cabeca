@@ -32,10 +32,12 @@ func drop_object() -> void:
 	var i: int  = 0
 	for ammount in drop_list:
 		while ammount > 0:
+			randomize()
 			var drop: PackedScene = load(drop_path[i])
 			var object = drop.instance()
 			owner.get_node("Drops").add_child(object)
 			var pos = randi() % 200 - 100
+			print(pos)
 			play_drop_animation(object, position, pos)
 			ammount -= 1
 		i += 1

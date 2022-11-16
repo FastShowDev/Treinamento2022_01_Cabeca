@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var audio: AudioStreamPlayer = $Cave
+onready var audio: AudioStreamPlayer = $BackgroundFX
 var can_play: bool = true
 
 func _process(_delta: float) -> void:
@@ -11,5 +11,5 @@ func play_background_audio() -> void:
 		can_play = false
 		audio.play()
 
-func _on_Cave_finished():
+func _on_BackgroundFX_finished():
 	can_play = true
