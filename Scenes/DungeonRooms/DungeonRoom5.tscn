@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Tiles/Ground.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Dungeon.tscn" type="PackedScene" id=2]
@@ -14,10 +14,19 @@
 [ext_resource path="res://Models/Itens/Coin.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Models/Itens/Bomb.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Models/Itens/Heart.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Sounds/Background/R5/horror ambient.mp3" type="AudioStream" id=15]
+[ext_resource path="res://Scripts/Background/background_sound.gd" type="Script" id=16]
 
 [node name="DungeonRoom5" type="Node2D"]
 position = Vector2( 0, 25 )
 script = ExtResource( 10 )
+
+[node name="Background" type="Node2D" parent="."]
+script = ExtResource( 16 )
+
+[node name="BackgroundFX" type="AudioStreamPlayer" parent="Background"]
+stream = ExtResource( 15 )
+volume_db = -30.0
 
 [node name="Terrain" type="Node2D" parent="."]
 
@@ -129,3 +138,4 @@ position = Vector2( 96, 311 )
 scale = Vector2( 2, 2 )
 
 [connection signal="tree_exiting" from="." to="." method="_on_scene_tree_exiting"]
+[connection signal="finished" from="Background/BackgroundFX" to="Background" method="_on_BackgroundFX_finished"]

@@ -13,8 +13,8 @@
 [ext_resource path="res://Models/Itens/Heart.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Models/Itens/Coin.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Tiles/Ground.tres" type="TileSet" id=13]
-[ext_resource path="res://Scripts/Background/background_room7.gd" type="Script" id=14]
-[ext_resource path="res://Sounds/Background/R7/water_fill.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Scripts/Background/background_sound.gd" type="Script" id=14]
+[ext_resource path="res://Sounds/Background/R7/amb_river.mp3" type="AudioStream" id=15]
 
 [sub_resource type="TileSet" id=12]
 0/name = "roguelikeSheet_transparent.png 0"
@@ -171,9 +171,9 @@ script = ExtResource( 9 )
 [node name="Background" type="Node2D" parent="."]
 script = ExtResource( 14 )
 
-[node name="WaterFall" type="AudioStreamPlayer" parent="Background"]
+[node name="BackgroundFX" type="AudioStreamPlayer" parent="Background"]
 stream = ExtResource( 15 )
-volume_db = -50.0
+volume_db = -30.0
 
 [node name="Terrain" type="Node2D" parent="."]
 
@@ -236,4 +236,4 @@ position = Vector2( 510, 531 )
 scale = Vector2( 2, 2 )
 
 [connection signal="tree_exiting" from="." to="." method="_on_scene_tree_exiting"]
-[connection signal="finished" from="Background/WaterFall" to="Background" method="_on_WaterFall_finished"]
+[connection signal="finished" from="Background/BackgroundFX" to="Background" method="_on_BackgroundFX_finished"]

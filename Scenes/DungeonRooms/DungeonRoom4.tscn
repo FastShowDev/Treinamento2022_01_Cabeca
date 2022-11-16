@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Tiles/Wall.tres" type="TileSet" id=1]
 [ext_resource path="res://Models/Enemies/Skeleton.tscn" type="PackedScene" id=2]
@@ -12,10 +12,21 @@
 [ext_resource path="res://Scripts/SetupGame.gd" type="Script" id=10]
 [ext_resource path="res://Tiles/Ground.tres" type="TileSet" id=11]
 [ext_resource path="res://Tiles/Decoration.tres" type="TileSet" id=12]
+[ext_resource path="res://Models/Itens/Heart.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Models/Itens/Coin.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scripts/Background/background_sound.gd" type="Script" id=15]
+[ext_resource path="res://Sounds/Background/R4/dark_cavern_ambient_001.ogg" type="AudioStream" id=16]
 
 [node name="DungeonRoom4" type="Node2D"]
 position = Vector2( 0, 25 )
 script = ExtResource( 10 )
+
+[node name="Background" type="Node2D" parent="."]
+script = ExtResource( 15 )
+
+[node name="BackgroundFX" type="AudioStreamPlayer" parent="Background"]
+stream = ExtResource( 16 )
+volume_db = -30.0
 
 [node name="Terrain" type="Node2D" parent="."]
 
@@ -72,6 +83,21 @@ position = Vector2( 859, 117 )
 
 [node name="Instances" type="Node2D" parent="."]
 
+[node name="Coin" parent="Instances" instance=ExtResource( 14 )]
+position = Vector2( 162, 539 )
+
+[node name="Coin2" parent="Instances" instance=ExtResource( 14 )]
+position = Vector2( 674, 215 )
+
+[node name="Coin3" parent="Instances" instance=ExtResource( 14 )]
+position = Vector2( 351, 176 )
+
+[node name="Coin4" parent="Instances" instance=ExtResource( 14 )]
+position = Vector2( 937, 549 )
+
+[node name="Heart" parent="Instances" instance=ExtResource( 13 )]
+position = Vector2( 89, 86 )
+
 [node name="Interfaces" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
@@ -91,3 +117,4 @@ position = Vector2( 517, 505 )
 scale = Vector2( 2, 2 )
 
 [connection signal="tree_exiting" from="." to="." method="_on_scene_tree_exiting"]
+[connection signal="finished" from="Background/BackgroundFX" to="Background" method="_on_BackgroundFX_finished"]

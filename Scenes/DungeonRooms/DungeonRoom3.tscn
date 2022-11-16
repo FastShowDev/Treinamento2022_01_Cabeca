@@ -16,7 +16,7 @@
 [ext_resource path="res://Models/Itens/Bomb.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Models/Itens/Coin.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Sounds/Background/R3/atmosbasement.mp3_.mp3" type="AudioStream" id=16]
-[ext_resource path="res://Scripts/Background/background_room3.gd" type="Script" id=17]
+[ext_resource path="res://Scripts/Background/background_sound.gd" type="Script" id=17]
 
 [node name="DungeonRoom3" type="Node2D"]
 position = Vector2( 0, 25 )
@@ -25,7 +25,7 @@ script = ExtResource( 10 )
 [node name="Background" type="Node2D" parent="."]
 script = ExtResource( 17 )
 
-[node name="Cave" type="AudioStreamPlayer" parent="Background"]
+[node name="BackgroundFX" type="AudioStreamPlayer" parent="Background"]
 stream = ExtResource( 16 )
 volume_db = -30.0
 
@@ -121,4 +121,4 @@ position = Vector2( 512, 504 )
 scale = Vector2( 2, 2 )
 
 [connection signal="tree_exiting" from="." to="." method="_on_scene_tree_exiting"]
-[connection signal="finished" from="Background/Cave" to="Background" method="_on_Cave_finished"]
+[connection signal="finished" from="Background/BackgroundFX" to="Background" method="_on_BackgroundFX_finished"]
