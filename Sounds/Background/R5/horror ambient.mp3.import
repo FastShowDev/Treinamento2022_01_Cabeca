@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/horror ambient.mp3-6a822dea4b2724d09fe7a1585db9fa87.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Background/R5/horror ambient.mp3"
+dest_files=[ "res://.import/horror ambient.mp3-6a822dea4b2724d09fe7a1585db9fa87.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

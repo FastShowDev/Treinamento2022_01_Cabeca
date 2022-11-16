@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/amb_river.mp3-4c00f92157022b773a1b5ef247fc3c02.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Background/R7/amb_river.mp3"
+dest_files=[ "res://.import/amb_river.mp3-4c00f92157022b773a1b5ef247fc3c02.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

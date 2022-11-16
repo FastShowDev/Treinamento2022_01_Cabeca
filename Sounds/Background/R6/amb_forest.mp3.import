@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/amb_forest.mp3-f7343eba062903eeae3244bc9c984536.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Background/R6/amb_forest.mp3"
+dest_files=[ "res://.import/amb_forest.mp3-f7343eba062903eeae3244bc9c984536.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

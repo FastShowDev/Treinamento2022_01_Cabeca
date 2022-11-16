@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/amb_waterfall.mp3-80e06c2ac02193652e342274f8d33736.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Background/R7/amb_waterfall.mp3"
+dest_files=[ "res://.import/amb_waterfall.mp3-80e06c2ac02193652e342274f8d33736.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
