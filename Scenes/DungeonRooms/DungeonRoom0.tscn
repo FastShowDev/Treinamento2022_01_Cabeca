@@ -306,6 +306,10 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 position = Vector2( 0, 25 )
 script = ExtResource( 3 )
 
+[node name="Background" type="Node2D" parent="."]
+
+[node name="BackgroundFX" type="AudioStreamPlayer" parent="Background"]
+
 [node name="Terrain" type="Node2D" parent="."]
 
 [node name="FirstLayer" type="TileMap" parent="Terrain"]
