@@ -47,6 +47,8 @@ position = Vector2( 64, 80 )
 shape = SubResource( 1 )
 
 [node name="DamageArea" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 4
 
 [node name="Collision" type="CollisionShape2D" parent="DamageArea"]
 position = Vector2( 64, 80 )
