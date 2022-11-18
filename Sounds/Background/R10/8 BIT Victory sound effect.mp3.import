@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/8 BIT Victory sound effect.mp3-00e9ca89da2bdf33e29e7dc79730af7e.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Background/R10/8 BIT Victory sound effect.mp3"
+dest_files=[ "res://.import/8 BIT Victory sound effect.mp3-00e9ca89da2bdf33e29e7dc79730af7e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
