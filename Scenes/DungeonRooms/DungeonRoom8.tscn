@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Tiles/Ground.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Dungeon.tscn" type="PackedScene" id=2]
@@ -11,13 +11,18 @@
 [ext_resource path="res://Scripts/DungeonRoom/GatesSetup.gd" type="Script" id=9]
 [ext_resource path="res://Scripts/SetupGame.gd" type="Script" id=10]
 [ext_resource path="res://Tiles/Background.tres" type="TileSet" id=11]
+[ext_resource path="res://Sounds/Background/R8/Minecart.mp3" type="AudioStream" id=12]
+[ext_resource path="res://Scripts/Background/background_sound.gd" type="Script" id=13]
 
 [node name="DungeonRoom8" type="Node2D"]
 script = ExtResource( 10 )
 
 [node name="Background" type="Node2D" parent="."]
+script = ExtResource( 13 )
 
 [node name="BackgroundFX" type="AudioStreamPlayer" parent="Background"]
+stream = ExtResource( 12 )
+volume_db = -35.0
 
 [node name="Terrain" type="Node2D" parent="."]
 
@@ -103,3 +108,4 @@ position = Vector2( 87, 302 )
 scale = Vector2( 2, 2 )
 
 [connection signal="tree_exiting" from="." to="." method="_on_scene_tree_exiting"]
+[connection signal="finished" from="Background/BackgroundFX" to="Background" method="_on_BackgroundFX_finished"]
