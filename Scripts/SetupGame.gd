@@ -7,6 +7,17 @@ var suffix: String
 func _ready() -> void:
 	print("Estou na cena: " + self.name)
 	match self.name:
+		"Spawn":
+			suffix = "spawn.json"
+			self.top_dungeon_path = ""
+			self.bottom_dungeon_path = ""
+			self.left_dungeon_path = ""
+			self.right_dungeon_path = ""
+			self.room_start_positions = [Vector2(512,570), Vector2(687,186), 
+				Vector2(50,320), Vector2(975, 320)]
+			self.std_gate_values = [false, false, false, false]
+			self.drop_ammount = [] #[heart, bomb, key, coin]
+			
 		"DungeonRoom0":
 			suffix = "room0.json"
 			self.top_dungeon_path = "res://Scenes/DungeonRooms/DungeonRoom3.tscn"

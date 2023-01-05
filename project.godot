@@ -48,6 +48,11 @@ _global_script_classes=[ {
 "class": "SetupGates",
 "language": "GDScript",
 "path": "res://Scripts/DungeonRoom/GatesSetup.gd"
+}, {
+"base": "Control",
+"class": "WinText",
+"language": "GDScript",
+"path": "res://Scripts/Background/win_interface.gd"
 } ]
 _global_script_class_icons={
 "Character": "",
@@ -57,7 +62,8 @@ _global_script_class_icons={
 "Map": "",
 "SaveGameAsJSON": "",
 "SetupGame": "",
-"SetupGates": ""
+"SetupGates": "",
+"WinText": ""
 }
 
 [application]

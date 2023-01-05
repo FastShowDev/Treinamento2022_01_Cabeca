@@ -423,7 +423,7 @@ position = Vector2( 161, 165 )
 position = Vector2( 482, 549 )
 
 [node name="Bomb" parent="Instances" instance=ExtResource( 13 )]
-position = Vector2( 416, 89 )
+position = Vector2( 414, 90 )
 
 [node name="Key" parent="Instances" instance=ExtResource( 11 )]
 position = Vector2( 100, 314 )

@@ -589,6 +589,10 @@ tile_data = PoolIntArray( 196629, 1, 196611, 196630, 1, 196612, 262165, 1, 13107
 
 [node name="Instances" type="Node2D" parent="."]
 
+[node name="Gates" type="Node2D" parent="."]
+
+[node name="Enemies" type="Node2D" parent="."]
+
 [node name="YSort" type="YSort" parent="."]
 script = ExtResource( 27 )
 

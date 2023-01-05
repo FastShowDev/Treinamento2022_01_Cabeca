@@ -86,7 +86,7 @@ func load_savegame() -> void:
 	_file.close()
 	all_data = JSON.parse(player_content).result
 	print(all_data)
-
+	
 	error = _file.open(SAVE_GAME_PATH, File.READ)
 	if error != OK:
 		printerr("Could not open the file %s. Aborting load operation. Error code: %s" % [SAVE_GAME_PATH, error])
@@ -96,6 +96,7 @@ func load_savegame() -> void:
 	_file.close()
 
 	all_data.merge(JSON.parse(content).result)
+	
 	
 func read_player_data() -> Dictionary:
 	var error := _file.open(SAVE_PLAYER_DATA, File.READ)

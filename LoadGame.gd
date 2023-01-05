@@ -86,6 +86,8 @@ func _save_player_data() -> void:
 		print(room_start_positions)
 		print(door_type)
 		match door_type:
+			"SpawnGate":
+				start_position = Vector2(512,570)
 			"TopDungeonGate":
 				start_position = room_start_positions[0]
 			"BottomDungeonGate":
