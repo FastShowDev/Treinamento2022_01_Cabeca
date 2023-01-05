@@ -17,6 +17,8 @@ func _input(event: InputEvent) -> void:
 		is_open = true
 		self.frame = 1
 	elif event.is_action_pressed("interact_item") and is_open and is_player_inside:
+		#Necessário pois se o player abrir as duas portas ao mesmo tempo vai salvar
+		#duas vezes e bugar tudo
 		if(main.loading_room):
 			return
 		
